@@ -16,6 +16,19 @@ namespace AdAbnb.Domain
         public string Footage { get; set; }
 
         // lista de comodidades?? e imagens?
+        public Property(int iD_prop, Owner owner, decimal daily, string city, string district, string footage)
+        {
+            ID_prop = iD_prop;
+            Owner = owner;
+            Daily = daily;
+            City = city;
+            District = district;
+            Footage = footage;
+        }
+
+        
+
+
 
     }
 }

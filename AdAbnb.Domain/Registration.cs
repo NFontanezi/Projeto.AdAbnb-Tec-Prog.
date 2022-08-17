@@ -10,5 +10,13 @@ namespace AdAbnb.Domain
     {
         public string Login { get; set; }
         public string Password { get; set; }
+
+        public Registration(string login, string password)
+        {
+            Login = login;
+            Password = password;
+        }
     }
+
+
 }
