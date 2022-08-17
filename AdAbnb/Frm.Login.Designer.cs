@@ -32,7 +32,7 @@
             this.lblEmailLogin = new System.Windows.Forms.Label();
             this.txbEmailLogin = new System.Windows.Forms.TextBox();
             this.lblPasswordLogin = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txbPasswordLogin = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lblLoginTitle
@@ -70,19 +70,19 @@
             this.lblPasswordLogin.TabIndex = 1;
             this.lblPasswordLogin.Text = "Senha";
             // 
-            // textBox1
+            // txbPasswordLogin
             // 
-            this.textBox1.Location = new System.Drawing.Point(41, 210);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(240, 23);
-            this.textBox1.TabIndex = 2;
+            this.txbPasswordLogin.Location = new System.Drawing.Point(41, 210);
+            this.txbPasswordLogin.Name = "txbPasswordLogin";
+            this.txbPasswordLogin.Size = new System.Drawing.Size(240, 23);
+            this.txbPasswordLogin.TabIndex = 2;
             // 
             // Frm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txbPasswordLogin);
             this.Controls.Add(this.lblPasswordLogin);
             this.Controls.Add(this.txbEmailLogin);
             this.Controls.Add(this.lblEmailLogin);
@@ -101,6 +101,6 @@
         private Label lblEmailLogin;
         private TextBox txbEmailLogin;
         private Label lblPasswordLogin;
-        private TextBox textBox1;
+        private TextBox txbPasswordLogin;
     }
 }
