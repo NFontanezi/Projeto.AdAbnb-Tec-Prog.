@@ -30,6 +30,7 @@
         {
             this.btnRegistration = new System.Windows.Forms.Button();
             this.btnSign = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnRegistration
@@ -40,6 +41,7 @@
             this.btnRegistration.TabIndex = 0;
             this.btnRegistration.Text = "Cadastre-se!";
             this.btnRegistration.UseVisualStyleBackColor = true;
+            this.btnRegistration.Click += new System.EventHandler(this.btnRegistration_Click_1);
             // 
             // btnSign
             // 
@@ -49,12 +51,24 @@
             this.btnSign.TabIndex = 0;
             this.btnSign.Text = "Login!";
             this.btnSign.UseVisualStyleBackColor = true;
+            this.btnSign.Click += new System.EventHandler(this.btnSign_Click_1);
+            // 
+            // btnBack
+            // 
+            this.btnBack.Location = new System.Drawing.Point(274, 351);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(205, 39);
+            this.btnBack.TabIndex = 1;
+            this.btnBack.Text = "Voltar ao Menu Principal";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // FormSign_adv
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnSign);
             this.Controls.Add(this.btnRegistration);
             this.Name = "FormSign_adv";
@@ -67,5 +81,6 @@
 
         private Button btnRegistration;
         private Button btnSign;
+        private Button btnBack;
     }
 }

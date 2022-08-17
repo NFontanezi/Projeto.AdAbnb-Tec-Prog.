@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace AdAbnb.Presentation
 {
-    public partial class Frm : Form
+    public partial class frmLogin : Form
     {
-        public Frm()
+        public frmLogin()
         {
             InitializeComponent();
         }
@@ -20,6 +20,11 @@ namespace AdAbnb.Presentation
         private void Frm_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

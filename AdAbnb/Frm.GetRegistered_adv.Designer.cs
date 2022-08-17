@@ -46,6 +46,12 @@
             this.txbPassword = new System.Windows.Forms.TextBox();
             this.btnRegister = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
+            this.lblBank = new System.Windows.Forms.Label();
+            this.txbBank = new System.Windows.Forms.TextBox();
+            this.lblBankAg = new System.Windows.Forms.Label();
+            this.txbAg = new System.Windows.Forms.TextBox();
+            this.lblBankAcc = new System.Windows.Forms.Label();
+            this.txbBankAcc = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lblNewAcc
@@ -198,6 +204,7 @@
             this.btnRegister.TabIndex = 4;
             this.btnRegister.Text = "Cadastrar";
             this.btnRegister.UseVisualStyleBackColor = true;
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
             // btnBack
             // 
@@ -207,6 +214,58 @@
             this.btnBack.TabIndex = 4;
             this.btnBack.Text = "Voltar";
             this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
+            // lblBank
+            // 
+            this.lblBank.AutoSize = true;
+            this.lblBank.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblBank.Location = new System.Drawing.Point(588, 96);
+            this.lblBank.Name = "lblBank";
+            this.lblBank.Size = new System.Drawing.Size(38, 13);
+            this.lblBank.TabIndex = 1;
+            this.lblBank.Text = "Banco";
+            // 
+            // txbBank
+            // 
+            this.txbBank.Location = new System.Drawing.Point(585, 116);
+            this.txbBank.Name = "txbBank";
+            this.txbBank.Size = new System.Drawing.Size(184, 23);
+            this.txbBank.TabIndex = 2;
+            // 
+            // lblBankAg
+            // 
+            this.lblBankAg.AutoSize = true;
+            this.lblBankAg.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblBankAg.Location = new System.Drawing.Point(588, 157);
+            this.lblBankAg.Name = "lblBankAg";
+            this.lblBankAg.Size = new System.Drawing.Size(46, 13);
+            this.lblBankAg.TabIndex = 1;
+            this.lblBankAg.Text = "Agencia";
+            // 
+            // txbAg
+            // 
+            this.txbAg.Location = new System.Drawing.Point(585, 177);
+            this.txbAg.Name = "txbAg";
+            this.txbAg.Size = new System.Drawing.Size(184, 23);
+            this.txbAg.TabIndex = 2;
+            // 
+            // lblBankAcc
+            // 
+            this.lblBankAcc.AutoSize = true;
+            this.lblBankAcc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblBankAcc.Location = new System.Drawing.Point(588, 226);
+            this.lblBankAcc.Name = "lblBankAcc";
+            this.lblBankAcc.Size = new System.Drawing.Size(80, 13);
+            this.lblBankAcc.TabIndex = 1;
+            this.lblBankAcc.Text = "Conta Bancaria";
+            // 
+            // txbBankAcc
+            // 
+            this.txbBankAcc.Location = new System.Drawing.Point(585, 246);
+            this.txbBankAcc.Name = "txbBankAcc";
+            this.txbBankAcc.Size = new System.Drawing.Size(184, 23);
+            this.txbBankAcc.TabIndex = 2;
             // 
             // frmGetRegistered
             // 
@@ -217,6 +276,12 @@
             this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.cbxMale);
             this.Controls.Add(this.cbxFemale);
+            this.Controls.Add(this.txbBankAcc);
+            this.Controls.Add(this.lblBankAcc);
+            this.Controls.Add(this.txbAg);
+            this.Controls.Add(this.lblBankAg);
+            this.Controls.Add(this.txbBank);
+            this.Controls.Add(this.lblBank);
             this.Controls.Add(this.txbEmail);
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.txbPhone);
@@ -258,5 +323,11 @@
         private TextBox txbPassword;
         private Button btnRegister;
         private Button btnBack;
+        private Label lblBank;
+        private TextBox txbBank;
+        private Label lblBankAg;
+        private TextBox txbAg;
+        private Label lblBankAcc;
+        private TextBox txbBankAcc;
     }
 }

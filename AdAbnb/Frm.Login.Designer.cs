@@ -1,6 +1,6 @@
 ﻿namespace AdAbnb.Presentation
 {
-    partial class Frm
+    partial class frmLogin
     {
         /// <summary>
         /// Required designer variable.
@@ -33,6 +33,8 @@
             this.txbEmailLogin = new System.Windows.Forms.TextBox();
             this.lblPasswordLogin = new System.Windows.Forms.Label();
             this.txbPasswordLogin = new System.Windows.Forms.TextBox();
+            this.btnLogin = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblLoginTitle
@@ -77,17 +79,38 @@
             this.txbPasswordLogin.Size = new System.Drawing.Size(240, 23);
             this.txbPasswordLogin.TabIndex = 2;
             // 
-            // Frm
+            // btnLogin
+            // 
+            this.btnLogin.Location = new System.Drawing.Point(38, 290);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(135, 50);
+            this.btnLogin.TabIndex = 3;
+            this.btnLogin.Text = "Entrar";
+            this.btnLogin.UseVisualStyleBackColor = true;
+            // 
+            // btnBack
+            // 
+            this.btnBack.Location = new System.Drawing.Point(179, 290);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(135, 50);
+            this.btnBack.TabIndex = 3;
+            this.btnBack.Text = "Voltar";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
+            // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnBack);
+            this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txbPasswordLogin);
             this.Controls.Add(this.lblPasswordLogin);
             this.Controls.Add(this.txbEmailLogin);
             this.Controls.Add(this.lblEmailLogin);
             this.Controls.Add(this.lblLoginTitle);
-            this.Name = "Frm";
+            this.Name = "frmLogin";
             this.Text = "Frm";
             this.Load += new System.EventHandler(this.Frm_Load);
             this.ResumeLayout(false);
@@ -102,5 +125,7 @@
         private TextBox txbEmailLogin;
         private Label lblPasswordLogin;
         private TextBox txbPasswordLogin;
+        private Button btnLogin;
+        private Button btnBack;
     }
 }

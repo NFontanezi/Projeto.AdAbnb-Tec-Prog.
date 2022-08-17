@@ -97,6 +97,7 @@
             this.btnAdvert.TabIndex = 1;
             this.btnAdvert.Text = "Advertise";
             this.btnAdvert.UseVisualStyleBackColor = true;
+            this.btnAdvert.Click += new System.EventHandler(this.btnAdvert_Click);
             // 
             // btnRent
             // 
@@ -130,6 +131,7 @@
             this.btnAdvert2.TabIndex = 3;
             this.btnAdvert2.Text = "Click aqui para anunciar!";
             this.btnAdvert2.UseVisualStyleBackColor = true;
+            this.btnAdvert2.Click += new System.EventHandler(this.btnAdvert2_Click);
             // 
             // btnRent2
             // 

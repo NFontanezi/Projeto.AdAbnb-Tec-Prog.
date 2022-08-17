@@ -1,3 +1,5 @@
+using AdAbnb.Presentation;
+
 namespace AdAbnb
 {
     public partial class frmMain : Form
@@ -12,5 +14,16 @@ namespace AdAbnb
 
         }
 
+        private void btnAdvert_Click(object sender, EventArgs e)
+        {
+            FormSign_adv frm = new();
+            frm.Show();
+        }
+
+        private void btnAdvert2_Click(object sender, EventArgs e)
+        {
+            FormSign_adv frm = new();
+            frm.Show();
+        }
     }
 }

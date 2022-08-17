@@ -25,8 +25,8 @@ namespace AdAbnb.Domain
         public List<Property> PropertyList { get; set; }
 
         public Owner(Registration registration, string cPF, string name,
-            string email, string phone, DateTime dateBirth, char gender,
-            string bank, string bankAgency, string bankAccount) : base(registration, cPF, name, email, phone, dateBirth, gender)
+           string phone, DateTime dateBirth, char gender,
+            string bank, string bankAgency, string bankAccount) : base(registration, cPF, name, phone, dateBirth, gender)
         {
             ID_owner = this.ID_owner;
             Bank = bank;
