@@ -52,6 +52,7 @@
             this.txbAg = new System.Windows.Forms.TextBox();
             this.lblBankAcc = new System.Windows.Forms.Label();
             this.txbBankAcc = new System.Windows.Forms.TextBox();
+            this.lblMsg = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblNewAcc
@@ -267,11 +268,20 @@
             this.txbBankAcc.Size = new System.Drawing.Size(184, 23);
             this.txbBankAcc.TabIndex = 2;
             // 
+            // lblMsg
+            // 
+            this.lblMsg.AutoSize = true;
+            this.lblMsg.Location = new System.Drawing.Point(647, 366);
+            this.lblMsg.Name = "lblMsg";
+            this.lblMsg.Size = new System.Drawing.Size(0, 15);
+            this.lblMsg.TabIndex = 5;
+            // 
             // frmGetRegistered
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblMsg);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.cbxMale);
@@ -329,5 +339,6 @@
         private TextBox txbAg;
         private Label lblBankAcc;
         private TextBox txbBankAcc;
+        private Label lblMsg;
     }
 }

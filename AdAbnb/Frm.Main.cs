@@ -18,12 +18,14 @@ namespace AdAbnb
         {
             FormSign_adv frm = new();
             frm.Show();
+            //this.Close();
         }
 
         private void btnAdvert2_Click(object sender, EventArgs e)
         {
             FormSign_adv frm = new();
             frm.Show();
+           //this.Close();
         }
 
         private void frmMain_Load(object sender, EventArgs e)
