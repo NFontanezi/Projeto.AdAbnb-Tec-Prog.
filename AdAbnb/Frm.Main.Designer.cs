@@ -38,8 +38,6 @@
             this.quitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnAdvert = new System.Windows.Forms.Button();
             this.btnRent = new System.Windows.Forms.Button();
-            this.txbToAdvert = new System.Windows.Forms.TextBox();
-            this.txbToRent = new System.Windows.Forms.TextBox();
             this.btnAdvert2 = new System.Windows.Forms.Button();
             this.btnRent2 = new System.Windows.Forms.Button();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
@@ -131,23 +129,6 @@
             this.btnRent.UseVisualStyleBackColor = false;
             this.btnRent.Click += new System.EventHandler(this.btnRent_Click);
             // 
-            // txbToAdvert
-            // 
-            this.txbToAdvert.Location = new System.Drawing.Point(80, 471);
-            this.txbToAdvert.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txbToAdvert.Name = "txbToAdvert";
-            this.txbToAdvert.Size = new System.Drawing.Size(361, 27);
-            this.txbToAdvert.TabIndex = 2;
-            this.txbToAdvert.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txbToRent
-            // 
-            this.txbToRent.Location = new System.Drawing.Point(478, 471);
-            this.txbToRent.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txbToRent.Name = "txbToRent";
-            this.txbToRent.Size = new System.Drawing.Size(361, 27);
-            this.txbToRent.TabIndex = 4;
-            // 
             // btnAdvert2
             // 
             this.btnAdvert2.BackColor = System.Drawing.Color.DarkSeaGreen;
@@ -201,8 +182,6 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnRent2);
             this.Controls.Add(this.btnAdvert2);
-            this.Controls.Add(this.txbToRent);
-            this.Controls.Add(this.txbToAdvert);
             this.Controls.Add(this.btnRent);
             this.Controls.Add(this.btnAdvert);
             this.Controls.Add(this.mspMain);
@@ -230,8 +209,6 @@
         private ToolStripMenuItem quitToolStripMenuItem;
         private Button btnAdvert;
         private Button btnRent;
-        private TextBox txbToAdvert;
-        private TextBox txbToRent;
         private Button btnAdvert2;
         private Button btnRent2;
         private ImageList imageList1;
