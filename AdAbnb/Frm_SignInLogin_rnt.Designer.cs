@@ -75,6 +75,7 @@
             this.btn_Search_rnt.TabIndex = 2;
             this.btn_Search_rnt.Text = "Procurar imóveis";
             this.btn_Search_rnt.UseVisualStyleBackColor = false;
+            this.btn_Search_rnt.Click += new System.EventHandler(this.btn_Search_rnt_Click);
             // 
             // btn_BackMenu_rnt
             // 

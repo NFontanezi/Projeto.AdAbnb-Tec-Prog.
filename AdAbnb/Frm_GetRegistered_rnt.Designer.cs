@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.btnBack = new System.Windows.Forms.Button();
-            this.btnRegister = new System.Windows.Forms.Button();
+            this.btnRegister_rnt = new System.Windows.Forms.Button();
             this.cbxMale = new System.Windows.Forms.CheckBox();
             this.cbxFemale = new System.Windows.Forms.CheckBox();
             this.txbEmail = new System.Windows.Forms.TextBox();
@@ -58,15 +58,16 @@
             this.btnBack.Text = "Voltar";
             this.btnBack.UseVisualStyleBackColor = true;
             // 
-            // btnRegister
+            // btnRegister_rnt
             // 
-            this.btnRegister.Location = new System.Drawing.Point(77, 466);
-            this.btnRegister.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(272, 61);
-            this.btnRegister.TabIndex = 21;
-            this.btnRegister.Text = "Cadastrar";
-            this.btnRegister.UseVisualStyleBackColor = true;
+            this.btnRegister_rnt.Location = new System.Drawing.Point(77, 466);
+            this.btnRegister_rnt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnRegister_rnt.Name = "btnRegister_rnt";
+            this.btnRegister_rnt.Size = new System.Drawing.Size(272, 61);
+            this.btnRegister_rnt.TabIndex = 21;
+            this.btnRegister_rnt.Text = "Cadastrar";
+            this.btnRegister_rnt.UseVisualStyleBackColor = true;
+            this.btnRegister_rnt.Click += new System.EventHandler(this.btnRegister_rnt_Click);
             // 
             // cbxMale
             // 
@@ -89,6 +90,7 @@
             this.cbxFemale.TabIndex = 19;
             this.cbxFemale.Text = "Feminino";
             this.cbxFemale.UseVisualStyleBackColor = true;
+            this.cbxFemale.Click += new System.EventHandler(this.cbxFemale_Click);
             // 
             // txbEmail
             // 
@@ -224,7 +226,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(914, 600);
             this.Controls.Add(this.btnBack);
-            this.Controls.Add(this.btnRegister);
+            this.Controls.Add(this.btnRegister_rnt);
             this.Controls.Add(this.cbxMale);
             this.Controls.Add(this.cbxFemale);
             this.Controls.Add(this.txbEmail);
@@ -243,6 +245,7 @@
             this.Controls.Add(this.lblNewAcc);
             this.Name = "Frm_GetRegistered_rnt";
             this.Text = "Frm_GetRegistered_rnt";
+            this.Load += new System.EventHandler(this.Frm_GetRegistered_rnt_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -251,7 +254,7 @@
         #endregion
 
         private Button btnBack;
-        private Button btnRegister;
+        private Button btnRegister_rnt;
         private CheckBox cbxMale;
         private CheckBox cbxFemale;
         private TextBox txbEmail;

@@ -19,16 +19,24 @@ namespace AdAbnb.Presentation
 
         private void btn_Login_rnt_Click(object sender, EventArgs e)
         {
-            frmLogin form_Login = new frmLogin();
+            frmLogin form_Login = new();
             this.Hide();
             form_Login.Show();
         }
 
         private void btn_SignIn_rnt_Click(object sender, EventArgs e)
         {
-            Frm_GetRegistered_rnt form_GetRegistered = new Frm_GetRegistered_rnt();
+            Frm_GetRegistered_rnt form_GetRegistered = new();
             this.Hide();
             form_GetRegistered.Show();
+        }
+
+        private void btn_Search_rnt_Click(object sender, EventArgs e)
+        {
+            Frm_Search_rnt form_Search = new();
+            this.Hide();
+            form_Search.Show();
+
         }
     }
 }
