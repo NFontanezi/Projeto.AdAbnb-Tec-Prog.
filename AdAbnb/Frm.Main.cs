@@ -25,5 +25,25 @@ namespace AdAbnb
             FormSign_adv frm = new();
             frm.Show();
         }
+
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnRent_Click(object sender, EventArgs e)
+        {
+            Frm_SignInLogin_rnt signInOrLogin = new Frm_SignInLogin_rnt();
+            this.Hide();
+            signInOrLogin.Show();
+
+        }
+
+
     }
 }
