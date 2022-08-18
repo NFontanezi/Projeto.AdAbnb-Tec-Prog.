@@ -35,7 +35,10 @@ namespace AdAbnb.Presentation
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            Close();
+           
+            frmMain frm = new();
+            frm.Show();
+            this.Close();
         }
     }
 }

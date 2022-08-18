@@ -22,7 +22,7 @@ namespace AdAbnb.Domain
         public string BankAgency { get; set; }
         public string BankAccount { get; set; }
 
-        public List<Property> PropertyList { get; set; }
+        public List<Property> PropertyList { get; set; } = new();
 
         public Owner(Registration registration, string cPF, string name,
            string phone, DateTime dateBirth, char gender,
@@ -32,6 +32,11 @@ namespace AdAbnb.Domain
             Bank = bank;
             BankAgency = bankAgency;
             BankAccount = bankAccount;
+        }
+
+        public void AddProperty(Property prop)
+        {
+            PropertyList.Add(prop);
         }
 
 
