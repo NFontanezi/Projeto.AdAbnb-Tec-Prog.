@@ -77,7 +77,6 @@
             this.advertisimentToolStripMenuItem.Name = "advertisimentToolStripMenuItem";
             this.advertisimentToolStripMenuItem.Size = new System.Drawing.Size(164, 26);
             this.advertisimentToolStripMenuItem.Text = "To advertise";
-            this.advertisimentToolStripMenuItem.Click += new System.EventHandler(this.advertisimentToolStripMenuItem_Click);
             // 
             // advertisimentToolStripMenuItem1
             // 
@@ -103,10 +102,11 @@
             // 
             // btnAdvert
             // 
+            this.btnAdvert.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnAdvert.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.btnAdvert.Font = new System.Drawing.Font("Franklin Gothic Demi Cond", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnAdvert.ForeColor = System.Drawing.Color.Cornsilk;
-            this.btnAdvert.Location = new System.Drawing.Point(80, 195);
+            this.btnAdvert.Location = new System.Drawing.Point(80, 248);
             this.btnAdvert.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAdvert.Name = "btnAdvert";
             this.btnAdvert.Size = new System.Drawing.Size(361, 213);
@@ -117,10 +117,11 @@
             // 
             // btnRent
             // 
+            this.btnRent.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnRent.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.btnRent.Font = new System.Drawing.Font("Franklin Gothic Demi Cond", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnRent.ForeColor = System.Drawing.Color.Cornsilk;
-            this.btnRent.Location = new System.Drawing.Point(478, 195);
+            this.btnRent.Location = new System.Drawing.Point(478, 248);
             this.btnRent.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnRent.Name = "btnRent";
             this.btnRent.Size = new System.Drawing.Size(361, 213);
@@ -131,10 +132,11 @@
             // 
             // btnAdvert2
             // 
+            this.btnAdvert2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnAdvert2.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.btnAdvert2.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnAdvert2.ForeColor = System.Drawing.Color.Cornsilk;
-            this.btnAdvert2.Location = new System.Drawing.Point(79, 412);
+            this.btnAdvert2.Location = new System.Drawing.Point(79, 465);
             this.btnAdvert2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAdvert2.Name = "btnAdvert2";
             this.btnAdvert2.Size = new System.Drawing.Size(362, 33);
@@ -145,16 +147,18 @@
             // 
             // btnRent2
             // 
+            this.btnRent2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnRent2.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.btnRent2.Font = new System.Drawing.Font("Franklin Gothic Demi Cond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnRent2.ForeColor = System.Drawing.Color.Cornsilk;
-            this.btnRent2.Location = new System.Drawing.Point(478, 416);
+            this.btnRent2.Location = new System.Drawing.Point(478, 469);
             this.btnRent2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnRent2.Name = "btnRent2";
             this.btnRent2.Size = new System.Drawing.Size(361, 33);
             this.btnRent2.TabIndex = 3;
             this.btnRent2.Text = "Clique aqui para encontrar um lugar!";
             this.btnRent2.UseVisualStyleBackColor = false;
+            this.btnRent2.Click += new System.EventHandler(this.btnRent2_Click);
             // 
             // imageList1
             // 
@@ -164,8 +168,9 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(80, 41);
+            this.pictureBox1.Location = new System.Drawing.Point(79, 62);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(375, 147);
             this.pictureBox1.TabIndex = 5;
@@ -176,7 +181,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.Cornsilk;
             this.ClientSize = new System.Drawing.Size(914, 600);
             this.Controls.Add(this.pictureBox1);
@@ -189,7 +193,9 @@
             this.MainMenuStrip = this.mspMain;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdAbnb";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.mspMain.ResumeLayout(false);
             this.mspMain.PerformLayout();

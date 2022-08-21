@@ -35,9 +35,10 @@
             // 
             // btnRegistration
             // 
-            this.btnRegistration.Location = new System.Drawing.Point(80, 88);
+            this.btnRegistration.Location = new System.Drawing.Point(91, 117);
+            this.btnRegistration.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnRegistration.Name = "btnRegistration";
-            this.btnRegistration.Size = new System.Drawing.Size(277, 198);
+            this.btnRegistration.Size = new System.Drawing.Size(317, 264);
             this.btnRegistration.TabIndex = 0;
             this.btnRegistration.Text = "Cadastre-se!";
             this.btnRegistration.UseVisualStyleBackColor = true;
@@ -45,9 +46,10 @@
             // 
             // btnSign
             // 
-            this.btnSign.Location = new System.Drawing.Point(398, 88);
+            this.btnSign.Location = new System.Drawing.Point(455, 117);
+            this.btnSign.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSign.Name = "btnSign";
-            this.btnSign.Size = new System.Drawing.Size(277, 198);
+            this.btnSign.Size = new System.Drawing.Size(317, 264);
             this.btnSign.TabIndex = 0;
             this.btnSign.Text = "Login!";
             this.btnSign.UseVisualStyleBackColor = true;
@@ -55,9 +57,10 @@
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(274, 351);
+            this.btnBack.Location = new System.Drawing.Point(313, 468);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(205, 39);
+            this.btnBack.Size = new System.Drawing.Size(234, 52);
             this.btnBack.TabIndex = 1;
             this.btnBack.Text = "Voltar ao Menu Principal";
             this.btnBack.UseVisualStyleBackColor = true;
@@ -65,14 +68,16 @@
             // 
             // FormSign_adv
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(914, 600);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnSign);
             this.Controls.Add(this.btnRegistration);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FormSign_adv";
             this.Text = "FormSign_adv";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
 
         }

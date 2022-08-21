@@ -10,19 +10,18 @@ using System.Windows.Forms;
 
 namespace AdAbnb.Presentation
 {
-    public partial class Frm_Search_rnt : Form
+    public partial class Frm_ClientArea : Form
     {
-        public Frm_Search_rnt()
+        public Frm_ClientArea()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btn_Search_Click(object sender, EventArgs e)
         {
-            pictureBox1.Image = Image.FromFile(@"C:\Users\natal\Downloads\logoAda-depositphotos-bgremover.png");
-
-
-
+            Frm_Search_rnt form_Search = new();
+            this.Hide();
+            form_Search.Show();
         }
     }
 }

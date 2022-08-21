@@ -34,9 +34,10 @@
             // 
             // btnNewAdv
             // 
-            this.btnNewAdv.Location = new System.Drawing.Point(88, 123);
+            this.btnNewAdv.Location = new System.Drawing.Point(101, 164);
+            this.btnNewAdv.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnNewAdv.Name = "btnNewAdv";
-            this.btnNewAdv.Size = new System.Drawing.Size(260, 130);
+            this.btnNewAdv.Size = new System.Drawing.Size(297, 173);
             this.btnNewAdv.TabIndex = 0;
             this.btnNewAdv.Text = "Criar Novo Anuncio";
             this.btnNewAdv.UseVisualStyleBackColor = true;
@@ -44,9 +45,10 @@
             // 
             // btnAdvOn
             // 
-            this.btnAdvOn.Location = new System.Drawing.Point(410, 123);
+            this.btnAdvOn.Location = new System.Drawing.Point(469, 164);
+            this.btnAdvOn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAdvOn.Name = "btnAdvOn";
-            this.btnAdvOn.Size = new System.Drawing.Size(260, 130);
+            this.btnAdvOn.Size = new System.Drawing.Size(297, 173);
             this.btnAdvOn.TabIndex = 0;
             this.btnAdvOn.Text = "Ver Anuncios ativos";
             this.btnAdvOn.UseVisualStyleBackColor = true;
@@ -54,13 +56,15 @@
             // 
             // frmAdvArea
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(914, 600);
             this.Controls.Add(this.btnAdvOn);
             this.Controls.Add(this.btnNewAdv);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmAdvArea";
             this.Text = "Area Anuncio";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
 
         }

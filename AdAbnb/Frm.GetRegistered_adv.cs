@@ -22,7 +22,9 @@ namespace AdAbnb.Presentation
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            Close();
+            FormSign_adv frm = new();
+            this.Hide();
+            frm.Show();
         }
 
         private void btnRegister_Click(object sender, EventArgs e)

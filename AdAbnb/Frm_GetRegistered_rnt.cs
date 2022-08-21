@@ -48,12 +48,18 @@ namespace AdAbnb.Presentation
 
             Person user = new Person(userRegistration, txbCPF.Text, txbName.Text, txbPhone.Text, Birth, Gender);
 
-            Frm_Search_rnt form_Search = new();
+            Frm_ClientArea clientArea = new();
             this.Hide();
-            form_Search.Show();
+            clientArea.Show();
+
 
         }
 
-
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            Frm_SignInLogin_rnt form = new();
+            this.Hide();
+            form.Show();
+        }
     }
 }

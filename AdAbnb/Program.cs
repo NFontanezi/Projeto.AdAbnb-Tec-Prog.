@@ -13,6 +13,7 @@ namespace AdAbnb
             ApplicationConfiguration.Initialize();
             Application.Run(new frmMain());
 
+
         }
     }
 }

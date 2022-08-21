@@ -57,18 +57,20 @@
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(313, 370);
+            this.btnBack.Location = new System.Drawing.Point(358, 493);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(238, 46);
+            this.btnBack.Size = new System.Drawing.Size(272, 61);
             this.btnBack.TabIndex = 24;
             this.btnBack.Text = "Voltar";
             this.btnBack.UseVisualStyleBackColor = true;
             // 
             // btnRegister
             // 
-            this.btnRegister.Location = new System.Drawing.Point(28, 370);
+            this.btnRegister.Location = new System.Drawing.Point(32, 493);
+            this.btnRegister.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(238, 46);
+            this.btnRegister.Size = new System.Drawing.Size(272, 61);
             this.btnRegister.TabIndex = 23;
             this.btnRegister.Text = "Cadastrar";
             this.btnRegister.UseVisualStyleBackColor = true;
@@ -77,44 +79,47 @@
             // cbxAtivo
             // 
             this.cbxAtivo.AutoSize = true;
-            this.cbxAtivo.Location = new System.Drawing.Point(343, 322);
+            this.cbxAtivo.Location = new System.Drawing.Point(392, 429);
+            this.cbxAtivo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cbxAtivo.Name = "cbxAtivo";
-            this.cbxAtivo.Size = new System.Drawing.Size(54, 19);
+            this.cbxAtivo.Size = new System.Drawing.Size(66, 24);
             this.cbxAtivo.TabIndex = 21;
             this.cbxAtivo.Text = "Ativo";
             this.cbxAtivo.UseVisualStyleBackColor = true;
             // 
             // txbState
             // 
-            this.txbState.Location = new System.Drawing.Point(389, 120);
+            this.txbState.Location = new System.Drawing.Point(445, 160);
+            this.txbState.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txbState.Name = "txbState";
-            this.txbState.Size = new System.Drawing.Size(43, 23);
+            this.txbState.Size = new System.Drawing.Size(49, 27);
             this.txbState.TabIndex = 20;
             // 
             // lblState
             // 
             this.lblState.AutoSize = true;
             this.lblState.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblState.Location = new System.Drawing.Point(392, 100);
+            this.lblState.Location = new System.Drawing.Point(448, 133);
             this.lblState.Name = "lblState";
-            this.lblState.Size = new System.Drawing.Size(40, 13);
+            this.lblState.Size = new System.Drawing.Size(52, 17);
             this.lblState.TabIndex = 11;
             this.lblState.Text = "Estado";
             // 
             // txbCity
             // 
-            this.txbCity.Location = new System.Drawing.Point(211, 120);
+            this.txbCity.Location = new System.Drawing.Point(241, 160);
+            this.txbCity.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txbCity.Name = "txbCity";
-            this.txbCity.Size = new System.Drawing.Size(157, 23);
+            this.txbCity.Size = new System.Drawing.Size(179, 27);
             this.txbCity.TabIndex = 14;
             // 
             // lblCity
             // 
             this.lblCity.AutoSize = true;
             this.lblCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblCity.Location = new System.Drawing.Point(214, 100);
+            this.lblCity.Location = new System.Drawing.Point(245, 133);
             this.lblCity.Name = "lblCity";
-            this.lblCity.Size = new System.Drawing.Size(40, 13);
+            this.lblCity.Size = new System.Drawing.Size(52, 17);
             this.lblCity.TabIndex = 12;
             this.lblCity.Text = "Cidade";
             // 
@@ -122,43 +127,45 @@
             // 
             this.lblActive.AutoSize = true;
             this.lblActive.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblActive.Location = new System.Drawing.Point(340, 306);
+            this.lblActive.Location = new System.Drawing.Point(389, 408);
             this.lblActive.Name = "lblActive";
-            this.lblActive.Size = new System.Drawing.Size(79, 13);
+            this.lblActive.Size = new System.Drawing.Size(103, 17);
             this.lblActive.TabIndex = 8;
             this.lblActive.Text = "Anuncio Status";
             // 
             // txbFootage
             // 
-            this.txbFootage.Location = new System.Drawing.Point(451, 120);
+            this.txbFootage.Location = new System.Drawing.Point(515, 160);
+            this.txbFootage.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txbFootage.Name = "txbFootage";
-            this.txbFootage.Size = new System.Drawing.Size(68, 23);
+            this.txbFootage.Size = new System.Drawing.Size(77, 27);
             this.txbFootage.TabIndex = 18;
             // 
             // lblFootage
             // 
             this.lblFootage.AutoSize = true;
             this.lblFootage.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblFootage.Location = new System.Drawing.Point(454, 100);
+            this.lblFootage.Location = new System.Drawing.Point(519, 133);
             this.lblFootage.Name = "lblFootage";
-            this.lblFootage.Size = new System.Drawing.Size(54, 13);
+            this.lblFootage.Size = new System.Drawing.Size(71, 17);
             this.lblFootage.TabIndex = 6;
             this.lblFootage.Text = "Metragem";
             // 
             // txbDistrict
             // 
-            this.txbDistrict.Location = new System.Drawing.Point(28, 120);
+            this.txbDistrict.Location = new System.Drawing.Point(32, 160);
+            this.txbDistrict.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txbDistrict.Name = "txbDistrict";
-            this.txbDistrict.Size = new System.Drawing.Size(161, 23);
+            this.txbDistrict.Size = new System.Drawing.Size(183, 27);
             this.txbDistrict.TabIndex = 19;
             // 
             // lblDistrict
             // 
             this.lblDistrict.AutoSize = true;
             this.lblDistrict.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblDistrict.Location = new System.Drawing.Point(31, 100);
+            this.lblDistrict.Location = new System.Drawing.Point(35, 133);
             this.lblDistrict.Name = "lblDistrict";
-            this.lblDistrict.Size = new System.Drawing.Size(34, 13);
+            this.lblDistrict.Size = new System.Drawing.Size(46, 17);
             this.lblDistrict.TabIndex = 10;
             this.lblDistrict.Text = "Bairro";
             // 
@@ -166,18 +173,18 @@
             // 
             this.lblNewAdv.AutoSize = true;
             this.lblNewAdv.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblNewAdv.Location = new System.Drawing.Point(31, 34);
+            this.lblNewAdv.Location = new System.Drawing.Point(35, 45);
             this.lblNewAdv.Name = "lblNewAdv";
-            this.lblNewAdv.Size = new System.Drawing.Size(214, 30);
+            this.lblNewAdv.Size = new System.Drawing.Size(273, 37);
             this.lblNewAdv.TabIndex = 5;
             this.lblNewAdv.Text = "Novo Anuncio Imovel";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(521, 127);
+            this.label1.Location = new System.Drawing.Point(595, 169);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(24, 15);
+            this.label1.Size = new System.Drawing.Size(30, 20);
             this.label1.TabIndex = 25;
             this.label1.Text = "m2";
             // 
@@ -185,25 +192,26 @@
             // 
             this.lblDaily.AutoSize = true;
             this.lblDaily.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblDaily.Location = new System.Drawing.Point(343, 198);
+            this.lblDaily.Location = new System.Drawing.Point(392, 264);
             this.lblDaily.Name = "lblDaily";
-            this.lblDaily.Size = new System.Drawing.Size(61, 13);
+            this.lblDaily.Size = new System.Drawing.Size(82, 17);
             this.lblDaily.TabIndex = 11;
             this.lblDaily.Text = "Valor Diaria";
             // 
             // txbDaily
             // 
-            this.txbDaily.Location = new System.Drawing.Point(340, 219);
+            this.txbDaily.Location = new System.Drawing.Point(389, 292);
+            this.txbDaily.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txbDaily.Name = "txbDaily";
-            this.txbDaily.Size = new System.Drawing.Size(64, 23);
+            this.txbDaily.Size = new System.Drawing.Size(73, 27);
             this.txbDaily.TabIndex = 20;
             // 
             // lblReais
             // 
             this.lblReais.AutoSize = true;
-            this.lblReais.Location = new System.Drawing.Point(317, 222);
+            this.lblReais.Location = new System.Drawing.Point(362, 296);
             this.lblReais.Name = "lblReais";
-            this.lblReais.Size = new System.Drawing.Size(20, 15);
+            this.lblReais.Size = new System.Drawing.Size(26, 20);
             this.lblReais.TabIndex = 25;
             this.lblReais.Text = "R$";
             // 
@@ -211,18 +219,19 @@
             // 
             this.lblComod.AutoSize = true;
             this.lblComod.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblComod.Location = new System.Drawing.Point(31, 181);
+            this.lblComod.Location = new System.Drawing.Point(35, 241);
             this.lblComod.Name = "lblComod";
-            this.lblComod.Size = new System.Drawing.Size(128, 13);
+            this.lblComod.Size = new System.Drawing.Size(170, 17);
             this.lblComod.TabIndex = 8;
             this.lblComod.Text = "Comodidades Disponiveis";
             // 
             // cbxPool
             // 
             this.cbxPool.AutoSize = true;
-            this.cbxPool.Location = new System.Drawing.Point(34, 234);
+            this.cbxPool.Location = new System.Drawing.Point(39, 312);
+            this.cbxPool.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cbxPool.Name = "cbxPool";
-            this.cbxPool.Size = new System.Drawing.Size(63, 19);
+            this.cbxPool.Size = new System.Drawing.Size(76, 24);
             this.cbxPool.TabIndex = 26;
             this.cbxPool.Text = "Piscina";
             this.cbxPool.UseVisualStyleBackColor = true;
@@ -230,9 +239,10 @@
             // cbxSea
             // 
             this.cbxSea.AutoSize = true;
-            this.cbxSea.Location = new System.Drawing.Point(34, 258);
+            this.cbxSea.Location = new System.Drawing.Point(39, 344);
+            this.cbxSea.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cbxSea.Name = "cbxSea";
-            this.cbxSea.Size = new System.Drawing.Size(93, 19);
+            this.cbxSea.Size = new System.Drawing.Size(114, 24);
             this.cbxSea.TabIndex = 26;
             this.cbxSea.Text = "Próx. ao mar";
             this.cbxSea.UseVisualStyleBackColor = true;
@@ -240,9 +250,10 @@
             // cbxPet
             // 
             this.cbxPet.AutoSize = true;
-            this.cbxPet.Location = new System.Drawing.Point(34, 282);
+            this.cbxPet.Location = new System.Drawing.Point(39, 376);
+            this.cbxPet.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cbxPet.Name = "cbxPet";
-            this.cbxPet.Size = new System.Drawing.Size(85, 19);
+            this.cbxPet.Size = new System.Drawing.Size(103, 24);
             this.cbxPet.TabIndex = 26;
             this.cbxPet.Text = "PetFriendly";
             this.cbxPet.UseVisualStyleBackColor = true;
@@ -250,9 +261,10 @@
             // cbxPark
             // 
             this.cbxPark.AutoSize = true;
-            this.cbxPark.Location = new System.Drawing.Point(34, 306);
+            this.cbxPark.Location = new System.Drawing.Point(39, 408);
+            this.cbxPark.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cbxPark.Name = "cbxPark";
-            this.cbxPark.Size = new System.Drawing.Size(139, 19);
+            this.cbxPark.Size = new System.Drawing.Size(174, 24);
             this.cbxPark.TabIndex = 26;
             this.cbxPark.Text = "Vaga estacionamento";
             this.cbxPark.UseVisualStyleBackColor = true;
@@ -260,9 +272,10 @@
             // cbxAC
             // 
             this.cbxAC.AutoSize = true;
-            this.cbxAC.Location = new System.Drawing.Point(31, 211);
+            this.cbxAC.Location = new System.Drawing.Point(35, 281);
+            this.cbxAC.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cbxAC.Name = "cbxAC";
-            this.cbxAC.Size = new System.Drawing.Size(116, 19);
+            this.cbxAC.Size = new System.Drawing.Size(143, 24);
             this.cbxAC.TabIndex = 26;
             this.cbxAC.Text = "Ar Condicionado";
             this.cbxAC.UseVisualStyleBackColor = true;
@@ -270,9 +283,10 @@
             // cbxBus
             // 
             this.cbxBus.AutoSize = true;
-            this.cbxBus.Location = new System.Drawing.Point(34, 331);
+            this.cbxBus.Location = new System.Drawing.Point(39, 441);
+            this.cbxBus.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cbxBus.Name = "cbxBus";
-            this.cbxBus.Size = new System.Drawing.Size(135, 19);
+            this.cbxBus.Size = new System.Drawing.Size(165, 24);
             this.cbxBus.TabIndex = 26;
             this.cbxBus.Text = "Próx. transp. público";
             this.cbxBus.UseVisualStyleBackColor = true;
@@ -280,16 +294,16 @@
             // lblMsg
             // 
             this.lblMsg.AutoSize = true;
-            this.lblMsg.Location = new System.Drawing.Point(179, 421);
+            this.lblMsg.Location = new System.Drawing.Point(205, 561);
             this.lblMsg.Name = "lblMsg";
-            this.lblMsg.Size = new System.Drawing.Size(0, 15);
+            this.lblMsg.Size = new System.Drawing.Size(0, 20);
             this.lblMsg.TabIndex = 27;
             // 
             // frmAddAdv
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(582, 450);
+            this.ClientSize = new System.Drawing.Size(665, 600);
             this.Controls.Add(this.lblMsg);
             this.Controls.Add(this.cbxBus);
             this.Controls.Add(this.cbxPark);
@@ -315,8 +329,11 @@
             this.Controls.Add(this.txbDistrict);
             this.Controls.Add(this.lblDistrict);
             this.Controls.Add(this.lblNewAdv);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmAddAdv";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Frm";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
             this.PerformLayout();
 

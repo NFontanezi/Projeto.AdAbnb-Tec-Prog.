@@ -88,6 +88,7 @@
             this.btn_BackMenu_rnt.TabIndex = 3;
             this.btn_BackMenu_rnt.Text = "Voltar ao menu principal";
             this.btn_BackMenu_rnt.UseVisualStyleBackColor = false;
+            this.btn_BackMenu_rnt.Click += new System.EventHandler(this.btn_BackMenu_rnt_Click);
             // 
             // pictureBox1
             // 
@@ -125,6 +126,8 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Frm_SignInLogin_rnt";
             this.Text = "AdaBnb - Aluguel";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Frm_SignInLogin_rnt_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

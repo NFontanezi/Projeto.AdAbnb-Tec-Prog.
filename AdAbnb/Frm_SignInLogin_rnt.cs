@@ -19,8 +19,9 @@ namespace AdAbnb.Presentation
 
         private void btn_Login_rnt_Click(object sender, EventArgs e)
         {
-            frmLogin form_Login = new();
+            Frm_Login_rnt form_Login = new();
             this.Hide();
+            this.Close();
             form_Login.Show();
         }
 
@@ -28,14 +29,30 @@ namespace AdAbnb.Presentation
         {
             Frm_GetRegistered_rnt form_GetRegistered = new();
             this.Hide();
+            this.Close();
             form_GetRegistered.Show();
         }
 
         private void btn_Search_rnt_Click(object sender, EventArgs e)
         {
-            Frm_Search_rnt form_Search = new();
+            Frm_AdvToRent_rnt form_AdvToRent = new();
             this.Hide();
-            form_Search.Show();
+            this.Close();
+            form_AdvToRent.Show();
+
+        }
+
+        private void btn_BackMenu_rnt_Click(object sender, EventArgs e)
+        {
+            frmMain mainForm = new();
+            this.Hide();
+            this.Close();
+            mainForm.Show(); 
+
+        }
+
+        private void Frm_SignInLogin_rnt_Load(object sender, EventArgs e)
+        {
 
         }
     }

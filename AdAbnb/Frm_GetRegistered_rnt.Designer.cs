@@ -57,6 +57,7 @@
             this.btnBack.TabIndex = 22;
             this.btnBack.Text = "Voltar";
             this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // btnRegister_rnt
             // 
@@ -245,6 +246,7 @@
             this.Controls.Add(this.lblNewAcc);
             this.Name = "Frm_GetRegistered_rnt";
             this.Text = "Frm_GetRegistered_rnt";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Frm_GetRegistered_rnt_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
