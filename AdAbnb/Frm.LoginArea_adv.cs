@@ -21,9 +21,11 @@ namespace AdAbnb.Presentation
 
         private void btnNewAdv_Click(object sender, EventArgs e)
         {
-
-            frmAddAdv frm = new(Owner);
-            frm.Show();
+            //var t = new Thread(() => Application.Run(new frmAddAdv(Owner)));
+           //this.Close();
+            //t.Start();
+            //frmAddAdv frm = new(Owner);
+            //frm.Show();
         }
 
         private void btnAdvOn_Click(object sender, EventArgs e)
