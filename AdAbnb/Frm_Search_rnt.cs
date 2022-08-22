@@ -24,5 +24,9 @@ namespace AdAbnb.Presentation
 
 
         }
+
+        private void Frm_Search_rnt_Load(object sender, EventArgs e)
+        {
+        }
     }
 }
