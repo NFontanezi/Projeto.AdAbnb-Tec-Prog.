@@ -8,7 +8,7 @@ namespace AdAbnb.Domain
 {
     public class Property
     {
-        private int count_prop=0;
+        private int count_prop=100;
         public int ID_prop
         {
             get

@@ -48,7 +48,9 @@ namespace AdAbnb.Presentation
                 MessageBox.Show("Imovel incluído com sucesso");
                 Owner.AddProperty(newProp);
 
+                var t = new Thread(() => Application.Run(new frmAdvArea(Owner)));
                 this.Close();
+                t.Start();
             }
             else
             {
