@@ -36,7 +36,7 @@ namespace AdAbnb.Presentation
             var t = new Thread(() => Application.Run(new Frm_AdvToRent_rnt()));
             this.Close();
             t.Start();
-
+            //teste
         }
 
         private void btn_BackMenu_rnt_Click(object sender, EventArgs e)
