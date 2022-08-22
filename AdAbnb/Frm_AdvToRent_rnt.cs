@@ -122,6 +122,9 @@ namespace AdAbnb.Presentation
             
         }
 
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
+        }
     }
 }

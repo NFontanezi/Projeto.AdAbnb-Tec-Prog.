@@ -55,7 +55,7 @@ namespace AdAbnb.Presentation
             var t = new Thread(() => Application.Run(new Frm_ClientArea()));
             this.Close();
             t.Start();
-            //
+            
 
 
         }

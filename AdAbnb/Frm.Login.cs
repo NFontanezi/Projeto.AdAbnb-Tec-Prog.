@@ -24,9 +24,11 @@ namespace AdAbnb.Presentation
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            FormSign_adv frm = new();
-            this.Hide();
-            frm.Show();
+
+            var t = new Thread(() => Application.Run(new FormSign_adv()));
+            this.Close();
+            t.Start();
+
         }
     }
 }
