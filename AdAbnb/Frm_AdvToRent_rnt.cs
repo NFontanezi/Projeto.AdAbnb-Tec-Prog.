@@ -18,14 +18,24 @@ namespace AdAbnb.Presentation
         public Frm_AdvToRent_rnt()
         {
             InitializeComponent();
+            //dataGridView1.DataSource = GetAnuncios(dtF);
+            //ConfigurarGrade();
+            //CarregarFotos();
         }
 
-        private void btnAbrir_Click(object sender, EventArgs e)
+        private void Frm_AdvToRent_rnt_Load(object sender, EventArgs e)
         {
             dataGridView1.DataSource = GetAnuncios(dtF);
             ConfigurarGrade();
             CarregarFotos();
         }
+
+        //private void btnAbrir_Click(object sender, EventArgs e)
+        //{
+        //  dataGridView1.DataSource = GetAnuncios(dtF);
+        //  ConfigurarGrade();
+        //  CarregarFotos();
+        //}
 
 
         public static DataTable GetAnuncios(DataTable dt)
@@ -111,5 +121,7 @@ namespace AdAbnb.Presentation
             frm.ShowDialog();
             
         }
+
+
     }
 }
