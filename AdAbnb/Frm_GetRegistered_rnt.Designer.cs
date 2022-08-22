@@ -50,24 +50,30 @@
             // 
             // btnBack
             // 
+            this.btnBack.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.btnBack.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnBack.ForeColor = System.Drawing.Color.Transparent;
             this.btnBack.Location = new System.Drawing.Point(473, 466);
             this.btnBack.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(272, 61);
             this.btnBack.TabIndex = 22;
             this.btnBack.Text = "Voltar";
-            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // btnRegister_rnt
             // 
+            this.btnRegister_rnt.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.btnRegister_rnt.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnRegister_rnt.ForeColor = System.Drawing.Color.Transparent;
             this.btnRegister_rnt.Location = new System.Drawing.Point(77, 466);
             this.btnRegister_rnt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnRegister_rnt.Name = "btnRegister_rnt";
             this.btnRegister_rnt.Size = new System.Drawing.Size(272, 61);
             this.btnRegister_rnt.TabIndex = 21;
             this.btnRegister_rnt.Text = "Cadastrar";
-            this.btnRegister_rnt.UseVisualStyleBackColor = true;
+            this.btnRegister_rnt.UseVisualStyleBackColor = false;
             this.btnRegister_rnt.Click += new System.EventHandler(this.btnRegister_rnt_Click);
             // 
             // cbxMale
@@ -104,10 +110,11 @@
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblEmail.Location = new System.Drawing.Point(477, 106);
+            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblEmail.ForeColor = System.Drawing.Color.Teal;
+            this.lblEmail.Location = new System.Drawing.Point(473, 106);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(42, 17);
+            this.lblEmail.Size = new System.Drawing.Size(50, 18);
             this.lblEmail.TabIndex = 8;
             this.lblEmail.Text = "Email";
             // 
@@ -122,10 +129,11 @@
             // lblPhone
             // 
             this.lblPhone.AutoSize = true;
-            this.lblPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblPhone.Location = new System.Drawing.Point(477, 187);
+            this.lblPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblPhone.ForeColor = System.Drawing.Color.Teal;
+            this.lblPhone.Location = new System.Drawing.Point(473, 187);
             this.lblPhone.Name = "lblPhone";
-            this.lblPhone.Size = new System.Drawing.Size(52, 17);
+            this.lblPhone.Size = new System.Drawing.Size(61, 18);
             this.lblPhone.TabIndex = 10;
             this.lblPhone.Text = "Celular";
             // 
@@ -148,30 +156,33 @@
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
-            this.lblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblPassword.Location = new System.Drawing.Point(81, 370);
+            this.lblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblPassword.ForeColor = System.Drawing.Color.Teal;
+            this.lblPassword.Location = new System.Drawing.Point(77, 375);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(49, 17);
+            this.lblPassword.Size = new System.Drawing.Size(55, 18);
             this.lblPassword.TabIndex = 12;
             this.lblPassword.Text = "Senha";
             // 
             // lblGender
             // 
             this.lblGender.AutoSize = true;
-            this.lblGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblGender.Location = new System.Drawing.Point(473, 290);
+            this.lblGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblGender.ForeColor = System.Drawing.Color.Teal;
+            this.lblGender.Location = new System.Drawing.Point(473, 278);
             this.lblGender.Name = "lblGender";
-            this.lblGender.Size = new System.Drawing.Size(56, 17);
+            this.lblGender.Size = new System.Drawing.Size(64, 18);
             this.lblGender.TabIndex = 9;
             this.lblGender.Text = "Genero";
             // 
             // lblBirth
             // 
             this.lblBirth.AutoSize = true;
-            this.lblBirth.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblBirth.Location = new System.Drawing.Point(81, 282);
+            this.lblBirth.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblBirth.ForeColor = System.Drawing.Color.Teal;
+            this.lblBirth.Location = new System.Drawing.Point(77, 278);
             this.lblBirth.Name = "lblBirth";
-            this.lblBirth.Size = new System.Drawing.Size(136, 17);
+            this.lblBirth.Size = new System.Drawing.Size(161, 18);
             this.lblBirth.TabIndex = 7;
             this.lblBirth.Text = "Data de Nascimento";
             // 
@@ -186,10 +197,11 @@
             // lblCPF
             // 
             this.lblCPF.AutoSize = true;
-            this.lblCPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblCPF.Location = new System.Drawing.Point(81, 187);
+            this.lblCPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblCPF.ForeColor = System.Drawing.Color.Teal;
+            this.lblCPF.Location = new System.Drawing.Point(77, 187);
             this.lblCPF.Name = "lblCPF";
-            this.lblCPF.Size = new System.Drawing.Size(34, 17);
+            this.lblCPF.Size = new System.Drawing.Size(41, 18);
             this.lblCPF.TabIndex = 6;
             this.lblCPF.Text = "CPF";
             // 
@@ -204,20 +216,22 @@
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblName.Location = new System.Drawing.Point(81, 106);
+            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblName.ForeColor = System.Drawing.Color.Teal;
+            this.lblName.Location = new System.Drawing.Point(77, 106);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(108, 17);
+            this.lblName.Size = new System.Drawing.Size(131, 18);
             this.lblName.TabIndex = 11;
             this.lblName.Text = "Nome Completo";
             // 
             // lblNewAcc
             // 
             this.lblNewAcc.AutoSize = true;
-            this.lblNewAcc.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblNewAcc.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblNewAcc.ForeColor = System.Drawing.Color.Teal;
             this.lblNewAcc.Location = new System.Drawing.Point(77, 39);
             this.lblNewAcc.Name = "lblNewAcc";
-            this.lblNewAcc.Size = new System.Drawing.Size(123, 37);
+            this.lblNewAcc.Size = new System.Drawing.Size(138, 34);
             this.lblNewAcc.TabIndex = 5;
             this.lblNewAcc.Text = "Cadastro";
             // 
@@ -225,6 +239,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Cornsilk;
             this.ClientSize = new System.Drawing.Size(914, 600);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnRegister_rnt);
@@ -246,7 +261,6 @@
             this.Controls.Add(this.lblNewAcc);
             this.Name = "Frm_GetRegistered_rnt";
             this.Text = "Frm_GetRegistered_rnt";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Frm_GetRegistered_rnt_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

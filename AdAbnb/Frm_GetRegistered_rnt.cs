@@ -43,10 +43,10 @@ namespace AdAbnb.Presentation
 
             Registration userRegistration = new Registration(txbEmail.Text, txbPassword.Text);
 
-            UsersRentDB userToBeAdd = new();
-            userToBeAdd.usersRentList.Add(userRegistration);
+            UsersRentDB.usersRentDic.Add(userRegistration.Login, userRegistration.Password);
 
             Person user = new Person(userRegistration, txbCPF.Text, txbName.Text, txbPhone.Text, Birth, Gender);
+            UsersRentDB.usersRentInfos.Add(user);
 
             //Frm_ClientArea clientArea = new();
             //this.Hide();

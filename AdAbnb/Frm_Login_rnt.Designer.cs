@@ -39,28 +39,35 @@
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(409, 365);
+            this.btnBack.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.btnBack.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnBack.ForeColor = System.Drawing.Color.Transparent;
+            this.btnBack.Location = new System.Drawing.Point(409, 405);
             this.btnBack.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(154, 67);
             this.btnBack.TabIndex = 9;
             this.btnBack.Text = "Voltar";
-            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(247, 365);
+            this.btnLogin.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnLogin.ForeColor = System.Drawing.Color.Transparent;
+            this.btnLogin.Location = new System.Drawing.Point(247, 405);
             this.btnLogin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(154, 67);
             this.btnLogin.TabIndex = 10;
             this.btnLogin.Text = "Entrar";
-            this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // txbPasswordLogin
             // 
-            this.txbPasswordLogin.Location = new System.Drawing.Point(251, 258);
+            this.txbPasswordLogin.Location = new System.Drawing.Point(251, 298);
             this.txbPasswordLogin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txbPasswordLogin.Name = "txbPasswordLogin";
             this.txbPasswordLogin.Size = new System.Drawing.Size(274, 27);
@@ -69,15 +76,17 @@
             // lblPasswordLogin
             // 
             this.lblPasswordLogin.AutoSize = true;
-            this.lblPasswordLogin.Location = new System.Drawing.Point(247, 229);
+            this.lblPasswordLogin.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblPasswordLogin.ForeColor = System.Drawing.Color.Teal;
+            this.lblPasswordLogin.Location = new System.Drawing.Point(247, 269);
             this.lblPasswordLogin.Name = "lblPasswordLogin";
-            this.lblPasswordLogin.Size = new System.Drawing.Size(49, 20);
+            this.lblPasswordLogin.Size = new System.Drawing.Size(51, 20);
             this.lblPasswordLogin.TabIndex = 5;
             this.lblPasswordLogin.Text = "Senha";
             // 
             // txbEmailLogin
             // 
-            this.txbEmailLogin.Location = new System.Drawing.Point(251, 169);
+            this.txbEmailLogin.Location = new System.Drawing.Point(251, 209);
             this.txbEmailLogin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txbEmailLogin.Name = "txbEmailLogin";
             this.txbEmailLogin.Size = new System.Drawing.Size(274, 27);
@@ -86,19 +95,22 @@
             // lblEmailLogin
             // 
             this.lblEmailLogin.AutoSize = true;
-            this.lblEmailLogin.Location = new System.Drawing.Point(247, 139);
+            this.lblEmailLogin.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblEmailLogin.ForeColor = System.Drawing.Color.Teal;
+            this.lblEmailLogin.Location = new System.Drawing.Point(247, 179);
             this.lblEmailLogin.Name = "lblEmailLogin";
-            this.lblEmailLogin.Size = new System.Drawing.Size(46, 20);
+            this.lblEmailLogin.Size = new System.Drawing.Size(47, 20);
             this.lblEmailLogin.TabIndex = 6;
             this.lblEmailLogin.Text = "Email";
             // 
             // lblLoginTitle
             // 
             this.lblLoginTitle.AutoSize = true;
-            this.lblLoginTitle.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblLoginTitle.Location = new System.Drawing.Point(238, 19);
+            this.lblLoginTitle.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblLoginTitle.ForeColor = System.Drawing.Color.Teal;
+            this.lblLoginTitle.Location = new System.Drawing.Point(238, 59);
             this.lblLoginTitle.Name = "lblLoginTitle";
-            this.lblLoginTitle.Size = new System.Drawing.Size(84, 37);
+            this.lblLoginTitle.Size = new System.Drawing.Size(103, 39);
             this.lblLoginTitle.TabIndex = 4;
             this.lblLoginTitle.Text = "Login";
             // 
@@ -106,7 +118,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.Cornsilk;
+            this.ClientSize = new System.Drawing.Size(800, 600);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txbPasswordLogin);

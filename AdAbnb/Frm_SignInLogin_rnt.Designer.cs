@@ -40,6 +40,7 @@
             // 
             // btn_Login_rnt
             // 
+            this.btn_Login_rnt.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_Login_rnt.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.btn_Login_rnt.Font = new System.Drawing.Font("Franklin Gothic Demi Cond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btn_Login_rnt.ForeColor = System.Drawing.Color.Cornsilk;
@@ -53,6 +54,7 @@
             // 
             // btn_SignIn_rnt
             // 
+            this.btn_SignIn_rnt.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_SignIn_rnt.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.btn_SignIn_rnt.Font = new System.Drawing.Font("Franklin Gothic Demi Cond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btn_SignIn_rnt.ForeColor = System.Drawing.Color.Cornsilk;
@@ -66,6 +68,7 @@
             // 
             // btn_Search_rnt
             // 
+            this.btn_Search_rnt.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_Search_rnt.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.btn_Search_rnt.Font = new System.Drawing.Font("Franklin Gothic Demi Cond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btn_Search_rnt.ForeColor = System.Drawing.Color.Cornsilk;
@@ -79,6 +82,7 @@
             // 
             // btn_BackMenu_rnt
             // 
+            this.btn_BackMenu_rnt.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_BackMenu_rnt.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.btn_BackMenu_rnt.Font = new System.Drawing.Font("Franklin Gothic Demi Cond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btn_BackMenu_rnt.ForeColor = System.Drawing.Color.Cornsilk;
@@ -92,6 +96,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
@@ -102,6 +107,7 @@
             // 
             // lbl_Rent
             // 
+            this.lbl_Rent.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_Rent.AutoSize = true;
             this.lbl_Rent.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lbl_Rent.ForeColor = System.Drawing.Color.Teal;
@@ -125,6 +131,7 @@
             this.Controls.Add(this.btn_Login_rnt);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Frm_SignInLogin_rnt";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdaBnb - Aluguel";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Frm_SignInLogin_rnt_Load);

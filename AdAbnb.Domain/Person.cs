@@ -19,5 +19,6 @@
             DateBirth = dateBirth;
             Gender = gender;
         }
+
     }
 }
