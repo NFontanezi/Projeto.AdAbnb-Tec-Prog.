@@ -75,5 +75,11 @@ namespace AdAbnb.Presentation
             throw new NotImplementedException();
         }
 
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            var t = new Thread(() => Application.Run(new frmAdvArea(Owner)));
+            this.Close();
+            t.Start();
+        }
     }
 }

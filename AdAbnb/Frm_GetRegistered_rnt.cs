@@ -55,15 +55,17 @@ namespace AdAbnb.Presentation
             var t = new Thread(() => Application.Run(new Frm_ClientArea()));
             this.Close();
             t.Start();
+            //
 
 
         }
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            //Frm_SignInLogin_rnt form = new();
-            //this.Hide();
-            //form.Show();
+
+            Frm_SignInLogin_rnt form = new();
+            this.Hide();
+            form.Show();
 
             var t = new Thread(() => Application.Run(new Frm_SignInLogin_rnt()));
             this.Close();

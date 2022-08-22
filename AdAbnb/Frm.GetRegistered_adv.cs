@@ -22,9 +22,10 @@ namespace AdAbnb.Presentation
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            FormSign_adv frm = new();
-            this.Hide();
-            frm.Show();
+            var t = new Thread(() => Application.Run(new FormSign_adv()));
+            this.Close();
+            t.Start();
+
         }
 
         private void btnRegister_Click(object sender, EventArgs e)
@@ -66,9 +67,7 @@ namespace AdAbnb.Presentation
                     MessageBox.Show("Registro incluído com sucesso");
                     listOwner_adv.Add(newOwner);
                     listReg_adv.Add(newReg);
-                    //frmAdvArea frm = new(newOwner);
-                    //frm.Show();
-                    //this.Close();
+
 
                     var t = new Thread(() => Application.Run(new frmAdvArea(newOwner)));
                     this.Close();
@@ -97,6 +96,9 @@ namespace AdAbnb.Presentation
 
         }
 
+        private void txbName_TextChanged(object sender, EventArgs e)
+        {
 
+        }
     }
 }
