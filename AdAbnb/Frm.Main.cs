@@ -11,21 +11,17 @@ namespace AdAbnb
 
         private void btnAdvert_Click(object sender, EventArgs e)
         {
-            FormSign_adv frm = new();
-            this.Hide();
-            frm.Show();
+            var t = new Thread(() => Application.Run(new FormSign_adv()));
+            this.Close();
+            t.Start();
         }
 
-        internal Form CenterToScreen()
-        {
-            throw new NotImplementedException();
-        }
 
         private void btnAdvert2_Click(object sender, EventArgs e)
         {
-            FormSign_adv frm = new();
-            this.Hide();
-            frm.Show();
+            var t = new Thread(() => Application.Run(new FormSign_adv()));
+            this.Close();
+            t.Start();
         }
 
 
@@ -37,16 +33,16 @@ namespace AdAbnb
 
         private void btnRent_Click(object sender, EventArgs e)
         {
-            Frm_SignInLogin_rnt signInOrLogin = new Frm_SignInLogin_rnt();
-            this.Hide();
-            signInOrLogin.Show();
+            var t = new Thread(() => Application.Run(new Frm_SignInLogin_rnt()));
+            this.Close();
+            t.Start();
         }
 
         private void btnRent2_Click(object sender, EventArgs e)
         {
-            Frm_SignInLogin_rnt signInOrLogin = new Frm_SignInLogin_rnt();
-            this.Hide();
-            signInOrLogin.Show();
+            var t = new Thread(() => Application.Run(new Frm_SignInLogin_rnt()));
+            this.Close();
+            t.Start();
         }
 
         private void frmMain_Load(object sender, EventArgs e)

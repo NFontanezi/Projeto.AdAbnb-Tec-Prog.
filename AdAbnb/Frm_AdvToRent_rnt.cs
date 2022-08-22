@@ -33,11 +33,11 @@ namespace AdAbnb.Presentation
             dt.Columns.Add("descricao", typeof(string));
             dt.Columns.Add("diaria", typeof(decimal));
             dt.Columns.Add("arquivoFoto", typeof(string));
-          
 
-            dt.Rows.Add(101, "Apartamento beira-mar 01", 700M, @"C:\Users\natal\OneDrive\Área de Trabalho\Let's Code\05 - Técnicas de Programação\Projeto_TP\Projeto.AdAbnb-Tec-Prog\apartamento-01-adabnb.jpg");
-            dt.Rows.Add(102, "Apartamento beira-mar 02", 800M, @"C:\Users\natal\OneDrive\Área de Trabalho\Let's Code\05 - Técnicas de Programação\Projeto_TP\Projeto.AdAbnb-Tec-Prog\apartamento-02-adabnb.jpg");
-            dt.Rows.Add(103, "Apartamento beira-mar 02", 900M, @"C:\Users\natal\OneDrive\Área de Trabalho\Let's Code\05 - Técnicas de Programação\Projeto_TP\Projeto.AdAbnb-Tec-Prog\apartamento-03-adabnb.jpg");
+
+            dt.Rows.Add(101, "Apartamento beira-mar 01", 700M, @"C:\Users\natal\OneDrive\Área de Trabalho\Let's Code\05 - Técnicas de Programação\Projeto_TP\Projeto.AdAbnb-Tec-Prog\apartamento-01-adabnb.png");
+            dt.Rows.Add(102, "Apartamento beira-mar 02", 800M, @"C:\Users\natal\OneDrive\Área de Trabalho\Let's Code\05 - Técnicas de Programação\Projeto_TP\Projeto.AdAbnb-Tec-Prog\apartamento-02-adabnb.png");
+            dt.Rows.Add(103, "Apartamento beira-mar 02", 900M, @"C:\Users\natal\OneDrive\Área de Trabalho\Let's Code\05 - Técnicas de Programação\Projeto_TP\Projeto.AdAbnb-Tec-Prog\apartamento-03-adabnb.png");
 
             return dt;
 
@@ -74,7 +74,7 @@ namespace AdAbnb.Presentation
 
         public void CarregarFotos()
         {
-            foreach(DataGridViewRow row in dataGridView1.Rows)
+            foreach (DataGridViewRow row in dataGridView1.Rows)
             {
                 row.Cells["img"].Value = Image
                     .FromFile(row.Cells["arquivoFoto"].Value.ToString());

@@ -48,18 +48,26 @@ namespace AdAbnb.Presentation
 
             Person user = new Person(userRegistration, txbCPF.Text, txbName.Text, txbPhone.Text, Birth, Gender);
 
-            Frm_ClientArea clientArea = new();
-            this.Hide();
-            clientArea.Show();
+            //Frm_ClientArea clientArea = new();
+            //this.Hide();
+            //clientArea.Show();
+
+            var t = new Thread(() => Application.Run(new Frm_ClientArea()));
+            this.Close();
+            t.Start();
 
 
         }
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            Frm_SignInLogin_rnt form = new();
-            this.Hide();
-            form.Show();
+            //Frm_SignInLogin_rnt form = new();
+            //this.Hide();
+            //form.Show();
+
+            var t = new Thread(() => Application.Run(new Frm_SignInLogin_rnt()));
+            this.Close();
+            t.Start();
         }
     }
 }

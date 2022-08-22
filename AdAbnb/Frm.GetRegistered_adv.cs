@@ -66,10 +66,15 @@ namespace AdAbnb.Presentation
                     MessageBox.Show("Registro incluído com sucesso");
                     listOwner_adv.Add(newOwner);
                     listReg_adv.Add(newReg);
-                    frmAdvArea frm = new(newOwner);
-                    frm.Show();
+                    //frmAdvArea frm = new(newOwner);
+                    //frm.Show();
+                    //this.Close();
+
+                    var t = new Thread(() => Application.Run(new frmAdvArea(newOwner)));
                     this.Close();
-                }
+                    t.Start();
+
+            }
                 else
                 {
                     lblMsg.Text = "Preencha todos os campos";
@@ -91,5 +96,7 @@ namespace AdAbnb.Presentation
 
 
         }
+
+
     }
 }

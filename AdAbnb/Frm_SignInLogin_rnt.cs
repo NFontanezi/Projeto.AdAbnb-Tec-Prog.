@@ -19,35 +19,31 @@ namespace AdAbnb.Presentation
 
         private void btn_Login_rnt_Click(object sender, EventArgs e)
         {
-            Frm_Login_rnt form_Login = new();
-            this.Hide();
+            var t = new Thread(() => Application.Run(new Frm_Login_rnt()));
             this.Close();
-            form_Login.Show();
+            t.Start();
         }
 
         private void btn_SignIn_rnt_Click(object sender, EventArgs e)
         {
-            Frm_GetRegistered_rnt form_GetRegistered = new();
-            this.Hide();
+            var t = new Thread(() => Application.Run(new Frm_GetRegistered_rnt()));
             this.Close();
-            form_GetRegistered.Show();
+            t.Start();
         }
 
         private void btn_Search_rnt_Click(object sender, EventArgs e)
         {
-            Frm_AdvToRent_rnt form_AdvToRent = new();
-            this.Hide();
+            var t = new Thread(() => Application.Run(new Frm_AdvToRent_rnt()));
             this.Close();
-            form_AdvToRent.Show();
+            t.Start();
 
         }
 
         private void btn_BackMenu_rnt_Click(object sender, EventArgs e)
         {
-            frmMain mainForm = new();
-            this.Hide();
+            var t = new Thread(() => Application.Run(new frmMain()));
             this.Close();
-            mainForm.Show(); 
+            t.Start();
 
         }
 
