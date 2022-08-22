@@ -31,7 +31,9 @@
             this.components = new System.ComponentModel.Container();
             this.ownerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridView_adv = new System.Windows.Forms.DataGridView();
-            this.iDpropDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.propertyBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ownerBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.iDpropDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewButtonColumn();
             this.dailyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.districtDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,8 +43,6 @@
             this.facilities = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Edit = new System.Windows.Forms.DataGridViewImageColumn();
             this.Delete = new System.Windows.Forms.DataGridViewImageColumn();
-            this.propertyBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ownerBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ownerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_adv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.propertyBindingSource)).BeginInit();
@@ -76,6 +76,14 @@
             this.dataGridView_adv.TabIndex = 0;
             this.dataGridView_adv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_adv_CellContentClickfacilities);
             // 
+            // propertyBindingSource
+            // 
+            this.propertyBindingSource.DataSource = typeof(AdAbnb.Domain.Property);
+            // 
+            // ownerBindingSource1
+            // 
+            this.ownerBindingSource1.DataSource = typeof(AdAbnb.Domain.Owner);
+            // 
             // iDpropDataGridViewTextBoxColumn
             // 
             this.iDpropDataGridViewTextBoxColumn.DataPropertyName = "ID_prop";
@@ -83,6 +91,7 @@
             this.iDpropDataGridViewTextBoxColumn.Name = "iDpropDataGridViewTextBoxColumn";
             this.iDpropDataGridViewTextBoxColumn.ReadOnly = true;
             this.iDpropDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.iDpropDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // dailyDataGridViewTextBoxColumn
             // 
@@ -148,14 +157,6 @@
             this.Delete.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Delete.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
-            // propertyBindingSource
-            // 
-            this.propertyBindingSource.DataSource = typeof(AdAbnb.Domain.Property);
-            // 
-            // ownerBindingSource1
-            // 
-            this.ownerBindingSource1.DataSource = typeof(AdAbnb.Domain.Owner);
-            // 
             // frmLoginArea_MyAdvs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -178,7 +179,7 @@
         private DataGridView dataGridView_adv;
         private BindingSource propertyBindingSource;
         private BindingSource ownerBindingSource1;
-        private DataGridViewTextBoxColumn iDpropDataGridViewTextBoxColumn;
+        private DataGridViewButtonColumn iDpropDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn dailyDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn cityDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn districtDataGridViewTextBoxColumn;

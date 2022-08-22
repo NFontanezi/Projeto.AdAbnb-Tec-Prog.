@@ -50,13 +50,14 @@ namespace AdAbnb.Presentation
             return dt;
         }
 
+
         public static void FillAnunciosRows(DataTable dt, List<Property> list1)
         {
             for (int i = 0; i < list1.Count; i++)
             {
-                dt.Rows.Add(list1[i]);
-                var f = list1[i].Facilities;
-                GetFacilities(f);
+                dt.Rows.Add(list1[i]); // preenche linha com as propriedades
+                var f = list1[i].Facilities; // cria lista de comodidades
+                GetFacilities(f); // nao esta sendo usado pra nada
 
             }
 
@@ -77,7 +78,7 @@ namespace AdAbnb.Presentation
 
         public static void AddAdv(DataTable dt, List<Property> list1)
         {
-            dt.Rows.Add(list1);
+            dt.Rows.Add(list1); // cria nome das colunas
             //dt.Rows.Add(new object[] { cod, descricao, diaria, url });
         }
 
@@ -145,26 +146,17 @@ namespace AdAbnb.Presentation
 
         private void dataGridView_adv_CellContentClickfacilities(object sender, DataGridViewCellEventArgs e)
         {
-            
-                StringBuilder stringBuilder = new StringBuilder();
 
-                stringBuilder.AppendLine("Comodidades");
+            int x = e.ColumnIndex;
+            var p = list1[x];
+            var f = list1[x].Facilities;
+            Form frm = new frmFacilities(p, f);
 
-                for (int i = 0; i < list1.Count; i++)
-                {
-                    stringBuilder.AppendLine($"{list1[i]}");
-                }
 
-                MessageBox.Show(stringBuilder.ToString());
-
-            
         }
 
-        public static void GetFacilities(Dictionary<string, bool> facilities)
+        public static List<string> GetFacilities(Dictionary<string, bool> facilities)
         {
-            //  var search = from x in facilities
-            //             where x.Value.Contains("true")
-            //           select x.Key; ????
 
             List<string> listafacilities = new();
             foreach (KeyValuePair<string, bool> pair in facilities)
@@ -176,12 +168,9 @@ namespace AdAbnb.Presentation
                 else continue;
             }
 
-            //return listafacilities.ToList();
+            return listafacilities.ToList();
         }
 
-        private void dataGridView_adv_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
-        {
 
-        }
     }
 }
