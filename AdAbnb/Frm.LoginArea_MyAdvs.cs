@@ -31,7 +31,7 @@ namespace AdAbnb.Presentation
 
         private void LoginArea_MyAdvs_Load(object sender, EventArgs e)
         {
-         
+
 
             dataGridView_adv.DataSource = null;
             dataGridView_adv.DataSource = list1;
@@ -40,7 +40,7 @@ namespace AdAbnb.Presentation
             ConfigurarGrade();
             CarregarFotos();
         }
- 
+
 
 
         public void ConfigurarGrade()
@@ -86,7 +86,7 @@ namespace AdAbnb.Presentation
             dataGridView_adv.Columns["Footage"].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridView_adv.Columns["Footage"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
-            
+
             dataGridView_adv.Columns["imagetext"].Visible = false;
 
             DataGridViewImageColumn col = new();
@@ -134,17 +134,9 @@ namespace AdAbnb.Presentation
         {
             int rowindex = dataGridView_adv.CurrentCell.RowIndex;
             int columnindex = dataGridView_adv.CurrentCell.ColumnIndex;
-            
 
-            if (columnindex == 9)
-            {
-                var path = dataGridView_adv.Rows[rowindex].Cells
-                 ["imagetext"].Value.ToString();
 
-                Form frm = new Form_Img_Adv(path);
-                frm.ShowDialog();
-            }
-            else if (columnindex == 7)
+           if (columnindex == 7) //comodidade
             {
 
                 int x = e.RowIndex;
@@ -155,11 +147,42 @@ namespace AdAbnb.Presentation
                 frm.ShowDialog();
             }
 
+           else if (columnindex == 8)// foto
+            {
+                var path = dataGridView_adv.Rows[rowindex].Cells
+                 ["imagetext"].Value.ToString();
+
+                Form frm = new Form_Img_Adv(path);
+                frm.ShowDialog();
+            }
+
+
         }
 
-        private void dataGridView_adv_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridView_adv_ControlRemoved(object sender, ControlEventArgs e)
         {
+            
+        }
 
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            int rowindex = dataGridView_adv.CurrentCell.RowIndex;
+            int columnindex = dataGridView_adv.CurrentCell.ColumnIndex;
+
+            var path = dataGridView_adv.Rows[rowindex].Cells
+                ["ID"].Value.ToString();
+
+            owner.PropertyList.RemoveAt(rowindex);
+            MessageBox.Show("Anuncio deletado");
+            this.Close();
+           
+            
+
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Delete e crie outro anuncio");
         }
     }
 }
