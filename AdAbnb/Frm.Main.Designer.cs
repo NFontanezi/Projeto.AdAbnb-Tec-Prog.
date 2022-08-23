@@ -109,7 +109,7 @@
             this.btnAdvert.Name = "btnAdvert";
             this.btnAdvert.Size = new System.Drawing.Size(316, 160);
             this.btnAdvert.TabIndex = 1;
-            this.btnAdvert.Text = "\'";
+            this.btnAdvert.Text = "ANUNCIE";
             this.btnAdvert.UseVisualStyleBackColor = false;
             this.btnAdvert.Click += new System.EventHandler(this.btnAdvert_Click);
             // 

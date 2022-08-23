@@ -18,7 +18,7 @@ namespace AdAbnb.Presentation
         Owner owner { get; set; }
         List<Property> list1 { get; set; }
 
-        List<string> f;
+
         public frmLoginArea_MyAdvs(Owner owner)
         {
 
@@ -32,12 +32,12 @@ namespace AdAbnb.Presentation
         private void LoginArea_MyAdvs_Load(object sender, EventArgs e)
         {
             //dataGridView_adv.DataSource = GetAnuncios(dtF);
-            // ConfigurarGrade();
-            //  CarregarFotos();
-            dataGridView_adv.DataSource = null; //Limpa o grid;
+            //ConfigurarGrade();
+            //CarregarFotos();
+            dataGridView_adv.DataSource = null;
             dataGridView_adv.DataSource = list1;
             dataGridView_adv.Refresh();
-            //dataGridView_adv.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
+            dataGridView_adv.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
         }
         public static DataTable GetAnuncios(DataTable dt, List<Property> list1)
         {
@@ -52,17 +52,17 @@ namespace AdAbnb.Presentation
         }
 
 
-        //public static void FillAnunciosRows(DataTable dt, List<Property> list1)
-        //{
-        //    for (int i = 0; i < list1.Count; i++)
-        //    {
-        //        dt.Rows.Add(list1[i]); // preenche linha com as propriedades
-        //        var f = list1[i].Facilities; // cria lista de comodidades
-        //        GetFacilities(f); // nao esta sendo usado pra nada
+        public static void FillAnunciosRows(DataTable dt, List<Property> list1)
+        {
+            for (int i = 0; i < list1.Count; i++)
+           {
+               dt.Rows.Add(list1[i]); // preenche linha com as propriedades
+               var f = list1[i].Facilities; // cria lista de comodidades
+               GetFacilities(f); // nao esta sendo usado pra nada
 
-        //    }
+            }
 
-        //}
+        }
 
 
         /*
@@ -158,9 +158,13 @@ namespace AdAbnb.Presentation
 
             int x = e.RowIndex;
             var p = list1[x]; //uma propriedade
-            var f = list1[x].Facilities; 
-            Form frm = new frmFacilities(x, p, f);
+            var f = list1[x].Facilities;
 
+            Form frm = new frmFacilities(p, f);
+            frm.ShowDialog();
+    
+            
+   
         }
 
         public static List<string> GetFacilities(Dictionary<string, bool> facilities)

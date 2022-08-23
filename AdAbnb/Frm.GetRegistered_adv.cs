@@ -70,8 +70,9 @@ namespace AdAbnb.Presentation
 
 
                     var t = new Thread(() => Application.Run(new frmAdvArea(newOwner)));
-                    this.Close();
                     t.Start();
+                    this.Close();
+             
 
             }
                 else
