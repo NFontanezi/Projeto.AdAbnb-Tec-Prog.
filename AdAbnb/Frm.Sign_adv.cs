@@ -22,23 +22,26 @@ namespace AdAbnb.Presentation
 
         private void btnRegistration_Click_1(object sender, EventArgs e)
         {
-            frmGetRegistered frm = new();
-            frm.Show();
+
+            var t = new Thread(() => Application.Run(new frmGetRegistered()));
+            this.Close();
+            t.Start();
 
         }
 
         private void btnSign_Click_1(object sender, EventArgs e)
         {
-            frmLogin frm = new();
-            frm.Show();
+            var t = new Thread(() => Application.Run(new frmLogin()));
+            this.Close();
+            t.Start();
         }
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-           
-            frmMain frm = new();
-            frm.Show();
+
+            var t = new Thread(() => Application.Run(new frmMain()));
             this.Close();
+            t.Start();
         }
     }
 }

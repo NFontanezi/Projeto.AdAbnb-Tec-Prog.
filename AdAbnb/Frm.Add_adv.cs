@@ -26,7 +26,7 @@ namespace AdAbnb.Presentation
             string city = txbCity.Text == "" ? "" : txbCity.Text;
             string state = txbState.Text == "" ? "" : txbState.Text;
             int footage = txbFootage.Text == "" ? 0 : Convert.ToInt32(txbFootage.Text);
-            int daily = txbFootage.Text == "" ? 0 : Convert.ToInt32(txbFootage.Text);
+            int daily = txbDaily.Text == "" ? 0 : Convert.ToInt32(txbDaily.Text);
             string imagetext = txbURL.Text; //== "" ? "" : txbURL.Text;
             bool active = cbxAtivo.Checked ? true : false;
             bool ac = cbxAC.Checked ? true : false;

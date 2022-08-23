@@ -43,5 +43,12 @@ namespace AdAbnb.Presentation
         {
 
         }
+
+        private void btbBack_Click(object sender, EventArgs e)
+        {
+            var t = new Thread(() => Application.Run(new frmMain()));
+            this.Close();
+            t.Start();
+        }
     }
 }

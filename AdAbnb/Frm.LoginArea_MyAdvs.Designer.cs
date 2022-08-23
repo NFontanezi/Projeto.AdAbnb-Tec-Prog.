@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             this.ownerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridView_adv = new System.Windows.Forms.DataGridView();
+            this.propertyBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ownerBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Daily = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.City = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -40,8 +42,6 @@
             this.Active = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.facilities = new System.Windows.Forms.DataGridViewButtonColumn();
             this.imagetext = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.propertyBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ownerBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ownerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_adv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.propertyBindingSource)).BeginInit();
@@ -75,12 +75,19 @@
             this.dataGridView_adv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_adv_CellContentClick);
             this.dataGridView_adv.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_adv_CellContentDoubleClick);
             // 
+            // propertyBindingSource
+            // 
+            this.propertyBindingSource.DataSource = typeof(AdAbnb.Domain.Property);
+            // 
+            // ownerBindingSource1
+            // 
+            this.ownerBindingSource1.DataSource = typeof(AdAbnb.Domain.Owner);
+            // 
             // ID
             // 
             this.ID.DataPropertyName = "ID_prop";
-            this.ID.HeaderText = "Column1";
+            this.ID.HeaderText = "ID";
             this.ID.Name = "ID";
-            this.ID.Visible = false;
             // 
             // Daily
             // 
@@ -138,14 +145,6 @@
             this.imagetext.DataPropertyName = "imagetext";
             this.imagetext.HeaderText = "imagetext";
             this.imagetext.Name = "imagetext";
-            // 
-            // propertyBindingSource
-            // 
-            this.propertyBindingSource.DataSource = typeof(AdAbnb.Domain.Property);
-            // 
-            // ownerBindingSource1
-            // 
-            this.ownerBindingSource1.DataSource = typeof(AdAbnb.Domain.Owner);
             // 
             // frmLoginArea_MyAdvs
             // 

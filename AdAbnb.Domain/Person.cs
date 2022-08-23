@@ -10,6 +10,8 @@
         public DateTime DateBirth { get; set; }
         public char Gender { get; set; }
 
+        public static Dictionary<Person,Registration> UserList { get; set; } = new();
+
         public Person(Registration registration, string cPF, string name, string phone, DateTime dateBirth, char gender)
         {
             Registration = registration;
@@ -20,5 +22,9 @@
             Gender = gender;
         }
 
+        public static void AddLoginUser(Person user, Registration login )
+        {
+           UserList.Add(user, login);
+        }
     }
 }

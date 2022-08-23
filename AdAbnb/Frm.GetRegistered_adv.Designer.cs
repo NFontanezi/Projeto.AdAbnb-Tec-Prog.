@@ -81,7 +81,6 @@
             this.txbName.Name = "txbName";
             this.txbName.Size = new System.Drawing.Size(238, 23);
             this.txbName.TabIndex = 2;
-            //this.txbName.TextChanged += new System.EventHandler(this.txbName_TextChanged);
             // 
             // lblEmail
             // 
@@ -310,6 +309,7 @@
             this.Name = "frmGetRegistered";
             this.Text = "Registration";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frmGetRegistered_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

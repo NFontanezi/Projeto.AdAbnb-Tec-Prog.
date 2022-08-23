@@ -30,6 +30,7 @@
         {
             this.btnNewAdv = new System.Windows.Forms.Button();
             this.btnAdvOn = new System.Windows.Forms.Button();
+            this.btbBack = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnNewAdv
@@ -52,11 +53,22 @@
             this.btnAdvOn.UseVisualStyleBackColor = true;
             this.btnAdvOn.Click += new System.EventHandler(this.btnAdvOn_Click);
             // 
+            // btbBack
+            // 
+            this.btbBack.Location = new System.Drawing.Point(270, 300);
+            this.btbBack.Name = "btbBack";
+            this.btbBack.Size = new System.Drawing.Size(224, 57);
+            this.btbBack.TabIndex = 1;
+            this.btbBack.Text = "Voltar Menu Principal";
+            this.btbBack.UseVisualStyleBackColor = true;
+            this.btbBack.Click += new System.EventHandler(this.btbBack_Click);
+            // 
             // frmAdvArea
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btbBack);
             this.Controls.Add(this.btnAdvOn);
             this.Controls.Add(this.btnNewAdv);
             this.Name = "frmAdvArea";
@@ -71,5 +83,6 @@
 
         private Button btnNewAdv;
         private Button btnAdvOn;
+        private Button btbBack;
     }
 }

@@ -8,14 +8,14 @@ namespace AdAbnb.Domain
 {
     public class Property
     {
-        private int count_prop=100;
-        public int ID_prop
+        public int count_prop;
+        public int ID_prop //{ get; set; }
         {
-            get
-            { return count_prop; }
-            set
-            { count_prop++; }
-        }
+           get
+           { return count_prop; }
+           set
+           { count_prop++; }
+       }
        // public Owner Owner { get; set; }
         public decimal Daily { get; set; }
         public string City { get; set; }
@@ -30,7 +30,7 @@ namespace AdAbnb.Domain
         // lista de comodidades?? e imagens?
         public Property(string district, string city, string state, int footage, decimal daily, bool active, string image)
         {
-            ID_prop = this.ID_prop;
+            ID_prop = count_prop++;
             District = district;
             City = city;
             State = state;

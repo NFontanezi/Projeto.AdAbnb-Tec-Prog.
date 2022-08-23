@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AdAbnb.Domain;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -29,6 +30,34 @@ namespace AdAbnb.Presentation
             this.Close();
             t.Start();
 
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            GetLogin();
+        }
+
+        private void GetLogin()
+        {
+
+            string email = txbEmailLogin.Text == "" ? "" : txbEmailLogin.Text;
+            string password = txbPasswordLogin.Text == "" ? "" : txbPasswordLogin.Text;
+
+            foreach (KeyValuePair<Person, Registration> pair in Person.UserList)
+            {
+                if (pair.Value.Login == email && pair.Value.Password == password)
+                {
+                    var t = new Thread(() => Application.Run(new frmAdvArea((Owner)pair.Key)));
+                    t.Start();
+                    this.Close();
+                    
+
+                }
+                else
+                    MessageBox.Show("Email ou senha não encontrado");
+
+
+            }
         }
     }
 }
