@@ -31,7 +31,7 @@ namespace AdAbnb.Presentation
 
         private void LoginArea_MyAdvs_Load(object sender, EventArgs e)
         {
-            //dataGridView_adv.DataSource = GetAnuncios(dtF);
+         
 
             dataGridView_adv.DataSource = null;
             dataGridView_adv.DataSource = list1;
@@ -40,50 +40,8 @@ namespace AdAbnb.Presentation
             ConfigurarGrade();
             CarregarFotos();
         }
-        /*  public static DataTable GetAnuncios(DataTable dt, List<Property> list1)
-          {
+ 
 
-              dt.Columns.Add("id", typeof(Int32));
-              dt.Columns.Add("descricao", typeof(string)); //commodities
-              dt.Columns.Add("diaria", typeof(decimal));
-              dt.Columns.Add("arquivoFoto", typeof(string));
-              dt.Columns.Add("facilidades", typeof(Dictionary<string, bool>));
-              //FillAnunciosRows(dt, list1);
-              return dt;
-          }*/
-
-
-        //public static void FillAnunciosRows(DataTable dt, List<Property> list1)
-        //{
-        //    for (int i = 0; i < list1.Count; i++)
-        //   {
-        //       dt.Rows.Add(list1[i]); // preenche linha com as propriedades
-
-        //    }
-
-        //}
-
-
-        /*
-         * 
-        dt.Rows.Add(new object[] {101, "Apartamento beira-mar 01", 700M,
-                @"https://viagemeturismo.abril.com.br/wp-content/uploads/2020/09/casas-airbnb-praia-perto-de-sao-paulo.jpg", Dict});
-
-
-           /* dt.Rows.Add(new object[] {101, "Apartamento beira-mar 01", 700M,
-                @"https://viagemeturismo.abril.com.br/wp-content/uploads/2020/09/casas-airbnb-praia-perto-de-sao-paulo.jpg"});
-            dt.Rows.Add(new object[] {102, "Apartamento beira-mar 02", 800M,
-                @"https://maladeaventuras.com/wp-content/uploads/2021/01/apartamento-de-temporada-bombinhas.jpg"});
-           */
-
-
-
-
-        //public static void AddAdv(DataTable dt, List<Property> list1)
-        //{
-        //    dt.Rows.Add(list1); // cria nome das colunas
-        //    //dt.Rows.Add(new object[] { cod, descricao, diaria, url });
-        //}
 
         public void ConfigurarGrade()
         {
@@ -128,10 +86,7 @@ namespace AdAbnb.Presentation
             dataGridView_adv.Columns["Footage"].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridView_adv.Columns["Footage"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
-            //dataGridView_adv.Columns["imagetext"].HeaderText = "URL";
-            //dataGridView_adv.Columns["imagetext"].Width = 80;
-            //dataGridView_adv.Columns["imagetext"].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            //dataGridView_adv.Columns["imagetext"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            
             dataGridView_adv.Columns["imagetext"].Visible = false;
 
             DataGridViewImageColumn col = new();

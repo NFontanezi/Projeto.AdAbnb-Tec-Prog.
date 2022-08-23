@@ -32,10 +32,17 @@ namespace AdAbnb.Presentation
 
         private void btnAdvOn_Click(object sender, EventArgs e)
         {
-            var t = new Thread(() => Application.Run(new frmLoginArea_MyAdvs(Owner)));
-            t.Start();
-            this.Close();
-           
+            if (Owner.PropertyList !=null)
+            {
+                var t = new Thread(() => Application.Run(new frmLoginArea_MyAdvs(Owner)));
+                t.Start();
+                
+            }
+            else
+            {
+                MessageBox.Show("Não há imoveis cadastrados");
+            }
+
             
         }
 
