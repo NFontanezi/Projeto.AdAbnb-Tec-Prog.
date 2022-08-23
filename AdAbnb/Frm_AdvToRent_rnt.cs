@@ -7,12 +7,21 @@ using System.Linq;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using AdAbnb.Domain;
 using System.Windows.Forms;
 
 namespace AdAbnb.Presentation
 {
     public partial class Frm_AdvToRent_rnt : Form
     {
+        bool bPiscina { get; set; }
+        bool bAC { get; set; }
+        bool bProxAoMar { get; set; }
+        bool bPetFriendly { get; set; }
+        bool bVagaEstacionamento { get; set; }
+        bool bProximoAoTransPublico { get; set; }
+        static List<Property> propFiltradas { get; set; } = new List<Property>();
+
         public DataTable dtF = new DataTable();
 
         public Frm_AdvToRent_rnt()
@@ -38,26 +47,39 @@ namespace AdAbnb.Presentation
         //}
 
 
-        public static DataTable GetAnuncios(DataTable dt)
+        public static DataTable GetAnuncios(DataTable dtF)
         {
-            dt.Columns.Add("id", typeof(Int32));
-            dt.Columns.Add("descricao", typeof(string));
-            dt.Columns.Add("diaria", typeof(decimal));
-            dt.Columns.Add("arquivoFoto", typeof(string));
+            dtF.Columns.Add("id", typeof(Int32));
+            dtF.Columns.Add("descricao", typeof(string));
+            dtF.Columns.Add("diaria", typeof(decimal));
+            dtF.Columns.Add("arquivoFoto", typeof(string));
+            dtF.Columns.Add("cidade", typeof(string));
+
+            dtF.Rows.Add(new object[] {101, "Apartamento beira-mar 01", 700M,
+                "https://viagemeturismo.abril.com.br/wp-content/uploads/2020/09/casas-airbnb-praia-perto-de-sao-paulo.jpg", "Guarujá"});
+
+            Property property1 = new Property("Bairro qualquer", "Guarujá", "SP", 100, 700, true, 
+                "https://viagemeturismo.abril.com.br/wp-content/uploads/2020/09/casas-airbnb-praia-perto-de-sao-paulo.jpg");
+            Repositories.AllProperties.allProperties.Add(property1);
 
 
-            dt.Rows.Add(new object[] {101, "Apartamento beira-mar 01", 700M,
-                "https://viagemeturismo.abril.com.br/wp-content/uploads/2020/09/casas-airbnb-praia-perto-de-sao-paulo.jpg"});
-            dt.Rows.Add(new object[] {102, "Apartamento beira-mar 02", 800M,
-                "https://maladeaventuras.com/wp-content/uploads/2021/01/apartamento-de-temporada-bombinhas.jpg"});
 
-            return dt;
+            dtF.Rows.Add(new object[] {102, "Apartamento beira-mar 02", 800M,
+                "https://maladeaventuras.com/wp-content/uploads/2021/01/apartamento-de-temporada-bombinhas.jpg", "Ubatuba"});
+
+            Property property2 = new Property("Bairro qualquer 2", "Ubatuba", "SP", 100, 800, true, 
+                "https://maladeaventuras.com/wp-content/uploads/2021/01/apartamento-de-temporada-bombinhas.jpg");
+            Repositories.AllProperties.allProperties.Add(property2);
+
+
+
+            return dtF;
 
         }
 
-        public static void AddAdv(DataTable dt, int cod, string descricao, decimal diaria, string url)
+        public static void AddAdv(DataTable dtF, int cod, string descricao, decimal diaria, string url)
         {
-            dt.Rows.Add(new object[] { cod, descricao, diaria, url });
+            dtF.Rows.Add(new object[] { cod, descricao, diaria, url });
         }
 
         public void ConfigurarGrade()
@@ -94,7 +116,7 @@ namespace AdAbnb.Presentation
         {
             foreach (DataGridViewRow row in dataGridView1.Rows)
             {
-                Uri uri = new Uri (row.Cells["arquivoFoto"].Value.ToString());
+                Uri uri = new Uri(row.Cells["arquivoFoto"].Value.ToString());
                 row.Cells["Image"].Value = GetImageFromUrl(uri);
             }
         }
@@ -122,17 +144,54 @@ namespace AdAbnb.Presentation
 
         }
 
+        private void btnFilter_Click(object sender, EventArgs e)
+        {
+            FilterCity();
+            FilterFacilities();
+        }
 
-        //private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        //{
-        //    if (e.ColumnIndex == 1)
-        //    {
-        //        MessageBox.Show("coluna 1");
-        //    } 
-        //    else if (e.ColumnIndex == 2)
-        //    {
-        //        MessageBox.Show("coluna 2");
-        //    }
-        //}
+
+        private void FilterCity()
+        {
+            dtF.DefaultView.RowFilter = string.Format("[{0}] LIKE '%{1}%'", "cidade", txbCidade.Text);
+            dataGridView1.DataSource = dtF;
+        }
+
+        private void FilterFacilities()
+        {
+
+            foreach (Property propriedade in Repositories.AllProperties.allProperties)
+            {
+                if (
+                    propriedade.Facilities["piscina"] == bPiscina
+                    )
+                {
+                    propFiltradas.Add(propriedade);
+                }
+                else
+                    continue;
+            }
+
+            List<int> listaIds = new List<int>();
+
+            foreach (var prop in propFiltradas)
+            {
+                listaIds.Add(prop.ID_prop);
+            }
+
+            dtF.DefaultView.RowFilter = string.Format("[{0}] LIKE '%{1}%'", "id", listaIds.ToString());
+            dataGridView1.DataSource = dtF;
+
+        }
+
+        private void Frm_AdvToRent_rnt_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CkbPool_Click(object sender, EventArgs e)
+        {
+            bPiscina = CkbPool.Checked ? true : false;
+        }
     }
 }

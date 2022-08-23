@@ -28,7 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_AdvToRent_rnt));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.lblCidade = new System.Windows.Forms.Label();
+            this.txbCidade = new System.Windows.Forms.TextBox();
+            this.btnFilter = new System.Windows.Forms.Button();
+            this.CkbPool = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -39,38 +44,88 @@
             this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.Cornsilk;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(1, 2);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridView1.Location = new System.Drawing.Point(127, 238);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(800, 452);
+            this.dataGridView1.Size = new System.Drawing.Size(838, 530);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.DoubleClick += new System.EventHandler(this.dataGridView1_DoubleClick);
             // 
+            // lblCidade
+            // 
+            this.lblCidade.AutoSize = true;
+            this.lblCidade.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblCidade.Location = new System.Drawing.Point(127, 145);
+            this.lblCidade.Name = "lblCidade";
+            this.lblCidade.Size = new System.Drawing.Size(71, 25);
+            this.lblCidade.TabIndex = 1;
+            this.lblCidade.Text = "Cidade:";
+            // 
+            // txbCidade
+            // 
+            this.txbCidade.Location = new System.Drawing.Point(204, 146);
+            this.txbCidade.MaxLength = 70;
+            this.txbCidade.Name = "txbCidade";
+            this.txbCidade.Size = new System.Drawing.Size(444, 27);
+            this.txbCidade.TabIndex = 2;
+            // 
+            // btnFilter
+            // 
+            this.btnFilter.AutoSize = true;
+            this.btnFilter.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnFilter.BackgroundImage")));
+            this.btnFilter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFilter.Location = new System.Drawing.Point(654, 146);
+            this.btnFilter.Name = "btnFilter";
+            this.btnFilter.Size = new System.Drawing.Size(34, 31);
+            this.btnFilter.TabIndex = 4;
+            this.btnFilter.UseVisualStyleBackColor = true;
+            this.btnFilter.Click += new System.EventHandler(this.btnFilter_Click);
+            // 
+            // CkbPool
+            // 
+            this.CkbPool.AutoSize = true;
+            this.CkbPool.Location = new System.Drawing.Point(744, 145);
+            this.CkbPool.Name = "CkbPool";
+            this.CkbPool.Size = new System.Drawing.Size(76, 24);
+            this.CkbPool.TabIndex = 5;
+            this.CkbPool.Text = "Piscina";
+            this.CkbPool.UseVisualStyleBackColor = true;
+            this.CkbPool.Click += new System.EventHandler(this.CkbPool_Click);
+            // 
             // Frm_AdvToRent_rnt
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.Cornsilk;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1082, 853);
+            this.Controls.Add(this.CkbPool);
+            this.Controls.Add(this.btnFilter);
+            this.Controls.Add(this.txbCidade);
+            this.Controls.Add(this.lblCidade);
             this.Controls.Add(this.dataGridView1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Frm_AdvToRent_rnt";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Frm_AdvToRent_rnt";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Frm_AdvToRent_rnt_Load);
+            this.Click += new System.EventHandler(this.Frm_AdvToRent_rnt_Click);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private DataGridView dataGridView1;
+        private Label lblCidade;
+        private TextBox txbCidade;
+        private Button btnFilter;
+        private CheckBox CkbPool;
     }
 }

@@ -35,5 +35,11 @@ namespace AdAbnb.Presentation
     Gênero: {usuario.Gender}";
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var t = new Thread(() => Application.Run(new Frm_ClientArea()));
+            this.Close();
+            t.Start();
+        }
     }
 }
