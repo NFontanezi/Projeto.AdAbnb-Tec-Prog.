@@ -53,6 +53,8 @@
             this.cbxAC = new System.Windows.Forms.CheckBox();
             this.cbxBus = new System.Windows.Forms.CheckBox();
             this.lblMsg = new System.Windows.Forms.Label();
+            this.txbURL = new System.Windows.Forms.TextBox();
+            this.lblURL = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnBack
@@ -78,7 +80,7 @@
             // cbxAtivo
             // 
             this.cbxAtivo.AutoSize = true;
-            this.cbxAtivo.Location = new System.Drawing.Point(343, 322);
+            this.cbxAtivo.Location = new System.Drawing.Point(454, 328);
             this.cbxAtivo.Name = "cbxAtivo";
             this.cbxAtivo.Size = new System.Drawing.Size(54, 19);
             this.cbxAtivo.TabIndex = 21;
@@ -123,7 +125,7 @@
             // 
             this.lblActive.AutoSize = true;
             this.lblActive.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblActive.Location = new System.Drawing.Point(340, 306);
+            this.lblActive.Location = new System.Drawing.Point(451, 312);
             this.lblActive.Name = "lblActive";
             this.lblActive.Size = new System.Drawing.Size(79, 13);
             this.lblActive.TabIndex = 8;
@@ -186,7 +188,7 @@
             // 
             this.lblDaily.AutoSize = true;
             this.lblDaily.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblDaily.Location = new System.Drawing.Point(343, 198);
+            this.lblDaily.Location = new System.Drawing.Point(342, 306);
             this.lblDaily.Name = "lblDaily";
             this.lblDaily.Size = new System.Drawing.Size(61, 13);
             this.lblDaily.TabIndex = 11;
@@ -194,7 +196,7 @@
             // 
             // txbDaily
             // 
-            this.txbDaily.Location = new System.Drawing.Point(340, 219);
+            this.txbDaily.Location = new System.Drawing.Point(339, 327);
             this.txbDaily.Name = "txbDaily";
             this.txbDaily.Size = new System.Drawing.Size(64, 23);
             this.txbDaily.TabIndex = 20;
@@ -202,7 +204,7 @@
             // lblReais
             // 
             this.lblReais.AutoSize = true;
-            this.lblReais.Location = new System.Drawing.Point(317, 222);
+            this.lblReais.Location = new System.Drawing.Point(316, 330);
             this.lblReais.Name = "lblReais";
             this.lblReais.Size = new System.Drawing.Size(20, 15);
             this.lblReais.TabIndex = 25;
@@ -286,6 +288,22 @@
             this.lblMsg.Size = new System.Drawing.Size(0, 15);
             this.lblMsg.TabIndex = 27;
             // 
+            // txbURL
+            // 
+            this.txbURL.Location = new System.Drawing.Point(313, 190);
+            this.txbURL.Name = "txbURL";
+            this.txbURL.Size = new System.Drawing.Size(206, 23);
+            this.txbURL.TabIndex = 20;
+            // 
+            // lblURL
+            // 
+            this.lblURL.AutoSize = true;
+            this.lblURL.Location = new System.Drawing.Point(313, 172);
+            this.lblURL.Name = "lblURL";
+            this.lblURL.Size = new System.Drawing.Size(63, 15);
+            this.lblURL.TabIndex = 25;
+            this.lblURL.Text = "Foto (URL)";
+            // 
             // frmAddAdv
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -298,11 +316,13 @@
             this.Controls.Add(this.cbxSea);
             this.Controls.Add(this.cbxAC);
             this.Controls.Add(this.cbxPool);
+            this.Controls.Add(this.lblURL);
             this.Controls.Add(this.lblReais);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.cbxAtivo);
+            this.Controls.Add(this.txbURL);
             this.Controls.Add(this.txbDaily);
             this.Controls.Add(this.lblDaily);
             this.Controls.Add(this.txbState);
@@ -320,6 +340,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Frm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frmAddAdv_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -352,5 +373,7 @@
         private CheckBox cbxAC;
         private CheckBox cbxBus;
         private Label lblMsg;
+        private TextBox txbURL;
+        private Label lblURL;
     }
 }

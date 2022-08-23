@@ -18,7 +18,7 @@ namespace AdAbnb.Presentation
         Owner owner { get; set; }
         List<Property> list1 { get; set; }
 
-        List<string> f;
+
         public frmLoginArea_MyAdvs(Owner owner)
         {
 
@@ -32,33 +32,32 @@ namespace AdAbnb.Presentation
         private void LoginArea_MyAdvs_Load(object sender, EventArgs e)
         {
             //dataGridView_adv.DataSource = GetAnuncios(dtF);
-            // ConfigurarGrade();
-            //  CarregarFotos();
-            dataGridView_adv.DataSource = null; //Limpa o grid;
+
+            dataGridView_adv.DataSource = null;
             dataGridView_adv.DataSource = list1;
             dataGridView_adv.Refresh();
-            //dataGridView_adv.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
+            dataGridView_adv.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
+            ConfigurarGrade();
+            CarregarFotos();
         }
-        public static DataTable GetAnuncios(DataTable dt, List<Property> list1)
-        {
+        /*  public static DataTable GetAnuncios(DataTable dt, List<Property> list1)
+          {
 
-            dt.Columns.Add("id", typeof(Int32));
-            dt.Columns.Add("descricao", typeof(string)); //commodities
-            dt.Columns.Add("diaria", typeof(decimal));
-            dt.Columns.Add("arquivoFoto", typeof(string));
-            dt.Columns.Add("facilidades", typeof(Dictionary<string, bool>));
-            //FillAnunciosRows(dt, list1);
-            return dt;
-        }
+              dt.Columns.Add("id", typeof(Int32));
+              dt.Columns.Add("descricao", typeof(string)); //commodities
+              dt.Columns.Add("diaria", typeof(decimal));
+              dt.Columns.Add("arquivoFoto", typeof(string));
+              dt.Columns.Add("facilidades", typeof(Dictionary<string, bool>));
+              //FillAnunciosRows(dt, list1);
+              return dt;
+          }*/
 
 
         //public static void FillAnunciosRows(DataTable dt, List<Property> list1)
         //{
         //    for (int i = 0; i < list1.Count; i++)
-        //    {
-        //        dt.Rows.Add(list1[i]); // preenche linha com as propriedades
-        //        var f = list1[i].Facilities; // cria lista de comodidades
-        //        GetFacilities(f); // nao esta sendo usado pra nada
+        //   {
+        //       dt.Rows.Add(list1[i]); // preenche linha com as propriedades
 
         //    }
 
@@ -80,37 +79,60 @@ namespace AdAbnb.Presentation
 
 
 
-        public static void AddAdv(DataTable dt, List<Property> list1)
-        {
-            dt.Rows.Add(list1); // cria nome das colunas
-            //dt.Rows.Add(new object[] { cod, descricao, diaria, url });
-        }
+        //public static void AddAdv(DataTable dt, List<Property> list1)
+        //{
+        //    dt.Rows.Add(list1); // cria nome das colunas
+        //    //dt.Rows.Add(new object[] { cod, descricao, diaria, url });
+        //}
 
         public void ConfigurarGrade()
         {
             dataGridView_adv.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 11);
             dataGridView_adv.DefaultCellStyle.Font = new Font("Arial", 10);
             dataGridView_adv.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dataGridView_adv.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
-            dataGridView_adv.Columns["id"].HeaderText = "ID";
-            dataGridView_adv.Columns["id"].Width = 50;
-            dataGridView_adv.Columns["id"].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridView_adv.Columns["id"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
-            dataGridView_adv.Columns["descricao"].HeaderText = "Descrição";
-            dataGridView_adv.Columns["descricao"].Width = 500;
+            dataGridView_adv.Columns["Daily"].HeaderText = "Diária";
+            dataGridView_adv.Columns["Daily"].Width = 80;
+            dataGridView_adv.Columns["Daily"].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridView_adv.Columns["Daily"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
-            dataGridView_adv.Columns["diaria"].HeaderText = "Diária";
-            dataGridView_adv.Columns["diaria"].Width = 80;
-            dataGridView_adv.Columns["diaria"].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridView_adv.Columns["diaria"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridView_adv.Columns["facilities"].HeaderText = "Comodidades";
+            dataGridView_adv.Columns["facilities"].Width = 80;
+            dataGridView_adv.Columns["facilities"].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridView_adv.Columns["facilities"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
-            dataGridView_adv.Columns["arquivoFoto"].Visible = false;
+            dataGridView_adv.Columns["City"].HeaderText = "Cidade";
+            dataGridView_adv.Columns["City"].Width = 80;
+            dataGridView_adv.Columns["City"].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridView_adv.Columns["City"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
-            dataGridView_adv.Columns["facilidades"].HeaderText = "Facilidades";
-            dataGridView_adv.Columns["facilidades"].Width = 80;
-            dataGridView_adv.Columns["facilidades"].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridView_adv.Columns["facilidades"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridView_adv.Columns["District"].HeaderText = "Bairro";
+            dataGridView_adv.Columns["District"].Width = 80;
+            dataGridView_adv.Columns["District"].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridView_adv.Columns["District"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+            dataGridView_adv.Columns["State"].HeaderText = "Estado";
+            dataGridView_adv.Columns["State"].Width = 80;
+            dataGridView_adv.Columns["State"].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridView_adv.Columns["State"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+            dataGridView_adv.Columns["Active"].HeaderText = "Ativo";
+            dataGridView_adv.Columns["Active"].Width = 80;
+            dataGridView_adv.Columns["Active"].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridView_adv.Columns["Active"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+            dataGridView_adv.Columns["Footage"].HeaderText = "Metragem";
+            dataGridView_adv.Columns["Footage"].Width = 80;
+            dataGridView_adv.Columns["Footage"].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridView_adv.Columns["Footage"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+            //dataGridView_adv.Columns["imagetext"].HeaderText = "URL";
+            //dataGridView_adv.Columns["imagetext"].Width = 80;
+            //dataGridView_adv.Columns["imagetext"].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            //dataGridView_adv.Columns["imagetext"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridView_adv.Columns["imagetext"].Visible = false;
 
             DataGridViewImageColumn col = new();
             col.Name = "Image";
@@ -125,7 +147,7 @@ namespace AdAbnb.Presentation
         {
             foreach (DataGridViewRow row in dataGridView_adv.Rows)
             {
-                Uri uri = new Uri(row.Cells["arquivoFoto"].Value.ToString());
+                Uri uri = new Uri(row.Cells["imagetext"].Value.ToString());
                 row.Cells["Image"].Value = GetImageFromUrl(uri);
             }
         }
@@ -146,39 +168,43 @@ namespace AdAbnb.Presentation
         private void dataGridView_adv_DoubleClick(object sender, EventArgs e)
         {
             var path = dataGridView_adv.Rows[dataGridView_adv.CurrentCell.RowIndex].Cells
-                ["arquivoFoto"].Value.ToString();
+                ["imagetext"].Value.ToString();
 
             Form frm = new Form_Img_Adv(path);
             frm.ShowDialog();
 
         }
 
-        private void dataGridView_adv_CellContentClickfacilities(object sender, DataGridViewCellEventArgs e)
+        private void dataGridView_adv_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            int rowindex = dataGridView_adv.CurrentCell.RowIndex;
+            int columnindex = dataGridView_adv.CurrentCell.ColumnIndex;
+            
 
-            int x = e.RowIndex;
-            var p = list1[x]; //uma propriedade
-            var f = list1[x].Facilities; 
-            Form frm = new frmFacilities(x, p, f);
-
-        }
-
-        public static List<string> GetFacilities(Dictionary<string, bool> facilities)
-        {
-
-            List<string> listafacilities = new();
-            foreach (KeyValuePair<string, bool> pair in facilities)
+            if (columnindex == 9)
             {
-                if (pair.Value == true)
-                {
-                    listafacilities.Add(pair.Key);
-                }
-                else continue;
+                var path = dataGridView_adv.Rows[rowindex].Cells
+                 ["imagetext"].Value.ToString();
+
+                Form frm = new Form_Img_Adv(path);
+                frm.ShowDialog();
+            }
+            else if (columnindex == 7)
+            {
+
+                int x = e.RowIndex;
+                var p = list1[x]; //uma propriedade
+                var f = list1[x].Facilities;
+
+                Form frm = new frmFacilities(p, f);
+                frm.ShowDialog();
             }
 
-            return listafacilities.ToList();
         }
 
+        private void dataGridView_adv_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
+        }
     }
 }

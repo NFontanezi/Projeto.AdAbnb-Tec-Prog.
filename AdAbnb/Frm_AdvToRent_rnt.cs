@@ -47,9 +47,9 @@ namespace AdAbnb.Presentation
 
 
             dt.Rows.Add(new object[] {101, "Apartamento beira-mar 01", 700M,
-                @"https://viagemeturismo.abril.com.br/wp-content/uploads/2020/09/casas-airbnb-praia-perto-de-sao-paulo.jpg"});
+                "https://viagemeturismo.abril.com.br/wp-content/uploads/2020/09/casas-airbnb-praia-perto-de-sao-paulo.jpg"});
             dt.Rows.Add(new object[] {102, "Apartamento beira-mar 02", 800M,
-                @"https://maladeaventuras.com/wp-content/uploads/2021/01/apartamento-de-temporada-bombinhas.jpg"});
+                "https://maladeaventuras.com/wp-content/uploads/2021/01/apartamento-de-temporada-bombinhas.jpg"});
 
             return dt;
 

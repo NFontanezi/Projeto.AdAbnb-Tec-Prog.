@@ -81,7 +81,7 @@
             this.txbName.Name = "txbName";
             this.txbName.Size = new System.Drawing.Size(238, 23);
             this.txbName.TabIndex = 2;
-            this.txbName.TextChanged += new System.EventHandler(this.txbName_TextChanged);
+            //this.txbName.TextChanged += new System.EventHandler(this.txbName_TextChanged);
             // 
             // lblEmail
             // 

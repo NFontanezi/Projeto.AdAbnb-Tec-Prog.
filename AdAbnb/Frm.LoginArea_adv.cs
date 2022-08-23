@@ -24,6 +24,8 @@ namespace AdAbnb.Presentation
             var t = new Thread(() => Application.Run(new frmAddAdv(Owner)));
             this.Close();
             t.Start();
+            
+          
             //frmAddAdv frm = new(Owner);
             //frm.Show();
         }
@@ -31,8 +33,9 @@ namespace AdAbnb.Presentation
         private void btnAdvOn_Click(object sender, EventArgs e)
         {
             var t = new Thread(() => Application.Run(new frmLoginArea_MyAdvs(Owner)));
-            this.Close();
             t.Start();
+            this.Close();
+           
             
         }
 
