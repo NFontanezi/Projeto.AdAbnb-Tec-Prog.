@@ -33,6 +33,7 @@
             this.lblCidade = new System.Windows.Forms.Label();
             this.txbCidade = new System.Windows.Forms.TextBox();
             this.btnFilter = new System.Windows.Forms.Button();
+            this.CkbPool = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -83,6 +84,17 @@
             this.btnFilter.UseVisualStyleBackColor = true;
             this.btnFilter.Click += new System.EventHandler(this.btnFilter_Click);
             // 
+            // CkbPool
+            // 
+            this.CkbPool.AutoSize = true;
+            this.CkbPool.Location = new System.Drawing.Point(744, 145);
+            this.CkbPool.Name = "CkbPool";
+            this.CkbPool.Size = new System.Drawing.Size(76, 24);
+            this.CkbPool.TabIndex = 5;
+            this.CkbPool.Text = "Piscina";
+            this.CkbPool.UseVisualStyleBackColor = true;
+            this.CkbPool.Click += new System.EventHandler(this.CkbPool_Click);
+            // 
             // Frm_AdvToRent_rnt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -91,6 +103,7 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.Cornsilk;
             this.ClientSize = new System.Drawing.Size(1082, 853);
+            this.Controls.Add(this.CkbPool);
             this.Controls.Add(this.btnFilter);
             this.Controls.Add(this.txbCidade);
             this.Controls.Add(this.lblCidade);
@@ -100,6 +113,7 @@
             this.Text = "Frm_AdvToRent_rnt";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Frm_AdvToRent_rnt_Load);
+            this.Click += new System.EventHandler(this.Frm_AdvToRent_rnt_Click);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -112,5 +126,6 @@
         private Label lblCidade;
         private TextBox txbCidade;
         private Button btnFilter;
+        private CheckBox CkbPool;
     }
 }
