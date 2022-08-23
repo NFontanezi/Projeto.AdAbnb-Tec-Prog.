@@ -97,9 +97,6 @@ namespace AdAbnb.Presentation
 
         }
 
-        private void txbName_TextChanged(object sender, EventArgs e)
-        {
 
-        }
     }
 }

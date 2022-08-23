@@ -23,20 +23,21 @@ namespace AdAbnb.Domain
         public string State { get; set; }
         public int Footage { get; set; }
         public bool Active { get; set; }
+        public string imagetext { get; set; }
 
         public Dictionary<string, bool> Facilities = new();
 
         // lista de comodidades?? e imagens?
-        public Property(string district, string city, string state, int footage, decimal daily, bool active)
+        public Property(string district, string city, string state, int footage, decimal daily, bool active, string image)
         {
             ID_prop = this.ID_prop;
-            //Owner = owner;
             District = district;
             City = city;
             State = state;
             Footage = footage;
             Daily = daily;
             Active = active;
+            imagetext = image;
         }
 
         public void AddFacilities(string nome, bool status)

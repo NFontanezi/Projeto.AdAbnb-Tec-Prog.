@@ -27,6 +27,7 @@ namespace AdAbnb.Presentation
             string state = txbState.Text == "" ? "" : txbState.Text;
             int footage = txbFootage.Text == "" ? 0 : Convert.ToInt32(txbFootage.Text);
             int daily = txbFootage.Text == "" ? 0 : Convert.ToInt32(txbFootage.Text);
+            string imagetext = txbURL.Text; //== "" ? "" : txbURL.Text;
             bool active = cbxAtivo.Checked ? true : false;
             bool ac = cbxAC.Checked ? true : false;
             bool pool = cbxPool.Checked ? true : false;
@@ -35,11 +36,11 @@ namespace AdAbnb.Presentation
             bool park = cbxPark.Checked ? true : false;
             bool bus = cbxBus.Checked ? true : false;
 
-            bool check = CheckFields(district, city,  state,  footage,  daily);
+            bool check = CheckFields(district, city, state, footage, daily,imagetext);
 
             if (check)
             {
-                Property newProp = new Property(district, city, state, footage, daily, active);
+                Property newProp = new Property(district, city, state, footage, daily, active, imagetext);
                 newProp.AddFacilities("Piscina", pool);
                 newProp.AddFacilities("Próximo ao mar", sea);
                 newProp.AddFacilities("PetFriendly", pet);
@@ -51,6 +52,8 @@ namespace AdAbnb.Presentation
                 var t = new Thread(() => Application.Run(new frmAdvArea(Owner)));
                 this.Close();
                 t.Start();
+                
+                
             }
             else
             {
@@ -61,27 +64,30 @@ namespace AdAbnb.Presentation
 
             //BindDataGridView();
         }
-    
 
-        private bool CheckFields(string district, string city, string state, int footage, decimal daily)
+
+
+        private bool CheckFields(string district, string city, string state, int footage, decimal daily, string image)
         {
-            if (district != "" && city != "" && state != "" && footage != 0 && daily != 0)
+            if (district != "" && city != "" && state != "" && footage != 0 && daily != 0 && image != "")
             {
                 return true;
             }
             else return false;
         }
 
-        private void Register()
-        {
-            throw new NotImplementedException();
-        }
 
         private void btnBack_Click(object sender, EventArgs e)
         {
             var t = new Thread(() => Application.Run(new frmAdvArea(Owner)));
-            this.Close();
             t.Start();
+            this.Close();
+            
+        }
+
+        private void frmAddAdv_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
