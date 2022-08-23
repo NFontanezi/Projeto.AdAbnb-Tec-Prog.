@@ -41,6 +41,7 @@ namespace AdAbnb.Presentation
             if (check)
             {
                 Property newProp = new Property(district, city, state, footage, daily, active, imagetext);
+                newProp.AddFacilities("Ar Condicionado", ac);
                 newProp.AddFacilities("Piscina", pool);
                 newProp.AddFacilities("Próximo ao mar", sea);
                 newProp.AddFacilities("PetFriendly", pet);

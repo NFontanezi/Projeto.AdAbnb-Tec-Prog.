@@ -31,8 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.ownerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridView_adv = new System.Windows.Forms.DataGridView();
-            this.propertyBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ownerBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Daily = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.City = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,6 +40,10 @@
             this.Active = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.facilities = new System.Windows.Forms.DataGridViewButtonColumn();
             this.imagetext = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.propertyBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ownerBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ownerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_adv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.propertyBindingSource)).BeginInit();
@@ -54,6 +56,7 @@
             // 
             // dataGridView_adv
             // 
+            this.dataGridView_adv.AllowUserToOrderColumns = true;
             this.dataGridView_adv.AutoGenerateColumns = false;
             this.dataGridView_adv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_adv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -67,21 +70,13 @@
             this.facilities,
             this.imagetext});
             this.dataGridView_adv.DataSource = this.propertyBindingSource;
-            this.dataGridView_adv.Location = new System.Drawing.Point(12, 105);
+            this.dataGridView_adv.Location = new System.Drawing.Point(-250, 51);
             this.dataGridView_adv.Name = "dataGridView_adv";
             this.dataGridView_adv.RowTemplate.Height = 25;
-            this.dataGridView_adv.Size = new System.Drawing.Size(794, 219);
+            this.dataGridView_adv.Size = new System.Drawing.Size(851, 219);
             this.dataGridView_adv.TabIndex = 0;
-            this.dataGridView_adv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_adv_CellContentClick);
             this.dataGridView_adv.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_adv_CellContentDoubleClick);
-            // 
-            // propertyBindingSource
-            // 
-            this.propertyBindingSource.DataSource = typeof(AdAbnb.Domain.Property);
-            // 
-            // ownerBindingSource1
-            // 
-            this.ownerBindingSource1.DataSource = typeof(AdAbnb.Domain.Owner);
+            this.dataGridView_adv.ControlRemoved += new System.Windows.Forms.ControlEventHandler(this.dataGridView_adv_ControlRemoved);
             // 
             // ID
             // 
@@ -146,11 +141,41 @@
             this.imagetext.HeaderText = "imagetext";
             this.imagetext.Name = "imagetext";
             // 
+            // propertyBindingSource
+            // 
+            this.propertyBindingSource.DataSource = typeof(AdAbnb.Domain.Property);
+            // 
+            // ownerBindingSource1
+            // 
+            this.ownerBindingSource1.DataSource = typeof(AdAbnb.Domain.Owner);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(628, 85);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(109, 27);
+            this.btnDelete.TabIndex = 2;
+            this.btnDelete.Text = "Deletar";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.Location = new System.Drawing.Point(628, 118);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(109, 27);
+            this.btnEdit.TabIndex = 2;
+            this.btnEdit.Text = "Editar";
+            this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            // 
             // frmLoginArea_MyAdvs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnEdit);
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.dataGridView_adv);
             this.Name = "frmLoginArea_MyAdvs";
             this.Text = "LoginArea_MyAdvs";
@@ -184,5 +209,7 @@
         private DataGridViewCheckBoxColumn Active;
         private DataGridViewButtonColumn facilities;
         private DataGridViewTextBoxColumn imagetext;
+        private Button btnDelete;
+        private Button btnEdit;
     }
 }
