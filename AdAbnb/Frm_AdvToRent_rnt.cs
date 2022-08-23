@@ -122,9 +122,17 @@ namespace AdAbnb.Presentation
 
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
 
-        }
+        //private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        //{
+        //    if (e.ColumnIndex == 1)
+        //    {
+        //        MessageBox.Show("coluna 1");
+        //    } 
+        //    else if (e.ColumnIndex == 2)
+        //    {
+        //        MessageBox.Show("coluna 2");
+        //    }
+        //}
     }
 }
