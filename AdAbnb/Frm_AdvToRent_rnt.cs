@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using AdAbnb.Domain;
 using System.Windows.Forms;
 
+
 namespace AdAbnb.Presentation
 {
     public partial class Frm_AdvToRent_rnt : Form
@@ -23,6 +24,13 @@ namespace AdAbnb.Presentation
         static List<Property> propFiltradas { get; set; } = new List<Property>();
 
         public DataTable dtF = new DataTable();
+
+        int clickCountPool = 0;
+        int clickCountAC = 0;
+        int clickCountNextToBeach = 0;
+        int clickCountPetFriendly = 0;
+        int clickCountGarageSlots = 0;
+        int clickCountNextToPublicTransp = 0;
 
         public Frm_AdvToRent_rnt()
         {
@@ -54,9 +62,18 @@ namespace AdAbnb.Presentation
             dtF.Columns.Add("diaria", typeof(decimal));
             dtF.Columns.Add("arquivoFoto", typeof(string));
             dtF.Columns.Add("cidade", typeof(string));
+            dtF.Columns.Add("piscina", typeof(bool));
+            dtF.Columns.Add("ac", typeof(bool));
+            dtF.Columns.Add("proxMar", typeof(bool));
+            dtF.Columns.Add("petFriendly", typeof(bool));
+            dtF.Columns.Add("vaga", typeof(bool));
+            dtF.Columns.Add("proxTranspPublico", typeof(bool));
+
+
+
 
             dtF.Rows.Add(new object[] {101, "Apartamento beira-mar 01", 700M,
-                "https://viagemeturismo.abril.com.br/wp-content/uploads/2020/09/casas-airbnb-praia-perto-de-sao-paulo.jpg", "Guarujá"});
+                "https://viagemeturismo.abril.com.br/wp-content/uploads/2020/09/casas-airbnb-praia-perto-de-sao-paulo.jpg", "Guarujá", true, true, true, false, false, false});
 
             Property property1 = new Property("Bairro qualquer", "Guarujá", "SP", 100, 700, true, 
                 "https://viagemeturismo.abril.com.br/wp-content/uploads/2020/09/casas-airbnb-praia-perto-de-sao-paulo.jpg");
@@ -65,9 +82,9 @@ namespace AdAbnb.Presentation
 
 
             dtF.Rows.Add(new object[] {102, "Apartamento beira-mar 02", 800M,
-                "https://maladeaventuras.com/wp-content/uploads/2021/01/apartamento-de-temporada-bombinhas.jpg", "Ubatuba"});
+                "https://maladeaventuras.com/wp-content/uploads/2021/01/apartamento-de-temporada-bombinhas.jpg", "Ubatuba", false, false, false, true, true, true});
 
-            Property property2 = new Property("Bairro qualquer 2", "Ubatuba", "SP", 100, 800, true, 
+            Property property2 = new Property("Bairro qualquer 2", "Ubatuba", "SP", 100, 800, false, 
                 "https://maladeaventuras.com/wp-content/uploads/2021/01/apartamento-de-temporada-bombinhas.jpg");
             Repositories.AllProperties.allProperties.Add(property2);
 
@@ -110,6 +127,21 @@ namespace AdAbnb.Presentation
             dataGridView1.Columns["Image"].HeaderText = "Foto";
             dataGridView1.Columns["Image"].Width = 64;
 
+
+            //dtF.Columns.Add("piscina", typeof(bool));
+            //dtF.Columns.Add("ac", typeof(bool));
+            //dtF.Columns.Add("proxMar", typeof(bool));
+            //dtF.Columns.Add("petFriendly", typeof(bool));
+            //dtF.Columns.Add("vaga", typeof(bool));
+            //dtF.Columns.Add("proxTranspPublico", typeof(bool));
+
+            dataGridView1.Columns["piscina"].Visible = false;
+            dataGridView1.Columns["ac"].Visible = false;
+            dataGridView1.Columns["proxMar"].Visible = false;
+            dataGridView1.Columns["petFriendly"].Visible = false;
+            dataGridView1.Columns["vaga"].Visible = false;
+            dataGridView1.Columns["proxTranspPublico"].Visible = false;
+
         }
 
         public void CarregarFotos()
@@ -146,52 +178,234 @@ namespace AdAbnb.Presentation
 
         private void btnFilter_Click(object sender, EventArgs e)
         {
-            FilterCity();
-            FilterFacilities();
+            string filter = "";
+            FilterCity(filter);
+            FilterFacilities(filter);
+
+            string filtroFinal = FilterCity(filter) + FilterFacilities(filter);
+
+            dtF.DefaultView.RowFilter = filtroFinal;
         }
 
-
-        private void FilterCity()
+        private string FilterFacilities(string filter)
         {
-            dtF.DefaultView.RowFilter = string.Format("[{0}] LIKE '%{1}%'", "cidade", txbCidade.Text);
+            string filterFacilities = 
+                FilterPool(filter) + 
+                FilterAC(filter) +
+                FilterNextToBeach(filter) +
+                FilterPetFriendly(filter) +
+                FilterGarageSlots(filter) +
+                FilterPublicTransp(filter);
+            CarregarFotos();
+            
+            return filterFacilities;
+        }
+
+        private string FilterCity(string filterS)
+        {
+            filterS += $"{dtF.DefaultView.RowFilter = string.Format("[{0}] LIKE '%{1}%'", "cidade", txbCidade.Text)}";
             dataGridView1.DataSource = dtF;
+            return filterS;
         }
 
-        private void FilterFacilities()
+        //--------------- FILTRO PISCINA
+        private string FilterPool(string filterS)
         {
-
-            foreach (Property propriedade in Repositories.AllProperties.allProperties)
+            if(bPiscina == true)
             {
-                if (
-                    propriedade.Facilities["piscina"] == bPiscina
-                    )
-                {
-                    propFiltradas.Add(propriedade);
-                }
-                else
-                    continue;
+                filterS += $" AND {dtF.DefaultView.RowFilter = "piscina = 1"}";
+            }
+            else
+            {
+                filterS += "";
             }
 
-            List<int> listaIds = new List<int>();
-
-            foreach (var prop in propFiltradas)
-            {
-                listaIds.Add(prop.ID_prop);
-            }
-
-            dtF.DefaultView.RowFilter = string.Format("[{0}] LIKE '%{1}%'", "id", listaIds.ToString());
+            
             dataGridView1.DataSource = dtF;
+            return filterS;
 
         }
+
+        private void CkbPool_Click(object sender, EventArgs e)
+        {
+            clickCountPool++;
+
+            if(clickCountPool % 2 == 0 || clickCountPool == 0)
+            {
+                bPiscina = false;
+            }
+            else
+            {
+                bPiscina = true;
+            }
+        }
+
+
+        // ------------ FILTRO AR CONDICIONADO
+        private string FilterAC(string filterS)
+        {
+            if (bAC == true)
+            {
+                filterS += $" AND {dtF.DefaultView.RowFilter = "ac = 1"}";
+            }
+            else
+            {
+                filterS += "";
+            }
+
+            dataGridView1.DataSource = dtF;
+            return filterS;
+        }
+
+        private void CkbAC_Click(object sender, EventArgs e)
+        {
+            clickCountAC++;
+
+            if (clickCountAC % 2 == 0 || clickCountAC == 0)
+            {
+                bAC = false;
+            }
+            else
+            {
+                bAC = true;
+            }
+        }
+
+        //------------ FILTRO PROXIMO AO MAR
+
+        private string FilterNextToBeach(string filterS)
+        {
+            if (bProxAoMar == true)
+            {
+                filterS += $" AND {dtF.DefaultView.RowFilter = "proxMar = 1"}";
+            }
+            else
+            {
+                filterS += "";
+            }
+            dataGridView1.DataSource = dtF;
+            return filterS;
+        }
+
+        private void CkbProxAoMar_Click(object sender, EventArgs e)
+        {
+            clickCountNextToBeach++;
+
+            if (clickCountNextToBeach % 2 == 0 || clickCountNextToBeach == 0)
+            {
+                bProxAoMar = false;
+            }
+            else
+            {
+                bProxAoMar = true;
+            }
+        }
+
+
+        //----------- FILTRO PET FRIENDLY
+
+        private string FilterPetFriendly(string filterS)
+        {
+            if (bPetFriendly == true)
+            {
+                filterS += $" AND {dtF.DefaultView.RowFilter = "petFriendly = 1"}";
+            }
+            else
+            {
+                filterS = "";
+            }
+
+            dataGridView1.DataSource = dtF;
+            return filterS;
+        }
+
+
+        private void CkbPetFriendly_Click(object sender, EventArgs e)
+        {
+            clickCountPetFriendly++;
+
+            if (clickCountPetFriendly % 2 == 0 || clickCountPetFriendly == 0)
+            {
+                bPetFriendly = false;
+            }
+            else
+            {
+                bPetFriendly = true;
+            }
+        }
+
+
+        //------------ FILTRO VAGA GARAGEM
+
+        private string FilterGarageSlots(string filterS)
+        {
+            if (bVagaEstacionamento == true)
+            {
+                filterS += $" AND {dtF.DefaultView.RowFilter = "vaga = 1"}";
+            }
+            else
+            {
+                filterS += "";
+            }
+
+            dataGridView1.DataSource = dtF;
+            return filterS;
+        }
+
+
+        private void CkbVagaGaragem_Click(object sender, EventArgs e)
+        {
+            clickCountGarageSlots++;
+
+            if (clickCountGarageSlots % 2 == 0 || clickCountGarageSlots == 0)
+            {
+                bVagaEstacionamento = false;
+            }
+            else
+            {
+                bVagaEstacionamento = true;
+            }
+        }
+
+
+        //------------ FILTRO TRANSP PUBLICO
+
+        private string FilterPublicTransp(string filterS)
+        {
+            if (bProximoAoTransPublico == true)
+            {
+                filterS += $" AND {dtF.DefaultView.RowFilter = "proxTranspPublico = 1"}";
+            }
+            else
+            {
+                filterS += "";
+            }
+
+            dataGridView1.DataSource = dtF;
+
+            return filterS;
+        }
+
+        private void CkbProxTranspPublico_Click(object sender, EventArgs e)
+        {
+            clickCountNextToPublicTransp++;
+
+            if (clickCountNextToPublicTransp % 2 == 0 || clickCountNextToPublicTransp == 0)
+            {
+                bProximoAoTransPublico = false;
+            }
+            else
+            {
+                bProximoAoTransPublico = true;
+            }
+        }
+
 
         private void Frm_AdvToRent_rnt_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void CkbPool_Click(object sender, EventArgs e)
-        {
-            bPiscina = CkbPool.Checked ? true : false;
-        }
+
     }
 }
