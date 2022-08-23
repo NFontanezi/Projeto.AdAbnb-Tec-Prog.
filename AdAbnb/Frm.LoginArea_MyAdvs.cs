@@ -46,25 +46,29 @@ namespace AdAbnb.Presentation
             dt.Columns.Add("descricao", typeof(string)); //commodities
             dt.Columns.Add("diaria", typeof(decimal));
             dt.Columns.Add("arquivoFoto", typeof(string));
-            FillAnunciosRows(dt, list1);
+            dt.Columns.Add("facilidades", typeof(Dictionary<string, bool>));
+            //FillAnunciosRows(dt, list1);
             return dt;
         }
 
 
-        public static void FillAnunciosRows(DataTable dt, List<Property> list1)
-        {
-            for (int i = 0; i < list1.Count; i++)
-            {
-                dt.Rows.Add(list1[i]); // preenche linha com as propriedades
-                var f = list1[i].Facilities; // cria lista de comodidades
-                GetFacilities(f); // nao esta sendo usado pra nada
+        //public static void FillAnunciosRows(DataTable dt, List<Property> list1)
+        //{
+        //    for (int i = 0; i < list1.Count; i++)
+        //    {
+        //        dt.Rows.Add(list1[i]); // preenche linha com as propriedades
+        //        var f = list1[i].Facilities; // cria lista de comodidades
+        //        GetFacilities(f); // nao esta sendo usado pra nada
 
-            }
+        //    }
 
-        }
+        //}
+
+
         /*
+         * 
         dt.Rows.Add(new object[] {101, "Apartamento beira-mar 01", 700M,
-                @"https://viagemeturismo.abril.com.br/wp-content/uploads/2020/09/casas-airbnb-praia-perto-de-sao-paulo.jpg"});
+                @"https://viagemeturismo.abril.com.br/wp-content/uploads/2020/09/casas-airbnb-praia-perto-de-sao-paulo.jpg", Dict});
 
 
            /* dt.Rows.Add(new object[] {101, "Apartamento beira-mar 01", 700M,
@@ -102,6 +106,11 @@ namespace AdAbnb.Presentation
             dataGridView_adv.Columns["diaria"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
             dataGridView_adv.Columns["arquivoFoto"].Visible = false;
+
+            dataGridView_adv.Columns["facilidades"].HeaderText = "Facilidades";
+            dataGridView_adv.Columns["facilidades"].Width = 80;
+            dataGridView_adv.Columns["facilidades"].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridView_adv.Columns["facilidades"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
             DataGridViewImageColumn col = new();
             col.Name = "Image";
@@ -147,11 +156,10 @@ namespace AdAbnb.Presentation
         private void dataGridView_adv_CellContentClickfacilities(object sender, DataGridViewCellEventArgs e)
         {
 
-            int x = e.ColumnIndex;
-            var p = list1[x];
-            var f = list1[x].Facilities;
-            Form frm = new frmFacilities(p, f);
-
+            int x = e.RowIndex;
+            var p = list1[x]; //uma propriedade
+            var f = list1[x].Facilities; 
+            Form frm = new frmFacilities(x, p, f);
 
         }
 
