@@ -67,7 +67,7 @@ namespace AdAbnb.Presentation
                     MessageBox.Show("Registro incluído com sucesso");
                     //listOwner_adv.Add(newOwner);
                     //listReg_adv.Add(newReg);
-                    Person.AddLoginUser(newOwner, newReg);
+                    //Person.AddLoginUser(newOwner, newReg);
 
 
                     var t = new Thread(() => Application.Run(new frmAdvArea(newOwner)));

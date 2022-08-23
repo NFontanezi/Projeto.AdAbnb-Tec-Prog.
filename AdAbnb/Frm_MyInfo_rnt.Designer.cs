@@ -30,6 +30,7 @@
         {
             this.lblNameBlank = new System.Windows.Forms.Label();
             this.lbInfoBlank = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblNameBlank
@@ -50,12 +51,25 @@
             this.lbInfoBlank.Size = new System.Drawing.Size(0, 23);
             this.lbInfoBlank.TabIndex = 3;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.button1.ForeColor = System.Drawing.Color.Cornsilk;
+            this.button1.Location = new System.Drawing.Point(366, 454);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(126, 54);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Voltar";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Frm_MyInfo_rnt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Cornsilk;
             this.ClientSize = new System.Drawing.Size(914, 600);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.lbInfoBlank);
             this.Controls.Add(this.lblNameBlank);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -72,5 +86,6 @@
         #endregion
         private Label lblNameBlank;
         private Label lbInfoBlank;
+        private Button button1;
     }
 }

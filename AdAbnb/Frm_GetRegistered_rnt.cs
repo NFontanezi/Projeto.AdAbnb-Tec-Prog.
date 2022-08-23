@@ -39,6 +39,26 @@ namespace AdAbnb.Presentation
 
         private void btnRegister_rnt_Click(object sender, EventArgs e)
         {
+            string name = txbName.Text;
+            string email = txbEmail.Text;
+            string cpf = txbCPF.Text;
+            string phone = txbPhone.Text;
+            string password = txbPassword.Text;
+
+            
+            if(string.IsNullOrEmpty(name)|| string.IsNullOrEmpty(email)|| string.IsNullOrEmpty(cpf)|| string.IsNullOrEmpty(phone) || string.IsNullOrEmpty(password))
+            {
+                MessageBox.Show("Preencha todos os campos");
+                return;
+            }
+
+            if(!DateTime.TryParse(txbBirth.Text, out DateTime dataValida))
+            {
+                MessageBox.Show("Data de nascimento inválida. Insira uma data no formato: DD/MM/AAAA");
+                return;
+            }
+
+
             DateTime Birth = DateTime.Parse(txbBirth.Text);
 
             Registration userRegistration = new Registration(txbEmail.Text, txbPassword.Text);
@@ -63,9 +83,9 @@ namespace AdAbnb.Presentation
         private void btnBack_Click(object sender, EventArgs e)
         {
 
-            Frm_SignInLogin_rnt form = new();
-            this.Hide();
-            form.Show();
+            //Frm_SignInLogin_rnt form = new();
+            //this.Hide();
+            //form.Show();
 
             var t = new Thread(() => Application.Run(new Frm_SignInLogin_rnt()));
             this.Close();

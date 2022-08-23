@@ -38,26 +38,26 @@ namespace AdAbnb.Presentation
         //}
 
 
-        public static DataTable GetAnuncios(DataTable dt)
+        public static DataTable GetAnuncios(DataTable dtF)
         {
-            dt.Columns.Add("id", typeof(Int32));
-            dt.Columns.Add("descricao", typeof(string));
-            dt.Columns.Add("diaria", typeof(decimal));
-            dt.Columns.Add("arquivoFoto", typeof(string));
+            dtF.Columns.Add("id", typeof(Int32));
+            dtF.Columns.Add("descricao", typeof(string));
+            dtF.Columns.Add("diaria", typeof(decimal));
+            dtF.Columns.Add("arquivoFoto", typeof(string));
+            dtF.Columns.Add("cidade", typeof(string));
 
+            dtF.Rows.Add(new object[] {101, "Apartamento beira-mar 01", 700M,
+                "https://viagemeturismo.abril.com.br/wp-content/uploads/2020/09/casas-airbnb-praia-perto-de-sao-paulo.jpg", "Guarujá"});
+            dtF.Rows.Add(new object[] {102, "Apartamento beira-mar 02", 800M,
+                "https://maladeaventuras.com/wp-content/uploads/2021/01/apartamento-de-temporada-bombinhas.jpg", "Ubatuba"});
 
-            dt.Rows.Add(new object[] {101, "Apartamento beira-mar 01", 700M,
-                "https://viagemeturismo.abril.com.br/wp-content/uploads/2020/09/casas-airbnb-praia-perto-de-sao-paulo.jpg"});
-            dt.Rows.Add(new object[] {102, "Apartamento beira-mar 02", 800M,
-                "https://maladeaventuras.com/wp-content/uploads/2021/01/apartamento-de-temporada-bombinhas.jpg"});
-
-            return dt;
+            return dtF;
 
         }
 
-        public static void AddAdv(DataTable dt, int cod, string descricao, decimal diaria, string url)
+        public static void AddAdv(DataTable dtF, int cod, string descricao, decimal diaria, string url)
         {
-            dt.Rows.Add(new object[] { cod, descricao, diaria, url });
+            dtF.Rows.Add(new object[] { cod, descricao, diaria, url });
         }
 
         public void ConfigurarGrade()
@@ -120,6 +120,23 @@ namespace AdAbnb.Presentation
             Form frm = new Form_Img_Adv(path);
             frm.ShowDialog();
 
+        }
+
+        private void btnFilter_Click(object sender, EventArgs e)
+        {
+            FilterCity();
+        }
+
+
+        private void FilterCity()
+        {
+            dtF.DefaultView.RowFilter = string.Format("[{0}] LIKE '%{1}%'", "cidade", txbCidade.Text);
+            dataGridView1.DataSource = dtF;
+        }
+        
+        private void FilterFacilities()
+        {
+            //dtF.DefaultView.RowFilter = dataGridView1
         }
 
 
