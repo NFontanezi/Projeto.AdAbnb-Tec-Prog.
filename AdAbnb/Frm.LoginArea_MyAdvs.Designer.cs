@@ -70,10 +70,12 @@
             this.facilities,
             this.imagetext});
             this.dataGridView_adv.DataSource = this.propertyBindingSource;
-            this.dataGridView_adv.Location = new System.Drawing.Point(-250, 51);
+            this.dataGridView_adv.Location = new System.Drawing.Point(-286, 68);
+            this.dataGridView_adv.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridView_adv.Name = "dataGridView_adv";
+            this.dataGridView_adv.RowHeadersWidth = 51;
             this.dataGridView_adv.RowTemplate.Height = 25;
-            this.dataGridView_adv.Size = new System.Drawing.Size(851, 219);
+            this.dataGridView_adv.Size = new System.Drawing.Size(973, 292);
             this.dataGridView_adv.TabIndex = 0;
             this.dataGridView_adv.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_adv_CellContentDoubleClick);
             this.dataGridView_adv.ControlRemoved += new System.Windows.Forms.ControlEventHandler(this.dataGridView_adv_ControlRemoved);
@@ -82,64 +84,82 @@
             // 
             this.ID.DataPropertyName = "ID_prop";
             this.ID.HeaderText = "ID";
+            this.ID.MinimumWidth = 6;
             this.ID.Name = "ID";
+            this.ID.Width = 125;
             // 
             // Daily
             // 
             this.Daily.DataPropertyName = "Daily";
             this.Daily.HeaderText = "Diária";
+            this.Daily.MinimumWidth = 6;
             this.Daily.Name = "Daily";
             this.Daily.ReadOnly = true;
+            this.Daily.Width = 125;
             // 
             // City
             // 
             this.City.DataPropertyName = "City";
             this.City.HeaderText = "Cidade";
+            this.City.MinimumWidth = 6;
             this.City.Name = "City";
             this.City.ReadOnly = true;
+            this.City.Width = 125;
             // 
             // District
             // 
             this.District.DataPropertyName = "District";
             this.District.HeaderText = "Bairo";
+            this.District.MinimumWidth = 6;
             this.District.Name = "District";
             this.District.ReadOnly = true;
             this.District.Visible = false;
+            this.District.Width = 125;
             // 
             // State
             // 
             this.State.DataPropertyName = "State";
             this.State.HeaderText = "Estado";
+            this.State.MinimumWidth = 6;
             this.State.Name = "State";
             this.State.ReadOnly = true;
+            this.State.Width = 125;
             // 
             // Footage
             // 
             this.Footage.DataPropertyName = "Footage";
             this.Footage.HeaderText = "Metragem";
+            this.Footage.MinimumWidth = 6;
             this.Footage.Name = "Footage";
             this.Footage.ReadOnly = true;
+            this.Footage.Width = 125;
             // 
             // Active
             // 
             this.Active.DataPropertyName = "Active";
             this.Active.HeaderText = "Ativo";
+            this.Active.MinimumWidth = 6;
             this.Active.Name = "Active";
             this.Active.ReadOnly = true;
+            this.Active.Width = 125;
             // 
             // facilities
             // 
             this.facilities.DataPropertyName = "facilities";
             this.facilities.HeaderText = "Comodidades";
+            this.facilities.MinimumWidth = 6;
             this.facilities.Name = "facilities";
             this.facilities.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.facilities.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.facilities.Width = 125;
             // 
             // imagetext
             // 
             this.imagetext.DataPropertyName = "imagetext";
             this.imagetext.HeaderText = "imagetext";
+            this.imagetext.MinimumWidth = 6;
             this.imagetext.Name = "imagetext";
+            this.imagetext.Width = 125;
             // 
             // propertyBindingSource
             // 
@@ -151,9 +171,10 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(628, 85);
+            this.btnDelete.Location = new System.Drawing.Point(718, 113);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(109, 27);
+            this.btnDelete.Size = new System.Drawing.Size(125, 36);
             this.btnDelete.TabIndex = 2;
             this.btnDelete.Text = "Deletar";
             this.btnDelete.UseVisualStyleBackColor = true;
@@ -161,9 +182,10 @@
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(628, 118);
+            this.btnEdit.Location = new System.Drawing.Point(718, 157);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(109, 27);
+            this.btnEdit.Size = new System.Drawing.Size(125, 36);
             this.btnEdit.TabIndex = 2;
             this.btnEdit.Text = "Editar";
             this.btnEdit.UseVisualStyleBackColor = true;
@@ -171,12 +193,13 @@
             // 
             // frmLoginArea_MyAdvs
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(914, 600);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.dataGridView_adv);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmLoginArea_MyAdvs";
             this.Text = "LoginArea_MyAdvs";
             this.Load += new System.EventHandler(this.LoginArea_MyAdvs_Load);
