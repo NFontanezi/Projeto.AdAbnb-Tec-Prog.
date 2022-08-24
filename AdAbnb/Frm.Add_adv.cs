@@ -13,6 +13,7 @@ namespace AdAbnb.Presentation
 {
     public partial class frmAddAdv : Form
     {
+        
         Owner Owner { get; set; }
         public frmAddAdv(Owner owner)
         {
@@ -20,9 +21,11 @@ namespace AdAbnb.Presentation
             InitializeComponent();
         }
 
-        private void btnRegister_Click(object sender, EventArgs e)
-        {
-            string district = txbDistrict.Text == "" ? "" : txbDistrict.Text;
+
+       public void btnRegister_Click(object sender, EventArgs e)
+        { 
+            
+            string district = txbDistrict.Text;
             string city = txbCity.Text == "" ? "" : txbCity.Text;
             string state = txbState.Text == "" ? "" : txbState.Text;
             int footage = txbFootage.Text == "" ? 0 : Convert.ToInt32(txbFootage.Text);
@@ -87,6 +90,8 @@ namespace AdAbnb.Presentation
             var t = new Thread(() => Application.Run(new frmAdvArea(Owner)));
             t.Start();
             this.Close();
+           
+            btnRegister_Click(sender, e);
             
         }
 
@@ -94,5 +99,18 @@ namespace AdAbnb.Presentation
         {
 
         }
+
+        public void GetEdit(string district, string city,
+            string state, string imagetext, int footage, int daily)
+        {
+            txbDistrict.Text = district;
+            txbCity.Text = city;
+            txbState.Text = state;
+            txbFootage.Text = Convert.ToString(footage);
+            txbDaily.Text = Convert.ToString(daily);
+            txbURL.Text = imagetext;
+        }
+        
+        
     }
 }

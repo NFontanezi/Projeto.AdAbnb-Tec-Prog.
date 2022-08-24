@@ -19,6 +19,16 @@ namespace AdAbnb.Presentation
             InitializeComponent();
         }
 
+        public void btnNewAdv2_Click(object sender, EventArgs e)
+        {
+            var t = new Thread(() => Application.Run(new frmAddAdv(Owner)));
+            this.Close();
+            t.Start();
+
+
+            //frmAddAdv frm = new(Owner);
+            //frm.Show();
+        }
         private void btnNewAdv_Click(object sender, EventArgs e)
         {
             var t = new Thread(() => Application.Run(new frmAddAdv(Owner)));

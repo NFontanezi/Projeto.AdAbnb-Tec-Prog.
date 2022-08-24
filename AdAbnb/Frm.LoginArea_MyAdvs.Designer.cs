@@ -70,13 +70,13 @@
             this.facilities,
             this.imagetext});
             this.dataGridView_adv.DataSource = this.propertyBindingSource;
-            this.dataGridView_adv.Location = new System.Drawing.Point(-286, 68);
-            this.dataGridView_adv.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dataGridView_adv.Location = new System.Drawing.Point(-250, 51);
             this.dataGridView_adv.Name = "dataGridView_adv";
             this.dataGridView_adv.RowHeadersWidth = 51;
             this.dataGridView_adv.RowTemplate.Height = 25;
-            this.dataGridView_adv.Size = new System.Drawing.Size(973, 292);
+            this.dataGridView_adv.Size = new System.Drawing.Size(851, 219);
             this.dataGridView_adv.TabIndex = 0;
+            this.dataGridView_adv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_adv_CellContentClick);
             this.dataGridView_adv.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_adv_CellContentDoubleClick);
             this.dataGridView_adv.ControlRemoved += new System.Windows.Forms.ControlEventHandler(this.dataGridView_adv_ControlRemoved);
             // 
@@ -171,10 +171,9 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(718, 113);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnDelete.Location = new System.Drawing.Point(628, 85);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(125, 36);
+            this.btnDelete.Size = new System.Drawing.Size(109, 27);
             this.btnDelete.TabIndex = 2;
             this.btnDelete.Text = "Deletar";
             this.btnDelete.UseVisualStyleBackColor = true;
@@ -182,10 +181,9 @@
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(718, 157);
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnEdit.Location = new System.Drawing.Point(628, 118);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(125, 36);
+            this.btnEdit.Size = new System.Drawing.Size(109, 27);
             this.btnEdit.TabIndex = 2;
             this.btnEdit.Text = "Editar";
             this.btnEdit.UseVisualStyleBackColor = true;
@@ -193,13 +191,12 @@
             // 
             // frmLoginArea_MyAdvs
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(914, 600);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.dataGridView_adv);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmLoginArea_MyAdvs";
             this.Text = "LoginArea_MyAdvs";
             this.Load += new System.EventHandler(this.LoginArea_MyAdvs_Load);

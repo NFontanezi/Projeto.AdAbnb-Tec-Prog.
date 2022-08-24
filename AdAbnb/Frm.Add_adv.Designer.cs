@@ -358,7 +358,7 @@
         private Label lblActive;
         private TextBox txbFootage;
         private Label lblFootage;
-        private TextBox txbDistrict;
+        public TextBox txbDistrict;
         private Label lblDistrict;
         private Label lblNewAdv;
         private Label label1;

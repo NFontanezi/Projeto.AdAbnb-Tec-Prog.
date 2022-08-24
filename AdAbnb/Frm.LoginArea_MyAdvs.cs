@@ -166,23 +166,67 @@ namespace AdAbnb.Presentation
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            int rowindex = dataGridView_adv.CurrentCell.RowIndex;
-            int columnindex = dataGridView_adv.CurrentCell.ColumnIndex;
 
-            var path = dataGridView_adv.Rows[rowindex].Cells
-                ["ID"].Value.ToString();
+            if (dataGridView_adv.CurrentCell == null)
+            {
+                MessageBox.Show("Não há anucios a serem excluidos");
+            }
+            else if (dataGridView_adv.CurrentCell.RowIndex == null)
+            {
+                MessageBox.Show("Selecionee um anúncio");
+            }
+            else
+            {
+                int rowindex = dataGridView_adv.CurrentCell.RowIndex;
+                int columnindex = dataGridView_adv.CurrentCell.ColumnIndex;
 
-            owner.PropertyList.RemoveAt(rowindex);
-            MessageBox.Show("Anuncio deletado");
-            this.Close();
+                owner.PropertyList.RemoveAt(rowindex);
+                MessageBox.Show("Anuncio deletado");
+                this.Close();
+            }
            
             
 
         }
 
-        private void btnEdit_Click(object sender, EventArgs e)
+        public void btnEdit_Click(object sender, EventArgs e)
         {
+            int columnindex = dataGridView_adv.CurrentCell.ColumnIndex;
+            int rowindex = dataGridView_adv.CurrentCell.RowIndex;
+
+            string city = dataGridView_adv.Rows[rowindex].Cells
+            ["City"].Value.ToString();
+            string state = dataGridView_adv.Rows[rowindex].Cells
+            ["State"].Value.ToString();
+            string district = dataGridView_adv.Rows[rowindex].Cells
+            ["District"].Value.ToString();
+            int footage = Convert.ToInt32(dataGridView_adv.Rows[rowindex].Cells
+            ["Footage"].Value.ToString());
+            int daily = Convert.ToInt32(dataGridView_adv.Rows[rowindex].Cells
+            ["Daily"].Value.ToString());
+            string imagetext = dataGridView_adv.Rows[rowindex].Cells
+            ["imagetext"].Value.ToString();
+
+            owner.PropertyList.RemoveAt(rowindex);
+
+         //  var t = new Thread(() => Application.Run(new frmAddAdv(owner)));
+           // frmAddAdv.GetEdit(district, city, state, imagetext, footage, daily);
+
+            //Form frm = new frmAddAdv(owner);
+            //frm.GetEdit(district, city, state, imagetext, footage, daily);
+           // frm.btnRegister_Click.performclick(sender, e);
+
+           // this.Close();
+           // t.Start();
+
+
+
             MessageBox.Show("Delete e crie outro anuncio");
+        }
+
+        private void dataGridView_adv_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
