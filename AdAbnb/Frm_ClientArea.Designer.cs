@@ -52,6 +52,7 @@
             this.btn_Rented.TabIndex = 1;
             this.btn_Rented.Text = "Já alugados";
             this.btn_Rented.UseVisualStyleBackColor = true;
+            this.btn_Rented.Click += new System.EventHandler(this.btn_Rented_Click);
             // 
             // btn_Search
             // 

@@ -37,5 +37,12 @@ namespace AdAbnb.Presentation
             this.Close();
             t.Start();
         }
+
+        private void btn_Rented_Click(object sender, EventArgs e)
+        {
+            var t = new Thread(() => Application.Run(new Frm_HistRent_rnt()));
+            this.Close();
+            t.Start();
+        }
     }
 }

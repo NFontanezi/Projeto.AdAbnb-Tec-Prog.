@@ -53,6 +53,7 @@ namespace AdAbnb.Presentation
             ConfigurarGrade();
 
             CarregarFotos();
+            CarregarBotaoAlugar();
         }
 
         //private void btnAbrir_Click(object sender, EventArgs e)
@@ -276,6 +277,11 @@ namespace AdAbnb.Presentation
             dataGridView1.Columns["Image"].HeaderText = "Foto";
             dataGridView1.Columns["Image"].Width = 64;
 
+            DataGridViewTextBoxColumn colRent = new();
+            colRent.Name = "Rent";
+            dataGridView1.Columns.Add(colRent);
+
+
         }
 
         public void CarregarFotos()
@@ -287,6 +293,14 @@ namespace AdAbnb.Presentation
             }
         }
 
+        public void CarregarBotaoAlugar()
+        {
+            foreach(DataGridViewRow row in dataGridView1.Rows)
+            {
+                row.Cells["Rent"].Value = "Alugar";
+            }
+
+        }
         public static Image GetImageFromUrl(Uri uri)
         {
             HttpWebRequest httpWebRequest = (HttpWebRequest)HttpWebRequest.Create(uri);
@@ -300,15 +314,92 @@ namespace AdAbnb.Presentation
             }
         }
 
-        private void dataGridView1_DoubleClick(object sender, EventArgs e)
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            var path = dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells
-                ["imagetext"].Value.ToString();
+            int rowindex = dataGridView1.CurrentCell.RowIndex;
+            int columnindex = dataGridView1.CurrentCell.ColumnIndex;
 
-            Form frm = new Form_Img_Adv(path);
-            frm.ShowDialog();
+
+            if (columnindex == 15) //alugar
+            {
+
+                //int x = e.RowIndex;
+                //var p = list1[x]; //uma propriedade
+                //var f = list1[x].Facilities;
+
+                //Form frm = new frmFacilities(p, f);
+                //frm.ShowDialog();
+
+
+
+
+                //dt.Columns.Add("ID_prop");
+                //dt.Columns.Add("District");
+                //dt.Columns.Add("City");
+                //dt.Columns.Add("State");
+                //dt.Columns.Add("Footage");
+                //dt.Columns.Add("Daily");
+                //dt.Columns.Add("Active");
+                //dt.Columns.Add("imagetext");
+
+                //dt.Columns.Add("Piscina", typeof(bool));
+                //dt.Columns.Add("AC", typeof(bool));
+                //dt.Columns.Add("ProxMar", typeof(bool));
+                //dt.Columns.Add("PetFriendly", typeof(bool));
+                //dt.Columns.Add("Vaga", typeof(bool));
+                //dt.Columns.Add("ProxTransp", typeof(bool));
+
+                
+
+                var id_prop = dataGridView1.Rows[rowindex].Cells["ID_prop"].Value.ToString();
+                var district = dataGridView1.Rows[rowindex].Cells["District"].Value.ToString();
+                var city = dataGridView1.Rows[rowindex].Cells["City"].Value.ToString();
+                var state = dataGridView1.Rows[rowindex].Cells["State"].Value.ToString();
+                var footage = int.Parse(dataGridView1.Rows[rowindex].Cells["Footage"].Value.ToString());
+                var daily = decimal.Parse(dataGridView1.Rows[rowindex].Cells["Daily"].Value.ToString());
+                var active = bool.Parse(dataGridView1.Rows[rowindex].Cells["Active"].Value.ToString());
+                var imagetext = dataGridView1.Rows[rowindex].Cells["imagetext"].Value.ToString();
+                var piscina = bool.Parse(dataGridView1.Rows[rowindex].Cells["Piscina"].Value.ToString());
+                var proxmar = bool.Parse(dataGridView1.Rows[rowindex].Cells["ProxMar"].Value.ToString());
+                var ac = bool.Parse(dataGridView1.Rows[rowindex].Cells["AC"].Value.ToString());
+                var petfriendly = bool.Parse(dataGridView1.Rows[rowindex].Cells["PetFriendly"].Value.ToString());
+                var vaga = bool.Parse(dataGridView1.Rows[rowindex].Cells["Vaga"].Value.ToString());
+                var proxtransp = bool.Parse(dataGridView1.Rows[rowindex].Cells["ProxTransp"].Value.ToString());
+
+                
+
+                Property rentedProp = new(district, city, state, footage, daily, active, imagetext, ac, piscina, proxmar, petfriendly, vaga, proxtransp);
+
+                UsersRentDB.usersPropRented.Add(rentedProp);
+
+                MessageBox.Show("Imóvel alugado com sucesso!");
+
+                var t = new Thread(() => Application.Run(new Frm_HistRent_rnt()));
+                this.Close();
+                t.Start();
+            }
+
+            else if (columnindex == 14)// foto
+            {
+                var path = dataGridView1.Rows[rowindex].Cells
+                 ["imagetext"].Value.ToString();
+
+                Form frm = new Form_Img_Adv(path);
+                frm.ShowDialog();
+            }
+
 
         }
+
+        //private void dataGridView1_DoubleClick(object sender, EventArgs e)
+        //{
+        //    var path = dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells
+        //        ["imagetext"].Value.ToString();
+
+        //    Form frm = new Form_Img_Adv(path);
+        //    frm.ShowDialog();
+
+        //}
 
         private void btnFilter_Click(object sender, EventArgs e)
         {
@@ -321,6 +412,7 @@ namespace AdAbnb.Presentation
 
             dt.DefaultView.RowFilter = filtroFinal;
             CarregarFotos();
+            CarregarBotaoAlugar();
 
         }
 
@@ -334,6 +426,7 @@ namespace AdAbnb.Presentation
                 FilterGarageSlots(filter) +
                 FilterPublicTransp(filter);
             CarregarFotos();
+            CarregarBotaoAlugar();
             
             return filterFacilities;
         }

@@ -31,16 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_AdvToRent_rnt));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.propertyBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.lblCidade = new System.Windows.Forms.Label();
-            this.txbCidade = new System.Windows.Forms.TextBox();
-            this.btnFilter = new System.Windows.Forms.Button();
-            this.CkbPool = new System.Windows.Forms.CheckBox();
-            this.CkbAC = new System.Windows.Forms.CheckBox();
-            this.CkbProxAoMar = new System.Windows.Forms.CheckBox();
-            this.CkbPetFriendly = new System.Windows.Forms.CheckBox();
-            this.CkbVagaGaragem = new System.Windows.Forms.CheckBox();
-            this.CkbProxTranspPublico = new System.Windows.Forms.CheckBox();
             this.ID_prop = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Daily = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.City = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,6 +45,16 @@
             this.PetFriendly = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.Vaga = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.ProxTransp = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.propertyBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lblCidade = new System.Windows.Forms.Label();
+            this.txbCidade = new System.Windows.Forms.TextBox();
+            this.btnFilter = new System.Windows.Forms.Button();
+            this.CkbPool = new System.Windows.Forms.CheckBox();
+            this.CkbAC = new System.Windows.Forms.CheckBox();
+            this.CkbProxAoMar = new System.Windows.Forms.CheckBox();
+            this.CkbPetFriendly = new System.Windows.Forms.CheckBox();
+            this.CkbVagaGaragem = new System.Windows.Forms.CheckBox();
+            this.CkbProxTranspPublico = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.propertyBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -92,7 +92,131 @@
             this.dataGridView1.RowTemplate.Height = 29;
             this.dataGridView1.Size = new System.Drawing.Size(900, 600);
             this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.DoubleClick += new System.EventHandler(this.dataGridView1_DoubleClick);
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            //this.dataGridView1.DoubleClick += new System.EventHandler(this.dataGridView1_DoubleClick);
+            // 
+            // ID_prop
+            // 
+            this.ID_prop.DataPropertyName = "ID_prop";
+            this.ID_prop.HeaderText = "ID_prop";
+            this.ID_prop.MinimumWidth = 6;
+            this.ID_prop.Name = "ID_prop";
+            this.ID_prop.ReadOnly = true;
+            this.ID_prop.Visible = false;
+            // 
+            // Daily
+            // 
+            this.Daily.DataPropertyName = "Daily";
+            this.Daily.HeaderText = "Daily";
+            this.Daily.MinimumWidth = 6;
+            this.Daily.Name = "Daily";
+            this.Daily.ReadOnly = true;
+            // 
+            // City
+            // 
+            this.City.DataPropertyName = "City";
+            this.City.HeaderText = "City";
+            this.City.MinimumWidth = 6;
+            this.City.Name = "City";
+            this.City.ReadOnly = true;
+            // 
+            // District
+            // 
+            this.District.DataPropertyName = "District";
+            this.District.HeaderText = "District";
+            this.District.MinimumWidth = 6;
+            this.District.Name = "District";
+            this.District.ReadOnly = true;
+            this.District.Visible = false;
+            // 
+            // State
+            // 
+            this.State.DataPropertyName = "State";
+            this.State.HeaderText = "State";
+            this.State.MinimumWidth = 6;
+            this.State.Name = "State";
+            this.State.ReadOnly = true;
+            this.State.Visible = false;
+            // 
+            // Footage
+            // 
+            this.Footage.DataPropertyName = "Footage";
+            this.Footage.HeaderText = "Footage";
+            this.Footage.MinimumWidth = 6;
+            this.Footage.Name = "Footage";
+            this.Footage.ReadOnly = true;
+            // 
+            // Active
+            // 
+            this.Active.DataPropertyName = "Active";
+            this.Active.HeaderText = "Active";
+            this.Active.MinimumWidth = 6;
+            this.Active.Name = "Active";
+            this.Active.ReadOnly = true;
+            this.Active.Visible = false;
+            // 
+            // imagetext
+            // 
+            this.imagetext.DataPropertyName = "imagetext";
+            this.imagetext.HeaderText = "imagetext";
+            this.imagetext.MinimumWidth = 6;
+            this.imagetext.Name = "imagetext";
+            this.imagetext.ReadOnly = true;
+            this.imagetext.Visible = false;
+            // 
+            // AC
+            // 
+            this.AC.DataPropertyName = "AC";
+            this.AC.HeaderText = "AC";
+            this.AC.MinimumWidth = 6;
+            this.AC.Name = "AC";
+            this.AC.ReadOnly = true;
+            this.AC.Visible = false;
+            // 
+            // Piscina
+            // 
+            this.Piscina.DataPropertyName = "Piscina";
+            this.Piscina.HeaderText = "Piscina";
+            this.Piscina.MinimumWidth = 6;
+            this.Piscina.Name = "Piscina";
+            this.Piscina.ReadOnly = true;
+            this.Piscina.Visible = false;
+            // 
+            // ProxMar
+            // 
+            this.ProxMar.DataPropertyName = "ProxMar";
+            this.ProxMar.HeaderText = "ProxMar";
+            this.ProxMar.MinimumWidth = 6;
+            this.ProxMar.Name = "ProxMar";
+            this.ProxMar.ReadOnly = true;
+            this.ProxMar.Visible = false;
+            // 
+            // PetFriendly
+            // 
+            this.PetFriendly.DataPropertyName = "PetFriendly";
+            this.PetFriendly.HeaderText = "PetFriendly";
+            this.PetFriendly.MinimumWidth = 6;
+            this.PetFriendly.Name = "PetFriendly";
+            this.PetFriendly.ReadOnly = true;
+            this.PetFriendly.Visible = false;
+            // 
+            // Vaga
+            // 
+            this.Vaga.DataPropertyName = "Vaga";
+            this.Vaga.HeaderText = "Vaga";
+            this.Vaga.MinimumWidth = 6;
+            this.Vaga.Name = "Vaga";
+            this.Vaga.ReadOnly = true;
+            this.Vaga.Visible = false;
+            // 
+            // ProxTransp
+            // 
+            this.ProxTransp.DataPropertyName = "ProxTransp";
+            this.ProxTransp.HeaderText = "ProxTransp";
+            this.ProxTransp.MinimumWidth = 6;
+            this.ProxTransp.Name = "ProxTransp";
+            this.ProxTransp.ReadOnly = true;
+            this.ProxTransp.Visible = false;
             // 
             // propertyBindingSource
             // 
@@ -218,129 +342,6 @@
             this.CkbProxTranspPublico.Text = "Próximo ao transporte público";
             this.CkbProxTranspPublico.UseVisualStyleBackColor = true;
             this.CkbProxTranspPublico.Click += new System.EventHandler(this.CkbProxTranspPublico_Click);
-            // 
-            // ID_prop
-            // 
-            this.ID_prop.DataPropertyName = "ID_prop";
-            this.ID_prop.HeaderText = "ID_prop";
-            this.ID_prop.MinimumWidth = 6;
-            this.ID_prop.Name = "ID_prop";
-            this.ID_prop.ReadOnly = true;
-            this.ID_prop.Visible = false;
-            // 
-            // Daily
-            // 
-            this.Daily.DataPropertyName = "Daily";
-            this.Daily.HeaderText = "Daily";
-            this.Daily.MinimumWidth = 6;
-            this.Daily.Name = "Daily";
-            this.Daily.ReadOnly = true;
-            // 
-            // City
-            // 
-            this.City.DataPropertyName = "City";
-            this.City.HeaderText = "City";
-            this.City.MinimumWidth = 6;
-            this.City.Name = "City";
-            this.City.ReadOnly = true;
-            // 
-            // District
-            // 
-            this.District.DataPropertyName = "District";
-            this.District.HeaderText = "District";
-            this.District.MinimumWidth = 6;
-            this.District.Name = "District";
-            this.District.ReadOnly = true;
-            this.District.Visible = false;
-            // 
-            // State
-            // 
-            this.State.DataPropertyName = "State";
-            this.State.HeaderText = "State";
-            this.State.MinimumWidth = 6;
-            this.State.Name = "State";
-            this.State.ReadOnly = true;
-            this.State.Visible = false;
-            // 
-            // Footage
-            // 
-            this.Footage.DataPropertyName = "Footage";
-            this.Footage.HeaderText = "Footage";
-            this.Footage.MinimumWidth = 6;
-            this.Footage.Name = "Footage";
-            this.Footage.ReadOnly = true;
-            // 
-            // Active
-            // 
-            this.Active.DataPropertyName = "Active";
-            this.Active.HeaderText = "Active";
-            this.Active.MinimumWidth = 6;
-            this.Active.Name = "Active";
-            this.Active.ReadOnly = true;
-            this.Active.Visible = false;
-            // 
-            // imagetext
-            // 
-            this.imagetext.DataPropertyName = "imagetext";
-            this.imagetext.HeaderText = "imagetext";
-            this.imagetext.MinimumWidth = 6;
-            this.imagetext.Name = "imagetext";
-            this.imagetext.ReadOnly = true;
-            this.imagetext.Visible = false;
-            // 
-            // AC
-            // 
-            this.AC.DataPropertyName = "AC";
-            this.AC.HeaderText = "AC";
-            this.AC.MinimumWidth = 6;
-            this.AC.Name = "AC";
-            this.AC.ReadOnly = true;
-            this.AC.Visible = false;
-            // 
-            // Piscina
-            // 
-            this.Piscina.DataPropertyName = "Piscina";
-            this.Piscina.HeaderText = "Piscina";
-            this.Piscina.MinimumWidth = 6;
-            this.Piscina.Name = "Piscina";
-            this.Piscina.ReadOnly = true;
-            this.Piscina.Visible = false;
-            // 
-            // ProxMar
-            // 
-            this.ProxMar.DataPropertyName = "ProxMar";
-            this.ProxMar.HeaderText = "ProxMar";
-            this.ProxMar.MinimumWidth = 6;
-            this.ProxMar.Name = "ProxMar";
-            this.ProxMar.ReadOnly = true;
-            this.ProxMar.Visible = false;
-            // 
-            // PetFriendly
-            // 
-            this.PetFriendly.DataPropertyName = "PetFriendly";
-            this.PetFriendly.HeaderText = "PetFriendly";
-            this.PetFriendly.MinimumWidth = 6;
-            this.PetFriendly.Name = "PetFriendly";
-            this.PetFriendly.ReadOnly = true;
-            this.PetFriendly.Visible = false;
-            // 
-            // Vaga
-            // 
-            this.Vaga.DataPropertyName = "Vaga";
-            this.Vaga.HeaderText = "Vaga";
-            this.Vaga.MinimumWidth = 6;
-            this.Vaga.Name = "Vaga";
-            this.Vaga.ReadOnly = true;
-            this.Vaga.Visible = false;
-            // 
-            // ProxTransp
-            // 
-            this.ProxTransp.DataPropertyName = "ProxTransp";
-            this.ProxTransp.HeaderText = "ProxTransp";
-            this.ProxTransp.MinimumWidth = 6;
-            this.ProxTransp.Name = "ProxTransp";
-            this.ProxTransp.ReadOnly = true;
-            this.ProxTransp.Visible = false;
             // 
             // Frm_AdvToRent_rnt
             // 

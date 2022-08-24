@@ -23,6 +23,6 @@ namespace AdAbnb.Repositories
         //    Gênero: {usuario.Gender}";
         //}
 
-
+        public static List<Property> usersPropRented = new();
     }
 }
