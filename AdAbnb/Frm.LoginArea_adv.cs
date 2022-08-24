@@ -67,5 +67,12 @@ namespace AdAbnb.Presentation
             this.Close();
             t.Start();
         }
+
+        private void btn_Infos_Click(object sender, EventArgs e)
+        {
+            var t = new Thread(() => Application.Run(new frmLoginAreaAdv_MyInfo(Owner)));
+            this.Close();
+            t.Start();
+        }
     }
 }

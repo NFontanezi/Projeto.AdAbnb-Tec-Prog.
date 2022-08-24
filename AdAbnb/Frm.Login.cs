@@ -50,7 +50,7 @@ namespace AdAbnb.Presentation
                     var t = new Thread(() => Application.Run(new frmAdvArea((Owner)pair.Key)));
                     t.Start();
                     this.Close();
-                    
+
 
                 }
                 else

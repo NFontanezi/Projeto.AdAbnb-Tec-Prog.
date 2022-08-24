@@ -22,9 +22,6 @@
             Gender = gender;
         }
 
-        public static void AddLoginUser(Person user, Registration login )
-        {
-           UserList.Add(user, login);
-        }
+
     }
 }

@@ -1,4 +1,5 @@
 ﻿using AdAbnb.Domain;
+using AdAbnb.Repositories;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -65,12 +66,13 @@ namespace AdAbnb.Presentation
                     Registration newReg = new Registration(email, password);
                     Owner newOwner = new Owner(newReg, cpf, name, phone, birth, gender, bank, bankAg, bankAcc);
                     MessageBox.Show("Registro incluído com sucesso");
-                    //listOwner_adv.Add(newOwner);
-                    //listReg_adv.Add(newReg);
-                    //Person.AddLoginUser(newOwner, newReg);
+                    OwnerAdvDB.ownerAdvInfos.Add(newOwner);
+                    listOwner_adv.Add(newOwner);
+                    listReg_adv.Add(newReg);
+                    Person.UserList.Add(newOwner, newReg);
 
 
-                    var t = new Thread(() => Application.Run(new frmAdvArea(newOwner)));
+                var t = new Thread(() => Application.Run(new frmAdvArea(newOwner)));
                     t.Start();
                     this.Close();
              
