@@ -23,7 +23,6 @@ namespace AdAbnb.Presentation
         bool bVagaEstacionamento { get; set; }
         bool bProximoAoTransPublico { get; set; }
 
-        public static DataTable dtF = new DataTable();
         static DataTable dt = new DataTable();
 
         int clickCountPool = 0;
@@ -52,8 +51,8 @@ namespace AdAbnb.Presentation
             dataGridView1.DataSource = ConvertToDatatable(listProp);
             ConfigurarGrade();
 
-            CarregarFotos();
-            CarregarBotaoAlugar();
+            CarregarFotos(dataGridView1);
+            CarregarBotaoAlugar(dataGridView1);
         }
 
         //private void btnAbrir_Click(object sender, EventArgs e)
@@ -108,7 +107,7 @@ namespace AdAbnb.Presentation
 
 
                 row["ID_prop"] = item.ID_prop;
-                row["District"] = item.Daily;
+                row["District"] = item.District;
                 row["City"] = item.City;
                 row["State"] = item.State;
                 row["Footage"] = item.Footage;
@@ -284,18 +283,18 @@ namespace AdAbnb.Presentation
 
         }
 
-        public void CarregarFotos()
+        public void CarregarFotos(DataGridView dt)
         {
-            foreach (DataGridViewRow row in dataGridView1.Rows)
+            foreach (DataGridViewRow row in dt.Rows)
             {
                 Uri uri = new Uri(row.Cells["imagetext"].Value.ToString());
                 row.Cells["Image"].Value = GetImageFromUrl(uri);
             }
         }
 
-        public void CarregarBotaoAlugar()
+        public void CarregarBotaoAlugar(DataGridView dt)
         {
-            foreach(DataGridViewRow row in dataGridView1.Rows)
+            foreach(DataGridViewRow row in dt.Rows)
             {
                 row.Cells["Rent"].Value = "Alugar";
             }
@@ -321,37 +320,7 @@ namespace AdAbnb.Presentation
 
 
             if (columnindex == 15) //alugar
-            {
-
-                //int x = e.RowIndex;
-                //var p = list1[x]; //uma propriedade
-                //var f = list1[x].Facilities;
-
-                //Form frm = new frmFacilities(p, f);
-                //frm.ShowDialog();
-
-
-
-
-                //dt.Columns.Add("ID_prop");
-                //dt.Columns.Add("District");
-                //dt.Columns.Add("City");
-                //dt.Columns.Add("State");
-                //dt.Columns.Add("Footage");
-                //dt.Columns.Add("Daily");
-                //dt.Columns.Add("Active");
-                //dt.Columns.Add("imagetext");
-
-                //dt.Columns.Add("Piscina", typeof(bool));
-                //dt.Columns.Add("AC", typeof(bool));
-                //dt.Columns.Add("ProxMar", typeof(bool));
-                //dt.Columns.Add("PetFriendly", typeof(bool));
-                //dt.Columns.Add("Vaga", typeof(bool));
-                //dt.Columns.Add("ProxTransp", typeof(bool));
-
-                
-
-                var id_prop = dataGridView1.Rows[rowindex].Cells["ID_prop"].Value.ToString();
+            {               
                 var district = dataGridView1.Rows[rowindex].Cells["District"].Value.ToString();
                 var city = dataGridView1.Rows[rowindex].Cells["City"].Value.ToString();
                 var state = dataGridView1.Rows[rowindex].Cells["State"].Value.ToString();
@@ -411,8 +380,8 @@ namespace AdAbnb.Presentation
             string filtroFinal = FilterCity(filter) + FilterFacilities(filter);
 
             dt.DefaultView.RowFilter = filtroFinal;
-            CarregarFotos();
-            CarregarBotaoAlugar();
+            CarregarFotos(dataGridView1);
+            CarregarBotaoAlugar(dataGridView1);
 
         }
 
@@ -425,8 +394,8 @@ namespace AdAbnb.Presentation
                 FilterPetFriendly(filter) +
                 FilterGarageSlots(filter) +
                 FilterPublicTransp(filter);
-            CarregarFotos();
-            CarregarBotaoAlugar();
+            CarregarFotos(dataGridView1);
+            CarregarBotaoAlugar(dataGridView1);
             
             return filterFacilities;
         }

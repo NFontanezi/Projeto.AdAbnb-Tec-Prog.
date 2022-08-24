@@ -15,22 +15,20 @@ namespace AdAbnb.Presentation
 {
     public partial class Frm_HistRent_rnt : Form
     {
-        List<Property> listPropRented = UsersRentDB.usersPropRented;
+        //List<Property> listPropRented = UsersRentDB.usersPropRented;
         static DataTable dt2 = new DataTable();
 
         public Frm_HistRent_rnt()
         {
             InitializeComponent();
-            listPropRented = UsersRentDB.usersPropRented;
         }
 
         private void Frm_HistRent_rnt_Load(object sender, EventArgs e)
         {
             dataGridView2.DataSource = null;
-            dataGridView2.DataSource = ConvertToDatatable(listPropRented);
+            dataGridView2.DataSource = ConvertToDatatable(UsersRentDB.usersPropRented);
             ConfigurarGrade();
-
-            CarregarFotos();
+            CarregarFotos(dataGridView2);
         }
 
         static DataTable ConvertToDatatable(List<Property> list)
@@ -92,17 +90,16 @@ namespace AdAbnb.Presentation
                 row["Vaga"] = vaga;
                 row["ProxTransp"] = proxTranspPublico;
 
-                if (item.Active == true)
-                {
-                    dt2.Rows.Add(row);
-                }
+
+                //dt2.Rows.Add(row);
+
             }
 
             return dt2;
         }
 
 
-        public void ConfigurarGrade()
+        private void ConfigurarGrade()
         {
             dataGridView2.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 11);
             dataGridView2.DefaultCellStyle.Font = new Font("Arial", 10);
@@ -142,6 +139,7 @@ namespace AdAbnb.Presentation
 
 
             dataGridView2.Columns["imagetext"].Visible = false;
+
             dataGridView2.Columns["Active"].Visible = false;
             dataGridView2.Columns["Piscina"].Visible = false;
             dataGridView2.Columns["AC"].Visible = false;
@@ -161,14 +159,15 @@ namespace AdAbnb.Presentation
 
         }
 
-        public void CarregarFotos()
+        public void CarregarFotos(DataGridView dtv)
         {
-            foreach (DataGridViewRow row in dataGridView2.Rows)
+            foreach (DataGridViewRow row in dtv.Rows)
             {
                 Uri uri = new Uri(row.Cells["imagetext"].Value.ToString());
                 row.Cells["Image"].Value = GetImageFromUrl(uri);
             }
         }
+
 
         public static Image GetImageFromUrl(Uri uri)
         {

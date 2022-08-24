@@ -36,8 +36,8 @@ namespace AdAbnb.Repositories
         //    imagetext = image;
 
         //}
-    //    public Property(string district, string city, string state, int footage, decimal daily, bool active, string image,
-    //bool ac, bool piscina, bool proxmar, bool pet, bool vaga, bool transp)
+        //    public Property(string district, string city, string state, int footage, decimal daily, bool active, string image,
+        //bool ac, bool piscina, bool proxmar, bool pet, bool vaga, bool transp)
 
         static Property property1 = new Property("Bairro qualquer", "Guarujá", "SP", 100, 700, true,
         "https://viagemeturismo.abril.com.br/wp-content/uploads/2020/09/casas-airbnb-praia-perto-de-sao-paulo.jpg",true, true, true, false, false, false);
