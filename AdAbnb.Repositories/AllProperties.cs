@@ -38,10 +38,10 @@ namespace AdAbnb.Repositories
         //}
 
         static Property property1 = new Property("Bairro qualquer", "Guarujá", "SP", 100, 700, true,
-        "https://viagemeturismo.abril.com.br/wp-content/uploads/2020/09/casas-airbnb-praia-perto-de-sao-paulo.jpg");
+        "https://viagemeturismo.abril.com.br/wp-content/uploads/2020/09/casas-airbnb-praia-perto-de-sao-paulo.jpg",true, true, true, true, true, true);
 
         static Property property2 = new Property("Bairro qualquer 2", "Ubatuba", "SP", 100, 800, true,
-        "https://maladeaventuras.com/wp-content/uploads/2021/01/apartamento-de-temporada-bombinhas.jpg");
+        "https://maladeaventuras.com/wp-content/uploads/2021/01/apartamento-de-temporada-bombinhas.jpg", true, true, true, true, true, true);
 
         public static List<Property> allProperties = new List<Property>() {property1, property2};
         
