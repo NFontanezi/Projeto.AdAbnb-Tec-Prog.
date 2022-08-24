@@ -16,6 +16,7 @@ namespace AdAbnb.Presentation
 {
     public partial class Frm_AdvToRent_rnt : Form
     {
+        Person User { get; set; }
         bool bPiscina { get; set; }
         bool bAC { get; set; }
         bool bProxAoMar { get; set; }
@@ -31,15 +32,17 @@ namespace AdAbnb.Presentation
         int clickCountPetFriendly = 0;
         int clickCountGarageSlots = 0;
         int clickCountNextToPublicTransp = 0;
+        public static int clickAlugar { get; set; } = 0;
+        public static int clickSearch { get; set; } = 0;
 
         List<Property> listProp = AllProperties.allProperties;
 
-        public Frm_AdvToRent_rnt()
+        public Frm_AdvToRent_rnt(Person User)
         {
             InitializeComponent();
             listProp = AllProperties.allProperties;
 
-
+            this.User = User;
             //dataGridView1.DataSource = GetAnuncios(dtF);
             //ConfigurarGrade();
             //CarregarFotos();
@@ -74,57 +77,63 @@ namespace AdAbnb.Presentation
             //Active = active;
             //imagetext = image;
 
-            dt.Columns.Add("ID_prop");
-            dt.Columns.Add("District");
-            dt.Columns.Add("City");
-            dt.Columns.Add("State");
-            dt.Columns.Add("Footage");
-            dt.Columns.Add("Daily");
-            dt.Columns.Add("Active");
-            dt.Columns.Add("imagetext");
+            clickSearch++;
 
-            dt.Columns.Add("Piscina", typeof(bool));
-            dt.Columns.Add("AC", typeof(bool));
-            dt.Columns.Add("ProxMar", typeof(bool));
-            dt.Columns.Add("PetFriendly", typeof(bool));
-            dt.Columns.Add("Vaga", typeof(bool));
-            dt.Columns.Add("ProxTransp", typeof(bool));
-
-
-
-
-
-            foreach (var item in list)
+            if (!dt.Columns.Contains("ID_prop"))
             {
-                var row = dt.NewRow();
+                dt.Columns.Add("ID_prop");
+                dt.Columns.Add("District");
+                dt.Columns.Add("City");
+                dt.Columns.Add("State");
+                dt.Columns.Add("Footage");
+                dt.Columns.Add("Daily");
+                dt.Columns.Add("Active");
+                dt.Columns.Add("imagetext");
 
-                var piscina = item.Piscina;
-                var ac = item.AC;
-                var proxMar = item.ProxMar;
-                var petFriendly = item.PetFriendly;
-                var vaga = item.Vaga;
-                var proxTranspPublico = item.ProxTransp;
+                dt.Columns.Add("Piscina", typeof(bool));
+                dt.Columns.Add("AC", typeof(bool));
+                dt.Columns.Add("ProxMar", typeof(bool));
+                dt.Columns.Add("PetFriendly", typeof(bool));
+                dt.Columns.Add("Vaga", typeof(bool));
+                dt.Columns.Add("ProxTransp", typeof(bool));
+            }
 
 
-                row["ID_prop"] = item.ID_prop;
-                row["District"] = item.District;
-                row["City"] = item.City;
-                row["State"] = item.State;
-                row["Footage"] = item.Footage;
-                row["Daily"] = item.Daily;
-                row["Active"] = item.Active;
-                row["imagetext"] = item.imagetext;
-                row["Piscina"] = piscina;
-                row["AC"] = ac;
-                row["ProxMar"] = proxMar;
-                row["PetFriendly"] = petFriendly;
-                row["Vaga"] = vaga;
-                row["ProxTransp"] = proxTranspPublico;
 
-                if(item.Active == true)
+
+            if(clickSearch == 1)
+            {
+                foreach (var item in list)
                 {
+                    var row = dt.NewRow();
+
+                    var piscina = item.Piscina;
+                    var ac = item.AC;
+                    var proxMar = item.ProxMar;
+                    var petFriendly = item.PetFriendly;
+                    var vaga = item.Vaga;
+                    var proxTranspPublico = item.ProxTransp;
+
+
+                    row["ID_prop"] = item.ID_prop;
+                    row["District"] = item.District;
+                    row["City"] = item.City;
+                    row["State"] = item.State;
+                    row["Footage"] = item.Footage;
+                    row["Daily"] = item.Daily;
+                    row["Active"] = item.Active;
+                    row["imagetext"] = item.imagetext;
+                    row["Piscina"] = piscina;
+                    row["AC"] = ac;
+                    row["ProxMar"] = proxMar;
+                    row["PetFriendly"] = petFriendly;
+                    row["Vaga"] = vaga;
+                    row["ProxTransp"] = proxTranspPublico;
                     dt.Rows.Add(row);
+
                 }
+
+
             }
 
             return dt;
@@ -278,6 +287,7 @@ namespace AdAbnb.Presentation
 
             DataGridViewTextBoxColumn colRent = new();
             colRent.Name = "Rent";
+            colRent.HeaderText = "";
             dataGridView1.Columns.Add(colRent);
 
 
@@ -294,7 +304,7 @@ namespace AdAbnb.Presentation
 
         public void CarregarBotaoAlugar(DataGridView dt)
         {
-            foreach(DataGridViewRow row in dt.Rows)
+            foreach (DataGridViewRow row in dt.Rows)
             {
                 row.Cells["Rent"].Value = "Alugar";
             }
@@ -320,7 +330,7 @@ namespace AdAbnb.Presentation
 
 
             if (columnindex == 15) //alugar
-            {               
+            {
                 var district = dataGridView1.Rows[rowindex].Cells["District"].Value.ToString();
                 var city = dataGridView1.Rows[rowindex].Cells["City"].Value.ToString();
                 var state = dataGridView1.Rows[rowindex].Cells["State"].Value.ToString();
@@ -335,15 +345,15 @@ namespace AdAbnb.Presentation
                 var vaga = bool.Parse(dataGridView1.Rows[rowindex].Cells["Vaga"].Value.ToString());
                 var proxtransp = bool.Parse(dataGridView1.Rows[rowindex].Cells["ProxTransp"].Value.ToString());
 
-                
+
 
                 Property rentedProp = new(district, city, state, footage, daily, active, imagetext, ac, piscina, proxmar, petfriendly, vaga, proxtransp);
 
-                UsersRentDB.usersPropRented.Add(rentedProp);
+                User.usersPropRented.Add(rentedProp);
 
                 MessageBox.Show("Imóvel alugado com sucesso!");
-
-                var t = new Thread(() => Application.Run(new Frm_HistRent_rnt()));
+                clickAlugar = 1;
+                var t = new Thread(() => Application.Run(new Frm_HistRent_rnt(User)));
                 this.Close();
                 t.Start();
             }
@@ -387,8 +397,8 @@ namespace AdAbnb.Presentation
 
         private string FilterFacilities(string filter)
         {
-            string filterFacilities = 
-                FilterPool(filter) + 
+            string filterFacilities =
+                FilterPool(filter) +
                 FilterAC(filter) +
                 FilterNextToBeach(filter) +
                 FilterPetFriendly(filter) +
@@ -396,7 +406,7 @@ namespace AdAbnb.Presentation
                 FilterPublicTransp(filter);
             CarregarFotos(dataGridView1);
             CarregarBotaoAlugar(dataGridView1);
-            
+
             return filterFacilities;
         }
 
@@ -409,7 +419,7 @@ namespace AdAbnb.Presentation
         //--------------- FILTRO PISCINA
         private string FilterPool(string filterS)
         {
-            if(bPiscina == true)
+            if (bPiscina == true)
             {
                 filterS += $" AND {dt.DefaultView.RowFilter = "Piscina = 1"}";
             }
@@ -426,7 +436,7 @@ namespace AdAbnb.Presentation
         {
             clickCountPool++;
 
-            if(clickCountPool % 2 == 0 || clickCountPool == 0)
+            if (clickCountPool % 2 == 0 || clickCountPool == 0)
             {
                 bPiscina = false;
             }

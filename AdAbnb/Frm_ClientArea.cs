@@ -7,19 +7,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AdAbnb.Domain;
 
 namespace AdAbnb.Presentation
 {
     public partial class Frm_ClientArea : Form
     {
-        public Frm_ClientArea()
+        Person User { get; set; }
+        public Frm_ClientArea(Person user)
         {
             InitializeComponent();
+            User = user;
         }
 
         private void btn_Search_Click(object sender, EventArgs e)
         {
-            var t = new Thread(() => Application.Run(new Frm_AdvToRent_rnt()));
+            var t = new Thread(() => Application.Run(new Frm_AdvToRent_rnt(User)));
             this.Close();
             t.Start();
         }
@@ -40,7 +43,7 @@ namespace AdAbnb.Presentation
 
         private void btn_Rented_Click(object sender, EventArgs e)
         {
-            var t = new Thread(() => Application.Run(new Frm_HistRent_rnt()));
+            var t = new Thread(() => Application.Run(new Frm_HistRent_rnt(User)));
             this.Close();
             t.Start();
         }

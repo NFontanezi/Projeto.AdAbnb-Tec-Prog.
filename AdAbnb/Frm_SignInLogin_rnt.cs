@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AdAbnb.Domain;
 
 namespace AdAbnb.Presentation
 {
     public partial class Frm_SignInLogin_rnt : Form
     {
+        Person User;
+
         public Frm_SignInLogin_rnt()
         {
             InitializeComponent();
@@ -33,9 +36,17 @@ namespace AdAbnb.Presentation
 
         private void btn_Search_rnt_Click(object sender, EventArgs e)
         {
-            var t = new Thread(() => Application.Run(new Frm_AdvToRent_rnt()));
-            this.Close();
-            t.Start();
+            if (Frm_Login_rnt.logado)
+            {
+                User = Frm_Login_rnt.User;
+                var t = new Thread(() => Application.Run(new Frm_AdvToRent_rnt(User)));
+                this.Close();
+                t.Start();
+            }
+            else
+            {
+                MessageBox.Show("Nenhum usuário logado. Realize o login");
+            }
             //teste
         }
 

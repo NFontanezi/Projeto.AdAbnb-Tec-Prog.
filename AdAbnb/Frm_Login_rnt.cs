@@ -7,12 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AdAbnb.Domain;
 using AdAbnb.Repositories;
 
 namespace AdAbnb.Presentation
 {
     public partial class Frm_Login_rnt : Form
     {
+        public static Person User { get; set; }
+        public static bool logado { get; set; } = false;
         public Frm_Login_rnt()
         {
             InitializeComponent();
@@ -32,10 +35,13 @@ namespace AdAbnb.Presentation
         {
             if (UsersRentDB.usersRentDic.ContainsKey(txbEmailLogin.Text) && UsersRentDB.usersRentDic[txbEmailLogin.Text] == txbPasswordLogin.Text)
             {
+                User = UsersRentDB.usersRentInfos.Where(x => x.Email == txbEmailLogin.Text).Single();
+
                 MessageBox.Show("Usuário logado com sucesso");
                 emailLog = txbEmailLogin.Text;
                 passwordLog = txbPasswordLogin.Text;
-                var t = new Thread(() => Application.Run(new Frm_ClientArea()));
+                logado = true;
+                var t = new Thread(() => Application.Run(new Frm_ClientArea(User)));
                 this.Close();
                 t.Start();
             }

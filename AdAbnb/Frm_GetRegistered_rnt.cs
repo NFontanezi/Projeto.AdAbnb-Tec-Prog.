@@ -14,6 +14,7 @@ namespace AdAbnb.Presentation
 {
     public partial class Frm_GetRegistered_rnt : Form
     {
+        Person User { get; set; }   
         public char Gender { get; set; }
 
 
@@ -72,7 +73,9 @@ namespace AdAbnb.Presentation
             //this.Hide();
             //clientArea.Show();
 
-            var t = new Thread(() => Application.Run(new Frm_ClientArea()));
+            User = user;
+
+            var t = new Thread(() => Application.Run(new Frm_ClientArea(User)));
             this.Close();
             t.Start();
             

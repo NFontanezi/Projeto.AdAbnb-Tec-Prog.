@@ -12,6 +12,8 @@
 
         public static Dictionary<Person,Registration> UserList { get; set; } = new();
 
+        public List<Property> usersPropRented { get; set; } = new();
+
         public Person(Registration registration, string cPF, string name, string phone, DateTime dateBirth, char gender)
         {
             Registration = registration;

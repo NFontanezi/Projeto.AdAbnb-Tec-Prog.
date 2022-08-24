@@ -14,6 +14,7 @@ namespace AdAbnb.Presentation
 {
     public partial class Frm_MyInfo_rnt : Form
     {
+        Person User { get; set; }
         public Frm_MyInfo_rnt()
         {
             InitializeComponent();
@@ -21,7 +22,8 @@ namespace AdAbnb.Presentation
 
         private void Frm_MyInfo_rnt_Load(object sender, EventArgs e)
         {
-            lbInfoBlank.Text = ToString1(UsersRentDB.usersRentInfos.Where(x => x.Email == Frm_Login_rnt.emailLog).Single());
+            User = UsersRentDB.usersRentInfos.Where(x => x.Email == Frm_Login_rnt.emailLog).Single();
+            lbInfoBlank.Text = ToString1(User);
 
         }
 
@@ -37,7 +39,7 @@ namespace AdAbnb.Presentation
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var t = new Thread(() => Application.Run(new Frm_ClientArea()));
+            var t = new Thread(() => Application.Run(new Frm_ClientArea(User)));
             this.Close();
             t.Start();
         }
