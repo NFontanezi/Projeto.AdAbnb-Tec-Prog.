@@ -256,14 +256,14 @@ namespace AdAbnb.Presentation
 
 
             var x = owner.PropertyList[rowindex];
-            Form FrmEdit = new FrmEdit(owner, x, district, city, state,
+            FrmEdit frm = new FrmEdit(owner, x, district, city, state,
                 footage, daily, imagetext);
 
            // Owner owner, Property propList, string district, string city,
            // string state, decimal footage, decimal daily, string image
 
 
-            FrmEdit.ShowDialog();
+            frm.ShowDialog();
 
 
 

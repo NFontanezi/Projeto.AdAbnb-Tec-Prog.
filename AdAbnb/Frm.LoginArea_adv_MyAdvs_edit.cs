@@ -29,6 +29,7 @@ namespace AdAbnb.Presentation
         public FrmEdit(Owner owner, Property propList, string district, string city,
             string state, decimal footage, decimal daily, string image)
         {
+            InitializeComponent();
             Owner = owner;
             x = propList;
             textBox1.Text = district;
@@ -55,7 +56,7 @@ namespace AdAbnb.Presentation
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)
-        {
+        {//*
 
             district = textBox1.Text;
             city = textBox2.Text == "" ? "" : textBox2.Text;
