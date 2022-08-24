@@ -41,19 +41,20 @@
             this.CkbPetFriendly = new System.Windows.Forms.CheckBox();
             this.CkbVagaGaragem = new System.Windows.Forms.CheckBox();
             this.CkbProxTranspPublico = new System.Windows.Forms.CheckBox();
+            this.ID_prop = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Daily = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.piscina = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ac = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.proxMar = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.petFriendly = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.vaga = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.proxTranspPublico = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.City = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.District = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.State = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Footage = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Active = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.imagetext = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AC = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Piscina = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.ProxMar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.PetFriendly = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Vaga = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.ProxTransp = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.propertyBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -68,19 +69,20 @@
             this.dataGridView1.BackgroundColor = System.Drawing.Color.Cornsilk;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID_prop,
             this.Daily,
-            this.piscina,
-            this.ac,
-            this.proxMar,
-            this.petFriendly,
-            this.vaga,
-            this.proxTranspPublico,
             this.City,
             this.District,
             this.State,
             this.Footage,
             this.Active,
-            this.imagetext});
+            this.imagetext,
+            this.AC,
+            this.Piscina,
+            this.ProxMar,
+            this.PetFriendly,
+            this.Vaga,
+            this.ProxTransp});
             this.dataGridView1.DataSource = this.propertyBindingSource;
             this.dataGridView1.GridColor = System.Drawing.Color.Cornsilk;
             this.dataGridView1.Location = new System.Drawing.Point(106, 241);
@@ -217,6 +219,15 @@
             this.CkbProxTranspPublico.UseVisualStyleBackColor = true;
             this.CkbProxTranspPublico.Click += new System.EventHandler(this.CkbProxTranspPublico_Click);
             // 
+            // ID_prop
+            // 
+            this.ID_prop.DataPropertyName = "ID_prop";
+            this.ID_prop.HeaderText = "ID_prop";
+            this.ID_prop.MinimumWidth = 6;
+            this.ID_prop.Name = "ID_prop";
+            this.ID_prop.ReadOnly = true;
+            this.ID_prop.Visible = false;
+            // 
             // Daily
             // 
             this.Daily.DataPropertyName = "Daily";
@@ -224,54 +235,6 @@
             this.Daily.MinimumWidth = 6;
             this.Daily.Name = "Daily";
             this.Daily.ReadOnly = true;
-            // 
-            // piscina
-            // 
-            this.piscina.HeaderText = "piscina";
-            this.piscina.MinimumWidth = 6;
-            this.piscina.Name = "piscina";
-            this.piscina.ReadOnly = true;
-            this.piscina.Visible = false;
-            // 
-            // ac
-            // 
-            this.ac.HeaderText = "ac";
-            this.ac.MinimumWidth = 6;
-            this.ac.Name = "ac";
-            this.ac.ReadOnly = true;
-            this.ac.Visible = false;
-            // 
-            // proxMar
-            // 
-            this.proxMar.HeaderText = "proxMar";
-            this.proxMar.MinimumWidth = 6;
-            this.proxMar.Name = "proxMar";
-            this.proxMar.ReadOnly = true;
-            this.proxMar.Visible = false;
-            // 
-            // petFriendly
-            // 
-            this.petFriendly.HeaderText = "petFriendly";
-            this.petFriendly.MinimumWidth = 6;
-            this.petFriendly.Name = "petFriendly";
-            this.petFriendly.ReadOnly = true;
-            this.petFriendly.Visible = false;
-            // 
-            // vaga
-            // 
-            this.vaga.HeaderText = "vaga";
-            this.vaga.MinimumWidth = 6;
-            this.vaga.Name = "vaga";
-            this.vaga.ReadOnly = true;
-            this.vaga.Visible = false;
-            // 
-            // proxTranspPublico
-            // 
-            this.proxTranspPublico.HeaderText = "proxTranspPublico";
-            this.proxTranspPublico.MinimumWidth = 6;
-            this.proxTranspPublico.Name = "proxTranspPublico";
-            this.proxTranspPublico.ReadOnly = true;
-            this.proxTranspPublico.Visible = false;
             // 
             // City
             // 
@@ -288,6 +251,7 @@
             this.District.MinimumWidth = 6;
             this.District.Name = "District";
             this.District.ReadOnly = true;
+            this.District.Visible = false;
             // 
             // State
             // 
@@ -296,6 +260,7 @@
             this.State.MinimumWidth = 6;
             this.State.Name = "State";
             this.State.ReadOnly = true;
+            this.State.Visible = false;
             // 
             // Footage
             // 
@@ -312,6 +277,7 @@
             this.Active.MinimumWidth = 6;
             this.Active.Name = "Active";
             this.Active.ReadOnly = true;
+            this.Active.Visible = false;
             // 
             // imagetext
             // 
@@ -320,6 +286,61 @@
             this.imagetext.MinimumWidth = 6;
             this.imagetext.Name = "imagetext";
             this.imagetext.ReadOnly = true;
+            this.imagetext.Visible = false;
+            // 
+            // AC
+            // 
+            this.AC.DataPropertyName = "AC";
+            this.AC.HeaderText = "AC";
+            this.AC.MinimumWidth = 6;
+            this.AC.Name = "AC";
+            this.AC.ReadOnly = true;
+            this.AC.Visible = false;
+            // 
+            // Piscina
+            // 
+            this.Piscina.DataPropertyName = "Piscina";
+            this.Piscina.HeaderText = "Piscina";
+            this.Piscina.MinimumWidth = 6;
+            this.Piscina.Name = "Piscina";
+            this.Piscina.ReadOnly = true;
+            this.Piscina.Visible = false;
+            // 
+            // ProxMar
+            // 
+            this.ProxMar.DataPropertyName = "ProxMar";
+            this.ProxMar.HeaderText = "ProxMar";
+            this.ProxMar.MinimumWidth = 6;
+            this.ProxMar.Name = "ProxMar";
+            this.ProxMar.ReadOnly = true;
+            this.ProxMar.Visible = false;
+            // 
+            // PetFriendly
+            // 
+            this.PetFriendly.DataPropertyName = "PetFriendly";
+            this.PetFriendly.HeaderText = "PetFriendly";
+            this.PetFriendly.MinimumWidth = 6;
+            this.PetFriendly.Name = "PetFriendly";
+            this.PetFriendly.ReadOnly = true;
+            this.PetFriendly.Visible = false;
+            // 
+            // Vaga
+            // 
+            this.Vaga.DataPropertyName = "Vaga";
+            this.Vaga.HeaderText = "Vaga";
+            this.Vaga.MinimumWidth = 6;
+            this.Vaga.Name = "Vaga";
+            this.Vaga.ReadOnly = true;
+            this.Vaga.Visible = false;
+            // 
+            // ProxTransp
+            // 
+            this.ProxTransp.DataPropertyName = "ProxTransp";
+            this.ProxTransp.HeaderText = "ProxTransp";
+            this.ProxTransp.MinimumWidth = 6;
+            this.ProxTransp.Name = "ProxTransp";
+            this.ProxTransp.ReadOnly = true;
+            this.ProxTransp.Visible = false;
             // 
             // Frm_AdvToRent_rnt
             // 
@@ -344,7 +365,6 @@
             this.Text = "Frm_AdvToRent_rnt";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Frm_AdvToRent_rnt_Load);
-            this.Click += new System.EventHandler(this.Frm_AdvToRent_rnt_Click);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.propertyBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -366,18 +386,19 @@
         private CheckBox CkbProxTranspPublico;
         private BindingSource propertyBindingSource;
         private DataGridViewTextBoxColumn ID;
+        private DataGridViewTextBoxColumn ID_prop;
         private DataGridViewTextBoxColumn Daily;
-        private DataGridViewTextBoxColumn piscina;
-        private DataGridViewTextBoxColumn ac;
-        private DataGridViewTextBoxColumn proxMar;
-        private DataGridViewTextBoxColumn petFriendly;
-        private DataGridViewTextBoxColumn vaga;
-        private DataGridViewTextBoxColumn proxTranspPublico;
         private DataGridViewTextBoxColumn City;
         private DataGridViewTextBoxColumn District;
         private DataGridViewTextBoxColumn State;
         private DataGridViewTextBoxColumn Footage;
         private DataGridViewCheckBoxColumn Active;
         private DataGridViewTextBoxColumn imagetext;
+        private DataGridViewCheckBoxColumn AC;
+        private DataGridViewCheckBoxColumn Piscina;
+        private DataGridViewCheckBoxColumn ProxMar;
+        private DataGridViewCheckBoxColumn PetFriendly;
+        private DataGridViewCheckBoxColumn Vaga;
+        private DataGridViewCheckBoxColumn ProxTransp;
     }
 }

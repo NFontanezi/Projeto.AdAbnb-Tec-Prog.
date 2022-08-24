@@ -33,12 +33,12 @@ namespace AdAbnb.Presentation
         int clickCountGarageSlots = 0;
         int clickCountNextToPublicTransp = 0;
 
-        List<Property> listProp = Repositories.AllProperties.allProperties;
+        List<Property> listProp = AllProperties.allProperties;
 
         public Frm_AdvToRent_rnt()
         {
             InitializeComponent();
-            listProp = Repositories.AllProperties.allProperties;
+            listProp = AllProperties.allProperties;
 
 
             //dataGridView1.DataSource = GetAnuncios(dtF);
@@ -74,7 +74,7 @@ namespace AdAbnb.Presentation
             //Active = active;
             //imagetext = image;
 
-            dt.Columns.Add("ID");
+            dt.Columns.Add("ID_prop");
             dt.Columns.Add("District");
             dt.Columns.Add("City");
             dt.Columns.Add("State");
@@ -83,12 +83,12 @@ namespace AdAbnb.Presentation
             dt.Columns.Add("Active");
             dt.Columns.Add("imagetext");
 
-            dt.Columns.Add("piscina", typeof(bool));
-            dt.Columns.Add("ac", typeof(bool));
-            dt.Columns.Add("proxMar", typeof(bool));
-            dt.Columns.Add("petFriendly", typeof(bool));
-            dt.Columns.Add("vaga", typeof(bool));
-            dt.Columns.Add("proxTranspPublico", typeof(bool));
+            dt.Columns.Add("Piscina", typeof(bool));
+            dt.Columns.Add("AC", typeof(bool));
+            dt.Columns.Add("ProxMar", typeof(bool));
+            dt.Columns.Add("PetFriendly", typeof(bool));
+            dt.Columns.Add("Vaga", typeof(bool));
+            dt.Columns.Add("ProxTransp", typeof(bool));
 
 
 
@@ -98,15 +98,15 @@ namespace AdAbnb.Presentation
             {
                 var row = dt.NewRow();
 
-                var piscina = item.Facilities["Piscina"];
-                var ac = item.Facilities["Ar Condicionado"];
-                var proxMar = item.Facilities["Próximo ao mar"];
-                var petFriendly = item.Facilities["PetFriendly"];
-                var vaga = item.Facilities["Vaga estacionamento"];
-                var proxTranspPublico = item.Facilities["Próximo ao transporte público"];
+                var piscina = item.Piscina;
+                var ac = item.AC;
+                var proxMar = item.ProxMar;
+                var petFriendly = item.PetFriendly;
+                var vaga = item.Vaga;
+                var proxTranspPublico = item.ProxTransp;
 
 
-                row["ID"] = item.ID_prop;
+                row["ID_prop"] = item.ID_prop;
                 row["District"] = item.Daily;
                 row["City"] = item.City;
                 row["State"] = item.State;
@@ -114,12 +114,12 @@ namespace AdAbnb.Presentation
                 row["Daily"] = item.Daily;
                 row["Active"] = item.Active;
                 row["imagetext"] = item.imagetext;
-                row["piscina"] = piscina;
-                row["ac"] = ac;
-                row["proxMar"] = proxMar;
-                row["petFriendly"] = petFriendly;
-                row["vaga"] = vaga;
-                row["proxTranspPublico"] = proxTranspPublico;
+                row["Piscina"] = piscina;
+                row["AC"] = ac;
+                row["ProxMar"] = proxMar;
+                row["PetFriendly"] = petFriendly;
+                row["Vaga"] = vaga;
+                row["ProxTransp"] = proxTranspPublico;
 
                 if(item.Active == true)
                 {
@@ -130,25 +130,25 @@ namespace AdAbnb.Presentation
             return dt;
         }
 
-        public static DataTable GetAnuncios(DataTable dtF)
-        {
-            dtF.Columns.Add("id", typeof(Int32));
-            dtF.Columns.Add("descricao", typeof(string));
-            dtF.Columns.Add("diaria", typeof(decimal));
-            dtF.Columns.Add("arquivoFoto", typeof(string));
-            dtF.Columns.Add("cidade", typeof(string));
-            dtF.Columns.Add("piscina", typeof(bool));
-            dtF.Columns.Add("ac", typeof(bool));
-            dtF.Columns.Add("proxMar", typeof(bool));
-            dtF.Columns.Add("petFriendly", typeof(bool));
-            dtF.Columns.Add("vaga", typeof(bool));
-            dtF.Columns.Add("proxTranspPublico", typeof(bool));
+        //public static DataTable GetAnuncios(DataTable dtF)
+        //{
+        //    dtF.Columns.Add("id", typeof(Int32));
+        //    dtF.Columns.Add("descricao", typeof(string));
+        //    dtF.Columns.Add("diaria", typeof(decimal));
+        //    dtF.Columns.Add("arquivoFoto", typeof(string));
+        //    dtF.Columns.Add("cidade", typeof(string));
+        //    dtF.Columns.Add("piscina", typeof(bool));
+        //    dtF.Columns.Add("ac", typeof(bool));
+        //    dtF.Columns.Add("proxMar", typeof(bool));
+        //    dtF.Columns.Add("petFriendly", typeof(bool));
+        //    dtF.Columns.Add("vaga", typeof(bool));
+        //    dtF.Columns.Add("proxTranspPublico", typeof(bool));
 
 
 
-            return dtF;
+        //    return dtF;
 
-        }
+        //}
 
         //public void ConfigurarGrade()
         //{
@@ -260,15 +260,15 @@ namespace AdAbnb.Presentation
 
             dataGridView1.Columns["imagetext"].Visible = false;
 
-            dataGridView1.Columns["piscina"].Visible = false;
-            dataGridView1.Columns["ac"].Visible = false;
-            dataGridView1.Columns["proxMar"].Visible = false;
-            dataGridView1.Columns["petFriendly"].Visible = false;
-            dataGridView1.Columns["vaga"].Visible = false;
-            dataGridView1.Columns["proxTranspPublico"].Visible = false;
+            dataGridView1.Columns["Piscina"].Visible = false;
+            dataGridView1.Columns["AC"].Visible = false;
+            dataGridView1.Columns["ProxMar"].Visible = false;
+            dataGridView1.Columns["PetFriendly"].Visible = false;
+            dataGridView1.Columns["Vaga"].Visible = false;
+            dataGridView1.Columns["ProxTransp"].Visible = false;
 
+            dataGridView1.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
 
-   
             DataGridViewImageColumn col = new();
             col.Name = "Image";
             col.ImageLayout = DataGridViewImageCellLayout.Zoom;
@@ -312,6 +312,7 @@ namespace AdAbnb.Presentation
 
         private void btnFilter_Click(object sender, EventArgs e)
         {
+            dt.DefaultView.RowFilter = "";
             string filter = "";
             FilterCity(filter);
             FilterFacilities(filter);
@@ -319,6 +320,8 @@ namespace AdAbnb.Presentation
             string filtroFinal = FilterCity(filter) + FilterFacilities(filter);
 
             dt.DefaultView.RowFilter = filtroFinal;
+            CarregarFotos();
+
         }
 
         private string FilterFacilities(string filter)
@@ -338,7 +341,6 @@ namespace AdAbnb.Presentation
         private string FilterCity(string filterS)
         {
             filterS += $"{dt.DefaultView.RowFilter = string.Format("[{0}] LIKE '%{1}%'", "City", txbCidade.Text)}";
-            dataGridView1.DataSource = ConvertToDatatable(listProp);
             return filterS;
         }
 
@@ -347,15 +349,13 @@ namespace AdAbnb.Presentation
         {
             if(bPiscina == true)
             {
-                filterS += $" AND {dt.DefaultView.RowFilter = "piscina = 1"}";
+                filterS += $" AND {dt.DefaultView.RowFilter = "Piscina = 1"}";
             }
             else
             {
                 filterS += "";
             }
 
-
-            dataGridView1.DataSource = ConvertToDatatable(listProp);
             return filterS;
 
         }
@@ -380,14 +380,13 @@ namespace AdAbnb.Presentation
         {
             if (bAC == true)
             {
-                filterS += $" AND {dt.DefaultView.RowFilter = "ac = 1"}";
+                filterS += $" AND {dt.DefaultView.RowFilter = "AC = 1"}";
             }
             else
             {
                 filterS += "";
             }
 
-            dataGridView1.DataSource = ConvertToDatatable(listProp);
             return filterS;
         }
 
@@ -411,13 +410,12 @@ namespace AdAbnb.Presentation
         {
             if (bProxAoMar == true)
             {
-                filterS += $" AND {dt.DefaultView.RowFilter = "proxMar = 1"}";
+                filterS += $" AND {dt.DefaultView.RowFilter = "ProxMar = 1"}";
             }
             else
             {
                 filterS += "";
             }
-            dataGridView1.DataSource = ConvertToDatatable(listProp);
             return filterS;
         }
 
@@ -442,14 +440,13 @@ namespace AdAbnb.Presentation
         {
             if (bPetFriendly == true)
             {
-                filterS += $" AND {dt.DefaultView.RowFilter = "petFriendly = 1"}";
+                filterS += $" AND {dt.DefaultView.RowFilter = "PetFriendly = 1"}";
             }
             else
             {
                 filterS = "";
             }
 
-            dataGridView1.DataSource = ConvertToDatatable(listProp);
             return filterS;
         }
 
@@ -475,14 +472,13 @@ namespace AdAbnb.Presentation
         {
             if (bVagaEstacionamento == true)
             {
-                filterS += $" AND {dt.DefaultView.RowFilter = "vaga = 1"}";
+                filterS += $" AND {dt.DefaultView.RowFilter = "Vaga = 1"}";
             }
             else
             {
                 filterS += "";
             }
 
-            dataGridView1.DataSource = ConvertToDatatable(listProp);
             return filterS;
         }
 
@@ -508,14 +504,12 @@ namespace AdAbnb.Presentation
         {
             if (bProximoAoTransPublico == true)
             {
-                filterS += $" AND {dt.DefaultView.RowFilter = "proxTranspPublico = 1"}";
+                filterS += $" AND {dt.DefaultView.RowFilter = "ProxTransp = 1"}";
             }
             else
             {
                 filterS += "";
             }
-
-            dataGridView1.DataSource = ConvertToDatatable(listProp);
 
             return filterS;
         }
@@ -533,13 +527,6 @@ namespace AdAbnb.Presentation
                 bProximoAoTransPublico = true;
             }
         }
-
-
-        private void Frm_AdvToRent_rnt_Click(object sender, EventArgs e)
-        {
-
-        }
-
 
     }
 }
