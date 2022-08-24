@@ -13,15 +13,6 @@ namespace AdAbnb.Repositories
         public static Dictionary<string, string> usersAdvDic = new(); // chave = email, valor = senha
 
         public static List<Owner> ownerAdvInfos = new();
-        //public static string ToString1(Person usuario)
-        //{
-        //    return $@"Número de registro: {usuario.Registration}
-        //    Nome: {usuario.Name}
-        //    CPF: {usuario.CPF}
-        //    Telefone: {usuario.Phone}   
-        //    Data de nascimento: {usuario.DateBirth}
-        //    Gênero: {usuario.Gender}";
-        //}
 
         public static List<Property> ownerPropAdv = new();
 

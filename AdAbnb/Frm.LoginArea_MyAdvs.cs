@@ -188,8 +188,51 @@ namespace AdAbnb.Presentation
             
 
         }
+        //btnEdit_Click
+        //public void button1_Click(object sender, EventArgs e)
+        //{
+            //int columnindex = dataGridView_adv.CurrentCell.ColumnIndex;
+            //int rowindex = dataGridView_adv.CurrentCell.RowIndex;
 
-        public void btnEdit_Click(object sender, EventArgs e)
+            //string city = dataGridView_adv.Rows[rowindex].Cells
+            //["City"].Value.ToString();
+            //string state = dataGridView_adv.Rows[rowindex].Cells
+            //["State"].Value.ToString();
+            //string district = dataGridView_adv.Rows[rowindex].Cells
+            //["District"].Value.ToString();
+            //int footage = Convert.ToInt32(dataGridView_adv.Rows[rowindex].Cells
+            //["Footage"].Value.ToString());
+            //int daily = Convert.ToInt32(dataGridView_adv.Rows[rowindex].Cells
+            //["Daily"].Value.ToString());
+            //string imagetext = dataGridView_adv.Rows[rowindex].Cells
+            //["imagetext"].Value.ToString();
+
+            //Form FrmEdit = new FrmEdit(district, city, state, imagetext, footage, daily);
+            //FrmEdit.ShowDialog();
+
+            //owner.PropertyList.RemoveAt(rowindex);
+
+         //  var t = new Thread(() => Application.Run(new frmAddAdv(owner)));
+           // frmAddAdv.GetEdit(district, city, state, imagetext, footage, daily);
+
+            //Form frm = new frmAddAdv(owner);
+            //frm.GetEdit(district, city, state, imagetext, footage, daily);
+           // frm.btnRegister_Click.performclick(sender, e);
+
+           // this.Close();
+           // t.Start();
+
+
+
+            //MessageBox.Show("Delete e crie outro anuncio");
+        //}
+
+        private void dataGridView_adv_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
         {
             int columnindex = dataGridView_adv.CurrentCell.ColumnIndex;
             int rowindex = dataGridView_adv.CurrentCell.RowIndex;
@@ -207,25 +250,23 @@ namespace AdAbnb.Presentation
             string imagetext = dataGridView_adv.Rows[rowindex].Cells
             ["imagetext"].Value.ToString();
 
-            owner.PropertyList.RemoveAt(rowindex);
 
-         //  var t = new Thread(() => Application.Run(new frmAddAdv(owner)));
-           // frmAddAdv.GetEdit(district, city, state, imagetext, footage, daily);
-
-            //Form frm = new frmAddAdv(owner);
-            //frm.GetEdit(district, city, state, imagetext, footage, daily);
-           // frm.btnRegister_Click.performclick(sender, e);
-
-           // this.Close();
-           // t.Start();
+            // Form FrmEdit = new FrmEdit(district, city, state, imagetext, footage, daily);
+            //FrmEdit.ShowDialog();
 
 
+            var x = owner.PropertyList[rowindex];
+            Form FrmEdit = new FrmEdit(owner, x, district, city, state,
+                footage, daily, imagetext);
 
-            MessageBox.Show("Delete e crie outro anuncio");
-        }
+           // Owner owner, Property propList, string district, string city,
+           // string state, decimal footage, decimal daily, string image
 
-        private void dataGridView_adv_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
+
+            FrmEdit.ShowDialog();
+
+
+
 
         }
     }

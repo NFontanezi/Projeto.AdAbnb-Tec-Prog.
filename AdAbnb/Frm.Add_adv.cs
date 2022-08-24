@@ -15,29 +15,62 @@ namespace AdAbnb.Presentation
     {
         
         Owner Owner { get; set; }
+       
         public frmAddAdv(Owner owner)
         {
             Owner = owner;
             InitializeComponent();
+
+        }
+
+        Property x;
+        string district, city, state,imagetext;
+
+        int footage, daily;
+
+        bool ac, pool, sea, pet, park, bus, active;
+        
+
+        public frmAddAdv(Owner owner, Property propList, string district, string city,
+            string state, string footage, string daily, string image, bool propAC, bool propPis,
+             bool propMar, bool propPet, bool proVaga, bool proBus, bool active)
+        { 
+
+
+            InitializeComponent();
+            txbDistrict.Text = district;
+            txbCity.Text = city;
+            txbState.Text = state;
+            txbFootage.Text = Convert.ToString(footage);
+            txbDaily.Text = Convert.ToString(daily);
+            txbURL.Text = image;
+            active = true ? cbxAC.Checked : false;
+            propList.AC = true ? cbxAC.Checked : false;
+            propList.Piscina = true ? cbxPool.Checked : false;
+            propList.ProxMar = true ? cbxSea.Checked : false;
+            propList.PetFriendly = true ? cbxPet.Checked : false;
+            propList.Vaga = true ? cbxPark.Checked : false;
+            propList.ProxTransp = true ? cbxBus.Checked : false;
+
         }
 
 
-       public void btnRegister_Click(object sender, EventArgs e)
+        public void btnRegister_Click(object sender, EventArgs e)
         { 
             
-            string district = txbDistrict.Text;
-            string city = txbCity.Text == "" ? "" : txbCity.Text;
-            string state = txbState.Text == "" ? "" : txbState.Text;
-            int footage = txbFootage.Text == "" ? 0 : Convert.ToInt32(txbFootage.Text);
-            int daily = txbDaily.Text == "" ? 0 : Convert.ToInt32(txbDaily.Text);
-            string imagetext = txbURL.Text; //== "" ? "" : txbURL.Text;
-            bool active = cbxAtivo.Checked ? true : false;
-            bool ac = cbxAC.Checked ? true : false;
-            bool pool = cbxPool.Checked ? true : false;
-            bool sea = cbxSea.Checked ? true : false;
-            bool pet = cbxPet.Checked ? true : false;
-            bool park = cbxPark.Checked ? true : false;
-            bool bus = cbxBus.Checked ? true : false;
+            district = txbDistrict.Text;
+            city = txbCity.Text == "" ? "" : txbCity.Text;
+            state = txbState.Text == "" ? "" : txbState.Text;
+            footage = txbFootage.Text == "" ? 0 : Convert.ToInt32(txbFootage.Text);
+            daily = txbDaily.Text == "" ? 0 : Convert.ToInt32(txbDaily.Text);
+            imagetext = txbURL.Text; //== "" ? "" : txbURL.Text;
+            active = cbxAtivo.Checked ? true : false;
+             ac = cbxAC.Checked ? true : false;
+             pool = cbxPool.Checked ? true : false;
+             sea = cbxSea.Checked ? true : false;
+             pet = cbxPet.Checked ? true : false;
+             park = cbxPark.Checked ? true : false;
+             bus = cbxBus.Checked ? true : false;
 
             bool check = CheckFields(district, city, state, footage, daily,imagetext);
 
@@ -66,11 +99,10 @@ namespace AdAbnb.Presentation
             else
             {
                 lblMsg.Text = "Preencha todos os campos";
-                //MessageBox.Show("Preencha todos os campos");
-                //corrigir gender e birth para ""
+
             }
 
-            //BindDataGridView();
+
         }
 
 
@@ -100,16 +132,6 @@ namespace AdAbnb.Presentation
 
         }
 
-        public void GetEdit(string district, string city,
-            string state, string imagetext, int footage, int daily)
-        {
-            txbDistrict.Text = district;
-            txbCity.Text = city;
-            txbState.Text = state;
-            txbFootage.Text = Convert.ToString(footage);
-            txbDaily.Text = Convert.ToString(daily);
-            txbURL.Text = imagetext;
-        }
         
         
     }
