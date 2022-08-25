@@ -84,6 +84,7 @@
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.dtv2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimumSize = new System.Drawing.Size(932, 647);
             this.Name = "Frm_HistRent_rnt";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Imóveis alugados";

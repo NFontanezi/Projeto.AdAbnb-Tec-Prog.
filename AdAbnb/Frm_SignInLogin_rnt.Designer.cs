@@ -114,6 +114,7 @@
             this.Controls.Add(this.btn_SignIn_rnt);
             this.Controls.Add(this.btn_Login_rnt);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimumSize = new System.Drawing.Size(932, 647);
             this.Name = "Frm_SignInLogin_rnt";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdaBnb - Aluguel";

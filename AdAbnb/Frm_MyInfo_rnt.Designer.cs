@@ -90,6 +90,7 @@
             this.ForeColor = System.Drawing.Color.Teal;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.MinimumSize = new System.Drawing.Size(932, 647);
             this.Name = "Frm_MyInfo_rnt";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Minhas informações";

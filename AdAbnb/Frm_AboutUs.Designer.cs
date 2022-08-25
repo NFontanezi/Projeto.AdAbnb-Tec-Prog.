@@ -52,7 +52,7 @@
             this.lblText.AutoSize = true;
             this.lblText.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblText.ForeColor = System.Drawing.Color.Teal;
-            this.lblText.Location = new System.Drawing.Point(91, 114);
+            this.lblText.Location = new System.Drawing.Point(150, 165);
             this.lblText.Name = "lblText";
             this.lblText.Size = new System.Drawing.Size(675, 294);
             this.lblText.TabIndex = 0;
@@ -64,7 +64,7 @@
             this.lnklblNatC.AutoSize = true;
             this.lnklblNatC.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lnklblNatC.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lnklblNatC.Location = new System.Drawing.Point(120, 459);
+            this.lnklblNatC.Location = new System.Drawing.Point(179, 575);
             this.lnklblNatC.Name = "lnklblNatC";
             this.lnklblNatC.Size = new System.Drawing.Size(142, 19);
             this.lnklblNatC.TabIndex = 1;
@@ -79,7 +79,7 @@
             this.lnklblNatF.AutoSize = true;
             this.lnklblNatF.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lnklblNatF.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lnklblNatF.Location = new System.Drawing.Point(377, 456);
+            this.lnklblNatF.Location = new System.Drawing.Point(447, 572);
             this.lnklblNatF.Name = "lnklblNatF";
             this.lnklblNatF.Size = new System.Drawing.Size(149, 19);
             this.lnklblNatF.TabIndex = 2;
@@ -102,7 +102,7 @@
             // 
             this.pbxLinkedInNatC.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pbxLinkedInNatC.Image = ((System.Drawing.Image)(resources.GetObject("pbxLinkedInNatC.Image")));
-            this.pbxLinkedInNatC.Location = new System.Drawing.Point(91, 456);
+            this.pbxLinkedInNatC.Location = new System.Drawing.Point(150, 572);
             this.pbxLinkedInNatC.Name = "pbxLinkedInNatC";
             this.pbxLinkedInNatC.Size = new System.Drawing.Size(23, 22);
             this.pbxLinkedInNatC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -114,7 +114,7 @@
             // 
             this.pbxLinkedInNatF.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pbxLinkedInNatF.Image = ((System.Drawing.Image)(resources.GetObject("pbxLinkedInNatF.Image")));
-            this.pbxLinkedInNatF.Location = new System.Drawing.Point(348, 456);
+            this.pbxLinkedInNatF.Location = new System.Drawing.Point(418, 572);
             this.pbxLinkedInNatF.Name = "pbxLinkedInNatF";
             this.pbxLinkedInNatF.Size = new System.Drawing.Size(23, 22);
             this.pbxLinkedInNatF.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -126,7 +126,7 @@
             // 
             this.pbxGithubNatC.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pbxGithubNatC.Image = ((System.Drawing.Image)(resources.GetObject("pbxGithubNatC.Image")));
-            this.pbxGithubNatC.Location = new System.Drawing.Point(91, 490);
+            this.pbxGithubNatC.Location = new System.Drawing.Point(150, 606);
             this.pbxGithubNatC.Name = "pbxGithubNatC";
             this.pbxGithubNatC.Size = new System.Drawing.Size(23, 22);
             this.pbxGithubNatC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -138,7 +138,7 @@
             // 
             this.pbxGithubNatF.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pbxGithubNatF.Image = ((System.Drawing.Image)(resources.GetObject("pbxGithubNatF.Image")));
-            this.pbxGithubNatF.Location = new System.Drawing.Point(348, 490);
+            this.pbxGithubNatF.Location = new System.Drawing.Point(418, 606);
             this.pbxGithubNatF.Name = "pbxGithubNatF";
             this.pbxGithubNatF.Size = new System.Drawing.Size(23, 22);
             this.pbxGithubNatF.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -152,7 +152,7 @@
             this.lnklblNatCgit.AutoSize = true;
             this.lnklblNatCgit.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lnklblNatCgit.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lnklblNatCgit.Location = new System.Drawing.Point(120, 493);
+            this.lnklblNatCgit.Location = new System.Drawing.Point(179, 609);
             this.lnklblNatCgit.Name = "lnklblNatCgit";
             this.lnklblNatCgit.Size = new System.Drawing.Size(142, 19);
             this.lnklblNatCgit.TabIndex = 14;
@@ -167,7 +167,7 @@
             this.lnklblNatFgit.AutoSize = true;
             this.lnklblNatFgit.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lnklblNatFgit.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lnklblNatFgit.Location = new System.Drawing.Point(377, 493);
+            this.lnklblNatFgit.Location = new System.Drawing.Point(447, 609);
             this.lnklblNatFgit.Name = "lnklblNatFgit";
             this.lnklblNatFgit.Size = new System.Drawing.Size(149, 19);
             this.lnklblNatFgit.TabIndex = 15;
@@ -181,7 +181,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Cornsilk;
-            this.ClientSize = new System.Drawing.Size(843, 586);
+            this.ClientSize = new System.Drawing.Size(960, 711);
             this.Controls.Add(this.lnklblNatFgit);
             this.Controls.Add(this.lnklblNatCgit);
             this.Controls.Add(this.pbxGithubNatF);
@@ -193,6 +193,7 @@
             this.Controls.Add(this.lnklblNatC);
             this.Controls.Add(this.lblText);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimumSize = new System.Drawing.Size(978, 758);
             this.Name = "Frm_AboutUs";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sobre nós";

@@ -16,6 +16,7 @@ namespace AdAbnb.Presentation
     {
         List<Owner> listOwner_adv = new();
         List<Registration> listReg_adv=new();
+        public static int clickEye = 0;
         public frmGetRegistered()
         {
             InitializeComponent();
@@ -105,119 +106,148 @@ namespace AdAbnb.Presentation
 
         }
 
-        private void lblNewAcc_Click(object sender, EventArgs e)
+        public void viewPassword()
         {
+            clickEye++;
 
+            if (clickEye % 2 != 0)
+            {
+                txbPassword.PasswordChar = '\0';
+                pictureBox2.Visible = false;
+                pictureBox3.Visible = true;
+            }
+            else
+            {
+                txbPassword.PasswordChar = '*';
+                pictureBox2.Visible = true;
+                pictureBox3.Visible = false;
+            }
+        }
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            viewPassword();
         }
 
-        private void lblMsg_Click(object sender, EventArgs e)
+        private void pictureBox3_Click(object sender, EventArgs e)
         {
-
+            viewPassword();
         }
 
-        private void cbxMale_CheckedChanged(object sender, EventArgs e)
-        {
+        //private void lblNewAcc_Click(object sender, EventArgs e)
+        //{
 
-        }
+        //}
 
-        private void cbxFemale_CheckedChanged(object sender, EventArgs e)
-        {
+        //private void lblMsg_Click(object sender, EventArgs e)
+        //{
 
-        }
+        //}
 
-        private void txbBankAcc_TextChanged(object sender, EventArgs e)
-        {
+        //private void cbxMale_CheckedChanged(object sender, EventArgs e)
+        //{
 
-        }
+        //}
 
-        private void lblBankAcc_Click(object sender, EventArgs e)
-        {
+        //private void cbxFemale_CheckedChanged(object sender, EventArgs e)
+        //{
 
-        }
+        //}
 
-        private void txbAg_TextChanged(object sender, EventArgs e)
-        {
+        //private void txbBankAcc_TextChanged(object sender, EventArgs e)
+        //{
 
-        }
+        //}
 
-        private void lblBankAg_Click(object sender, EventArgs e)
-        {
+        //private void lblBankAcc_Click(object sender, EventArgs e)
+        //{
 
-        }
+        //}
 
-        private void txbBank_TextChanged(object sender, EventArgs e)
-        {
+        //private void txbAg_TextChanged(object sender, EventArgs e)
+        //{
 
-        }
+        //}
 
-        private void lblBank_Click(object sender, EventArgs e)
-        {
+        //private void lblBankAg_Click(object sender, EventArgs e)
+        //{
 
-        }
+        //}
 
-        private void txbEmail_TextChanged(object sender, EventArgs e)
-        {
+        //private void txbBank_TextChanged(object sender, EventArgs e)
+        //{
 
-        }
+        //}
 
-        private void lblEmail_Click(object sender, EventArgs e)
-        {
+        //private void lblBank_Click(object sender, EventArgs e)
+        //{
 
-        }
+        //}
 
-        private void txbPhone_TextChanged(object sender, EventArgs e)
-        {
+        //private void txbEmail_TextChanged(object sender, EventArgs e)
+        //{
 
-        }
+        //}
 
-        private void lblPhone_Click(object sender, EventArgs e)
-        {
+        //private void lblEmail_Click(object sender, EventArgs e)
+        //{
 
-        }
+        //}
 
-        private void txbPassword_TextChanged(object sender, EventArgs e)
-        {
+        //private void txbPhone_TextChanged(object sender, EventArgs e)
+        //{
 
-        }
+        //}
 
-        private void txbBirth_TextChanged(object sender, EventArgs e)
-        {
+        //private void lblPhone_Click(object sender, EventArgs e)
+        //{
 
-        }
+        //}
 
-        private void lblPassword_Click(object sender, EventArgs e)
-        {
+        //private void txbPassword_TextChanged(object sender, EventArgs e)
+        //{
 
-        }
+        //}
 
-        private void lblGender_Click(object sender, EventArgs e)
-        {
+        //private void txbBirth_TextChanged(object sender, EventArgs e)
+        //{
 
-        }
+        //}
 
-        private void lblBirth_Click(object sender, EventArgs e)
-        {
+        //private void lblPassword_Click(object sender, EventArgs e)
+        //{
 
-        }
+        //}
 
-        private void txbCPF_TextChanged(object sender, EventArgs e)
-        {
+        //private void lblGender_Click(object sender, EventArgs e)
+        //{
 
-        }
+        //}
 
-        private void lblCPF_Click(object sender, EventArgs e)
-        {
+        //private void lblBirth_Click(object sender, EventArgs e)
+        //{
 
-        }
+        //}
 
-        private void txbName_TextChanged(object sender, EventArgs e)
-        {
+        //private void txbCPF_TextChanged(object sender, EventArgs e)
+        //{
 
-        }
+        //}
 
-        private void lblName_Click(object sender, EventArgs e)
-        {
+        //private void lblCPF_Click(object sender, EventArgs e)
+        //{
 
-        }
+        //}
+
+        //private void txbName_TextChanged(object sender, EventArgs e)
+        //{
+
+        //}
+
+        //private void lblName_Click(object sender, EventArgs e)
+        //{
+
+        //}
+
+
     }
 }

@@ -213,6 +213,7 @@
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.dataGridView_adv);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MinimumSize = new System.Drawing.Size(932, 647);
             this.Name = "frmLoginArea_MyAdvs";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoginArea_MyAdvs";

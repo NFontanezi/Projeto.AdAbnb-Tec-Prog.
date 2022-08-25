@@ -142,6 +142,7 @@
             this.Controls.Add(this.btn_Rented);
             this.Controls.Add(this.btn_Infos);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimumSize = new System.Drawing.Size(932, 647);
             this.Name = "Frm_ClientArea";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Área do cliente";

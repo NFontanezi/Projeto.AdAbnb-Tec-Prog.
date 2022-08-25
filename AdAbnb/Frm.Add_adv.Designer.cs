@@ -62,7 +62,9 @@
             // 
             // btnBack
             // 
-            this.btnBack.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnBack.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBack.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.btnBack.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnBack.ForeColor = System.Drawing.Color.Transparent;
@@ -77,7 +79,9 @@
             // 
             // btnRegister
             // 
-            this.btnRegister.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnRegister.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRegister.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.btnRegister.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnRegister.ForeColor = System.Drawing.Color.Transparent;
@@ -92,7 +96,9 @@
             // 
             // cbxAtivo
             // 
-            this.cbxAtivo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbxAtivo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cbxAtivo.AutoSize = true;
             this.cbxAtivo.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.cbxAtivo.ForeColor = System.Drawing.Color.Teal;
@@ -106,7 +112,9 @@
             // 
             // txbState
             // 
-            this.txbState.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txbState.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txbState.Location = new System.Drawing.Point(572, 159);
             this.txbState.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txbState.Name = "txbState";
@@ -115,7 +123,9 @@
             // 
             // lblState
             // 
-            this.lblState.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblState.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblState.AutoSize = true;
             this.lblState.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblState.ForeColor = System.Drawing.Color.Teal;
@@ -127,7 +137,9 @@
             // 
             // txbCity
             // 
-            this.txbCity.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txbCity.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txbCity.Location = new System.Drawing.Point(367, 159);
             this.txbCity.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txbCity.Name = "txbCity";
@@ -136,7 +148,9 @@
             // 
             // lblCity
             // 
-            this.lblCity.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblCity.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblCity.AutoSize = true;
             this.lblCity.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblCity.ForeColor = System.Drawing.Color.Teal;
@@ -148,7 +162,9 @@
             // 
             // lblActive
             // 
-            this.lblActive.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblActive.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblActive.AutoSize = true;
             this.lblActive.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblActive.ForeColor = System.Drawing.Color.Teal;
@@ -160,7 +176,9 @@
             // 
             // txbFootage
             // 
-            this.txbFootage.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txbFootage.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txbFootage.Location = new System.Drawing.Point(648, 159);
             this.txbFootage.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txbFootage.Name = "txbFootage";
@@ -169,7 +187,9 @@
             // 
             // lblFootage
             // 
-            this.lblFootage.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblFootage.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblFootage.AutoSize = true;
             this.lblFootage.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblFootage.ForeColor = System.Drawing.Color.Teal;
@@ -181,7 +201,9 @@
             // 
             // txbDistrict
             // 
-            this.txbDistrict.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txbDistrict.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txbDistrict.Location = new System.Drawing.Point(161, 159);
             this.txbDistrict.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txbDistrict.Name = "txbDistrict";
@@ -190,7 +212,9 @@
             // 
             // lblDistrict
             // 
-            this.lblDistrict.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblDistrict.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblDistrict.AutoSize = true;
             this.lblDistrict.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblDistrict.ForeColor = System.Drawing.Color.Teal;
@@ -214,7 +238,9 @@
             // 
             // label1
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.Teal;
@@ -226,7 +252,9 @@
             // 
             // lblDaily
             // 
-            this.lblDaily.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblDaily.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblDaily.AutoSize = true;
             this.lblDaily.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblDaily.ForeColor = System.Drawing.Color.Teal;
@@ -238,7 +266,9 @@
             // 
             // txbDaily
             // 
-            this.txbDaily.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txbDaily.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txbDaily.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txbDaily.ForeColor = System.Drawing.Color.Teal;
             this.txbDaily.Location = new System.Drawing.Point(516, 435);
@@ -249,7 +279,9 @@
             // 
             // lblReais
             // 
-            this.lblReais.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblReais.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblReais.AutoSize = true;
             this.lblReais.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblReais.ForeColor = System.Drawing.Color.Teal;
@@ -261,7 +293,9 @@
             // 
             // lblComod
             // 
-            this.lblComod.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblComod.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblComod.AutoSize = true;
             this.lblComod.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblComod.ForeColor = System.Drawing.Color.Teal;
@@ -273,7 +307,9 @@
             // 
             // cbxPool
             // 
-            this.cbxPool.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbxPool.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cbxPool.AutoSize = true;
             this.cbxPool.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.cbxPool.ForeColor = System.Drawing.Color.Teal;
@@ -287,7 +323,9 @@
             // 
             // cbxSea
             // 
-            this.cbxSea.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbxSea.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cbxSea.AutoSize = true;
             this.cbxSea.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.cbxSea.ForeColor = System.Drawing.Color.Teal;
@@ -301,7 +339,9 @@
             // 
             // cbxPet
             // 
-            this.cbxPet.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbxPet.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cbxPet.AutoSize = true;
             this.cbxPet.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.cbxPet.ForeColor = System.Drawing.Color.Teal;
@@ -315,7 +355,9 @@
             // 
             // cbxPark
             // 
-            this.cbxPark.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbxPark.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cbxPark.AutoSize = true;
             this.cbxPark.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.cbxPark.ForeColor = System.Drawing.Color.Teal;
@@ -329,7 +371,9 @@
             // 
             // cbxAC
             // 
-            this.cbxAC.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbxAC.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cbxAC.AutoSize = true;
             this.cbxAC.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.cbxAC.ForeColor = System.Drawing.Color.Teal;
@@ -343,7 +387,9 @@
             // 
             // cbxBus
             // 
-            this.cbxBus.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbxBus.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cbxBus.AutoSize = true;
             this.cbxBus.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.cbxBus.ForeColor = System.Drawing.Color.Teal;
@@ -357,7 +403,9 @@
             // 
             // lblMsg
             // 
-            this.lblMsg.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblMsg.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblMsg.AutoSize = true;
             this.lblMsg.Location = new System.Drawing.Point(334, 560);
             this.lblMsg.Name = "lblMsg";
@@ -366,7 +414,9 @@
             // 
             // txbURL
             // 
-            this.txbURL.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txbURL.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txbURL.Location = new System.Drawing.Point(490, 279);
             this.txbURL.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txbURL.Name = "txbURL";
@@ -375,7 +425,9 @@
             // 
             // lblURL
             // 
-            this.lblURL.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblURL.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblURL.AutoSize = true;
             this.lblURL.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblURL.ForeColor = System.Drawing.Color.Teal;
@@ -432,6 +484,7 @@
             this.Controls.Add(this.lblNewAdv);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MinimumSize = new System.Drawing.Size(932, 647);
             this.Name = "frmAddAdv";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Adicionar anúncio";
