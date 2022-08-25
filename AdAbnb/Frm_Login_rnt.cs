@@ -53,6 +53,9 @@ namespace AdAbnb.Presentation
             }
         }
 
+        private void Frm_Login_rnt_Load(object sender, EventArgs e)
+        {
 
+        }
     }
 }

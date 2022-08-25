@@ -61,10 +61,9 @@
             this.btnSalvar.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.btnSalvar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnSalvar.ForeColor = System.Drawing.Color.Transparent;
-            this.btnSalvar.Location = new System.Drawing.Point(483, 546);
-            this.btnSalvar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnSalvar.Location = new System.Drawing.Point(423, 410);
             this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(154, 67);
+            this.btnSalvar.Size = new System.Drawing.Size(135, 50);
             this.btnSalvar.TabIndex = 0;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = false;
@@ -73,55 +72,49 @@
             // textBox1
             // 
             this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox1.Location = new System.Drawing.Point(64, 151);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox1.Location = new System.Drawing.Point(56, 113);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(243, 27);
+            this.textBox1.Size = new System.Drawing.Size(213, 23);
             this.textBox1.TabIndex = 1;
             // 
             // textBox2
             // 
             this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox2.Location = new System.Drawing.Point(64, 232);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox2.Location = new System.Drawing.Point(56, 174);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(243, 27);
+            this.textBox2.Size = new System.Drawing.Size(213, 23);
             this.textBox2.TabIndex = 1;
             // 
             // textBox3
             // 
             this.textBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox3.Location = new System.Drawing.Point(64, 318);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox3.Location = new System.Drawing.Point(56, 238);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(243, 27);
+            this.textBox3.Size = new System.Drawing.Size(213, 23);
             this.textBox3.TabIndex = 1;
             // 
             // textBox4
             // 
             this.textBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox4.Location = new System.Drawing.Point(64, 406);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox4.Location = new System.Drawing.Point(56, 304);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(243, 27);
+            this.textBox4.Size = new System.Drawing.Size(213, 23);
             this.textBox4.TabIndex = 1;
             // 
             // textBox5
             // 
             this.textBox5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox5.Location = new System.Drawing.Point(64, 496);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox5.Location = new System.Drawing.Point(56, 372);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(243, 27);
+            this.textBox5.Size = new System.Drawing.Size(213, 23);
             this.textBox5.TabIndex = 1;
             // 
             // textBox6
             // 
             this.textBox6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox6.Location = new System.Drawing.Point(64, 586);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox6.Location = new System.Drawing.Point(56, 440);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(243, 27);
+            this.textBox6.Size = new System.Drawing.Size(213, 23);
             this.textBox6.TabIndex = 1;
             // 
             // checkBox1
@@ -130,10 +123,9 @@
             this.checkBox1.AutoSize = true;
             this.checkBox1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.checkBox1.ForeColor = System.Drawing.Color.Teal;
-            this.checkBox1.Location = new System.Drawing.Point(409, 163);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.checkBox1.Location = new System.Drawing.Point(358, 122);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(158, 22);
+            this.checkBox1.Size = new System.Drawing.Size(127, 20);
             this.checkBox1.TabIndex = 2;
             this.checkBox1.Text = "Ar Condicionado";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -145,13 +137,13 @@
             this.checkBox2.AutoSize = true;
             this.checkBox2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.checkBox2.ForeColor = System.Drawing.Color.Teal;
-            this.checkBox2.Location = new System.Drawing.Point(409, 195);
-            this.checkBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.checkBox2.Location = new System.Drawing.Point(358, 146);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(81, 22);
+            this.checkBox2.Size = new System.Drawing.Size(67, 20);
             this.checkBox2.TabIndex = 2;
             this.checkBox2.Text = "Piscina";
             this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
             // 
             // checkBox3
             // 
@@ -159,10 +151,9 @@
             this.checkBox3.AutoSize = true;
             this.checkBox3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.checkBox3.ForeColor = System.Drawing.Color.Teal;
-            this.checkBox3.Location = new System.Drawing.Point(409, 227);
-            this.checkBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.checkBox3.Location = new System.Drawing.Point(358, 170);
             this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(146, 22);
+            this.checkBox3.Size = new System.Drawing.Size(119, 20);
             this.checkBox3.TabIndex = 2;
             this.checkBox3.Text = "Proximo ao Mar";
             this.checkBox3.UseVisualStyleBackColor = true;
@@ -173,10 +164,9 @@
             this.checkBox4.AutoSize = true;
             this.checkBox4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.checkBox4.ForeColor = System.Drawing.Color.Teal;
-            this.checkBox4.Location = new System.Drawing.Point(409, 259);
-            this.checkBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.checkBox4.Location = new System.Drawing.Point(358, 194);
             this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(110, 22);
+            this.checkBox4.Size = new System.Drawing.Size(90, 20);
             this.checkBox4.TabIndex = 2;
             this.checkBox4.Text = "PetFriendly";
             this.checkBox4.UseVisualStyleBackColor = true;
@@ -187,10 +177,9 @@
             this.checkBox5.AutoSize = true;
             this.checkBox5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.checkBox5.ForeColor = System.Drawing.Color.Teal;
-            this.checkBox5.Location = new System.Drawing.Point(409, 291);
-            this.checkBox5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.checkBox5.Location = new System.Drawing.Point(358, 218);
             this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(183, 22);
+            this.checkBox5.Size = new System.Drawing.Size(146, 20);
             this.checkBox5.TabIndex = 2;
             this.checkBox5.Text = "Vaga Estacionamnto";
             this.checkBox5.UseVisualStyleBackColor = true;
@@ -201,10 +190,9 @@
             this.checkBox6.AutoSize = true;
             this.checkBox6.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.checkBox6.ForeColor = System.Drawing.Color.Teal;
-            this.checkBox6.Location = new System.Drawing.Point(409, 323);
-            this.checkBox6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.checkBox6.Location = new System.Drawing.Point(358, 242);
             this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(228, 22);
+            this.checkBox6.Size = new System.Drawing.Size(185, 20);
             this.checkBox6.TabIndex = 2;
             this.checkBox6.Text = "Proximo ao Transp. público";
             this.checkBox6.UseVisualStyleBackColor = true;
@@ -215,9 +203,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.Teal;
-            this.label1.Location = new System.Drawing.Point(64, 128);
+            this.label1.Location = new System.Drawing.Point(56, 96);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 19);
+            this.label1.Size = new System.Drawing.Size(46, 17);
             this.label1.TabIndex = 3;
             this.label1.Text = "Bairro";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -228,9 +216,9 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.Teal;
-            this.label2.Location = new System.Drawing.Point(64, 209);
+            this.label2.Location = new System.Drawing.Point(56, 157);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 19);
+            this.label2.Size = new System.Drawing.Size(59, 17);
             this.label2.TabIndex = 3;
             this.label2.Text = "Cidade";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -241,9 +229,9 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.Teal;
-            this.label3.Location = new System.Drawing.Point(64, 295);
+            this.label3.Location = new System.Drawing.Point(56, 221);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(63, 19);
+            this.label3.Size = new System.Drawing.Size(52, 17);
             this.label3.TabIndex = 3;
             this.label3.Text = "Estado";
             this.label3.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -254,9 +242,9 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.Color.Teal;
-            this.label4.Location = new System.Drawing.Point(64, 383);
+            this.label4.Location = new System.Drawing.Point(56, 287);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(93, 19);
+            this.label4.Size = new System.Drawing.Size(79, 17);
             this.label4.TabIndex = 3;
             this.label4.Text = "Metragem";
             this.label4.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -267,9 +255,9 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label5.ForeColor = System.Drawing.Color.Teal;
-            this.label5.Location = new System.Drawing.Point(64, 473);
+            this.label5.Location = new System.Drawing.Point(56, 355);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(56, 19);
+            this.label5.Size = new System.Drawing.Size(48, 17);
             this.label5.TabIndex = 3;
             this.label5.Text = "Diaria";
             this.label5.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -280,9 +268,9 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label6.ForeColor = System.Drawing.Color.Teal;
-            this.label6.Location = new System.Drawing.Point(64, 563);
+            this.label6.Location = new System.Drawing.Point(56, 422);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(36, 19);
+            this.label6.Size = new System.Drawing.Size(31, 17);
             this.label6.TabIndex = 3;
             this.label6.Text = "URL";
             this.label6.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -293,10 +281,9 @@
             this.checkBox7.AutoSize = true;
             this.checkBox7.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.checkBox7.ForeColor = System.Drawing.Color.Teal;
-            this.checkBox7.Location = new System.Drawing.Point(490, 486);
-            this.checkBox7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.checkBox7.Location = new System.Drawing.Point(429, 364);
             this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(147, 23);
+            this.checkBox7.Size = new System.Drawing.Size(121, 21);
             this.checkBox7.TabIndex = 2;
             this.checkBox7.Text = "Anuncio Ativo";
             this.checkBox7.UseVisualStyleBackColor = true;
@@ -307,9 +294,9 @@
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblTitle.ForeColor = System.Drawing.Color.Teal;
-            this.lblTitle.Location = new System.Drawing.Point(233, 33);
+            this.lblTitle.Location = new System.Drawing.Point(204, 25);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(226, 37);
+            this.lblTitle.Size = new System.Drawing.Size(178, 28);
             this.lblTitle.TabIndex = 4;
             this.lblTitle.Text = "Editar anúncio";
             // 
@@ -319,28 +306,29 @@
             this.lblFacilities.AutoSize = true;
             this.lblFacilities.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblFacilities.ForeColor = System.Drawing.Color.Teal;
-            this.lblFacilities.Location = new System.Drawing.Point(409, 128);
+            this.lblFacilities.Location = new System.Drawing.Point(358, 96);
             this.lblFacilities.Name = "lblFacilities";
-            this.lblFacilities.Size = new System.Drawing.Size(132, 19);
+            this.lblFacilities.Size = new System.Drawing.Size(110, 17);
             this.lblFacilities.TabIndex = 5;
             this.lblFacilities.Text = "Comodidades:";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, -2);
+            this.pictureBox1.Location = new System.Drawing.Point(10, -2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(123, 83);
+            this.pictureBox1.Size = new System.Drawing.Size(108, 62);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
             // FrmEdit
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Cornsilk;
-            this.ClientSize = new System.Drawing.Size(754, 727);
+            this.ClientSize = new System.Drawing.Size(660, 545);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblFacilities);
             this.Controls.Add(this.lblTitle);
@@ -365,7 +353,6 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btnSalvar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FrmEdit";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Editar anúncio";
