@@ -28,25 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFacilities));
             this.txbFacilities = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // txbFacilities
             // 
-            this.txbFacilities.Location = new System.Drawing.Point(89, 74);
+            this.txbFacilities.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.txbFacilities.ForeColor = System.Drawing.Color.Teal;
+            this.txbFacilities.Location = new System.Drawing.Point(102, 99);
+            this.txbFacilities.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txbFacilities.Multiline = true;
             this.txbFacilities.Name = "txbFacilities";
-            this.txbFacilities.Size = new System.Drawing.Size(208, 156);
+            this.txbFacilities.Size = new System.Drawing.Size(237, 207);
             this.txbFacilities.TabIndex = 0;
             // 
             // frmFacilities
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(378, 319);
+            this.BackColor = System.Drawing.Color.Cornsilk;
+            this.ClientSize = new System.Drawing.Size(432, 425);
             this.Controls.Add(this.txbFacilities);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmFacilities";
-            this.Text = "Frm";
+            this.Text = "Comodidades";
             this.Load += new System.EventHandler(this.Frm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

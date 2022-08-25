@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_GetRegistered_rnt));
             this.btnBack = new System.Windows.Forms.Button();
             this.btnRegister_rnt = new System.Windows.Forms.Button();
             this.cbxMale = new System.Windows.Forms.CheckBox();
@@ -46,6 +47,8 @@
             this.txbName = new System.Windows.Forms.TextBox();
             this.lblName = new System.Windows.Forms.Label();
             this.lblNewAcc = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnBack
@@ -229,11 +232,21 @@
             this.lblNewAcc.AutoSize = true;
             this.lblNewAcc.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblNewAcc.ForeColor = System.Drawing.Color.Teal;
-            this.lblNewAcc.Location = new System.Drawing.Point(77, 39);
+            this.lblNewAcc.Location = new System.Drawing.Point(336, 36);
             this.lblNewAcc.Name = "lblNewAcc";
             this.lblNewAcc.Size = new System.Drawing.Size(138, 34);
             this.lblNewAcc.TabIndex = 5;
             this.lblNewAcc.Text = "Cadastro";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(9, 1);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(123, 83);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 23;
+            this.pictureBox1.TabStop = false;
             // 
             // Frm_GetRegistered_rnt
             // 
@@ -241,6 +254,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Cornsilk;
             this.ClientSize = new System.Drawing.Size(914, 600);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnRegister_rnt);
             this.Controls.Add(this.cbxMale);
@@ -259,9 +273,11 @@
             this.Controls.Add(this.txbName);
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.lblNewAcc);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Frm_GetRegistered_rnt";
-            this.Text = "Frm_GetRegistered_rnt";
+            this.Text = "Novo cadastro";
             this.Load += new System.EventHandler(this.Frm_GetRegistered_rnt_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -287,5 +303,6 @@
         private TextBox txbName;
         private Label lblName;
         private Label lblNewAcc;
+        private PictureBox pictureBox1;
     }
 }

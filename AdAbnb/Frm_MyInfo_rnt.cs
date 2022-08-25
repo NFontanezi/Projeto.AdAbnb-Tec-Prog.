@@ -24,16 +24,19 @@ namespace AdAbnb.Presentation
         {
             User = UsersRentDB.usersRentInfos.Where(x => x.Email == Frm_Login_rnt.emailLog).Single();
             lbInfoBlank.Text = ToString1(User);
-
         }
 
         public static string ToString1(Person usuario)
         {
             return $@"
     Nome: {usuario.Name}
+
     CPF: {usuario.CPF}
+
     Telefone: {usuario.Phone}   
+
     Data de nascimento: {usuario.DateBirth}
+
     Gênero: {usuario.Gender}";
         }
 

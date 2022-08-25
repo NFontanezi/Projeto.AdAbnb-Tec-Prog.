@@ -198,11 +198,11 @@ namespace AdAbnb.Presentation
             frm.ShowDialog();
         }
 
-        private void btnBack_Click(object sender, EventArgs e)
-        {
-            var t = new Thread(() => Application.Run(new Frm_ClientArea(User)));
-            this.Close();
-            t.Start();
-        }
+        //private void btnBack_Click(object sender, EventArgs e)
+        //{
+        //    var t = new Thread(() => Application.Run(new Frm_ClientArea(User)));
+        //    this.Close();
+        //    t.Start();
+        //}
     }
 }

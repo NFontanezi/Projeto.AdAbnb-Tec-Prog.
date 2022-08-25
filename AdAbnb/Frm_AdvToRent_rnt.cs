@@ -354,7 +354,6 @@ namespace AdAbnb.Presentation
                 MessageBox.Show("Imóvel alugado com sucesso!");
                 clickAlugar = 1;
                 var t = new Thread(() => Application.Run(new Frm_HistRent_rnt(User)));
-                this.Close();
                 t.Start();
             }
 
@@ -600,5 +599,11 @@ namespace AdAbnb.Presentation
             }
         }
 
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            var t = new Thread(() => Application.Run(new Frm_ClientArea(User)));
+            this.Close();
+            t.Start();
+        }
     }
 }

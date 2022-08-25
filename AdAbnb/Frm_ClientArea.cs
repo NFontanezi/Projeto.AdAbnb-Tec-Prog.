@@ -18,6 +18,7 @@ namespace AdAbnb.Presentation
         {
             InitializeComponent();
             User = user;
+            lblHello.Text = $"Olá, {user.Name}";
         }
 
         private void btn_Search_Click(object sender, EventArgs e)
@@ -44,7 +45,6 @@ namespace AdAbnb.Presentation
         private void btn_Rented_Click(object sender, EventArgs e)
         {
             var t = new Thread(() => Application.Run(new Frm_HistRent_rnt(User)));
-            this.Close();
             t.Start();
         }
     }

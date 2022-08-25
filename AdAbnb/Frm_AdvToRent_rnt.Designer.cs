@@ -55,8 +55,11 @@
             this.CkbPetFriendly = new System.Windows.Forms.CheckBox();
             this.CkbVagaGaragem = new System.Windows.Forms.CheckBox();
             this.CkbProxTranspPublico = new System.Windows.Forms.CheckBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.propertyBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -85,7 +88,7 @@
             this.ProxTransp});
             this.dataGridView1.DataSource = this.propertyBindingSource;
             this.dataGridView1.GridColor = System.Drawing.Color.Cornsilk;
-            this.dataGridView1.Location = new System.Drawing.Point(106, 241);
+            this.dataGridView1.Location = new System.Drawing.Point(90, 262);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
@@ -93,7 +96,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(900, 600);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            //this.dataGridView1.DoubleClick += new System.EventHandler(this.dataGridView1_DoubleClick);
             // 
             // ID_prop
             // 
@@ -228,7 +230,7 @@
             this.lblCidade.AutoSize = true;
             this.lblCidade.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblCidade.ForeColor = System.Drawing.Color.Teal;
-            this.lblCidade.Location = new System.Drawing.Point(269, 103);
+            this.lblCidade.Location = new System.Drawing.Point(253, 124);
             this.lblCidade.Name = "lblCidade";
             this.lblCidade.Size = new System.Drawing.Size(89, 23);
             this.lblCidade.TabIndex = 1;
@@ -238,7 +240,7 @@
             // 
             this.txbCidade.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txbCidade.ForeColor = System.Drawing.Color.Teal;
-            this.txbCidade.Location = new System.Drawing.Point(364, 103);
+            this.txbCidade.Location = new System.Drawing.Point(348, 124);
             this.txbCidade.MaxLength = 70;
             this.txbCidade.Name = "txbCidade";
             this.txbCidade.Size = new System.Drawing.Size(444, 27);
@@ -252,7 +254,7 @@
             this.btnFilter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFilter.ForeColor = System.Drawing.Color.Teal;
-            this.btnFilter.Location = new System.Drawing.Point(814, 103);
+            this.btnFilter.Location = new System.Drawing.Point(798, 124);
             this.btnFilter.Name = "btnFilter";
             this.btnFilter.Size = new System.Drawing.Size(34, 31);
             this.btnFilter.TabIndex = 4;
@@ -265,7 +267,7 @@
             this.CkbPool.AutoSize = true;
             this.CkbPool.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.CkbPool.ForeColor = System.Drawing.Color.Teal;
-            this.CkbPool.Location = new System.Drawing.Point(275, 153);
+            this.CkbPool.Location = new System.Drawing.Point(259, 174);
             this.CkbPool.Name = "CkbPool";
             this.CkbPool.Size = new System.Drawing.Size(89, 23);
             this.CkbPool.TabIndex = 5;
@@ -279,7 +281,7 @@
             this.CkbAC.AutoSize = true;
             this.CkbAC.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.CkbAC.ForeColor = System.Drawing.Color.Teal;
-            this.CkbAC.Location = new System.Drawing.Point(275, 198);
+            this.CkbAC.Location = new System.Drawing.Point(259, 219);
             this.CkbAC.Name = "CkbAC";
             this.CkbAC.Size = new System.Drawing.Size(170, 23);
             this.CkbAC.TabIndex = 6;
@@ -293,7 +295,7 @@
             this.CkbProxAoMar.AutoSize = true;
             this.CkbProxAoMar.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.CkbProxAoMar.ForeColor = System.Drawing.Color.Teal;
-            this.CkbProxAoMar.Location = new System.Drawing.Point(463, 153);
+            this.CkbProxAoMar.Location = new System.Drawing.Point(447, 174);
             this.CkbProxAoMar.Name = "CkbProxAoMar";
             this.CkbProxAoMar.Size = new System.Drawing.Size(162, 23);
             this.CkbProxAoMar.TabIndex = 7;
@@ -307,7 +309,7 @@
             this.CkbPetFriendly.AutoSize = true;
             this.CkbPetFriendly.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.CkbPetFriendly.ForeColor = System.Drawing.Color.Teal;
-            this.CkbPetFriendly.Location = new System.Drawing.Point(463, 198);
+            this.CkbPetFriendly.Location = new System.Drawing.Point(447, 219);
             this.CkbPetFriendly.Name = "CkbPetFriendly";
             this.CkbPetFriendly.Size = new System.Drawing.Size(124, 23);
             this.CkbPetFriendly.TabIndex = 8;
@@ -321,7 +323,7 @@
             this.CkbVagaGaragem.AutoSize = true;
             this.CkbVagaGaragem.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.CkbVagaGaragem.ForeColor = System.Drawing.Color.Teal;
-            this.CkbVagaGaragem.Location = new System.Drawing.Point(636, 153);
+            this.CkbVagaGaragem.Location = new System.Drawing.Point(620, 174);
             this.CkbVagaGaragem.Name = "CkbVagaGaragem";
             this.CkbVagaGaragem.Size = new System.Drawing.Size(183, 23);
             this.CkbVagaGaragem.TabIndex = 9;
@@ -335,13 +337,37 @@
             this.CkbProxTranspPublico.AutoSize = true;
             this.CkbProxTranspPublico.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.CkbProxTranspPublico.ForeColor = System.Drawing.Color.Teal;
-            this.CkbProxTranspPublico.Location = new System.Drawing.Point(636, 198);
+            this.CkbProxTranspPublico.Location = new System.Drawing.Point(620, 219);
             this.CkbProxTranspPublico.Name = "CkbProxTranspPublico";
             this.CkbProxTranspPublico.Size = new System.Drawing.Size(277, 23);
             this.CkbProxTranspPublico.TabIndex = 10;
             this.CkbProxTranspPublico.Text = "Próximo ao transporte público";
             this.CkbProxTranspPublico.UseVisualStyleBackColor = true;
             this.CkbProxTranspPublico.Click += new System.EventHandler(this.CkbProxTranspPublico_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(12, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(123, 83);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnBack
+            // 
+            this.btnBack.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnBack.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.btnBack.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnBack.ForeColor = System.Drawing.Color.Transparent;
+            this.btnBack.Location = new System.Drawing.Point(447, 901);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(177, 57);
+            this.btnBack.TabIndex = 12;
+            this.btnBack.Text = "Voltar";
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // Frm_AdvToRent_rnt
             // 
@@ -350,7 +376,9 @@
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.Cornsilk;
-            this.ClientSize = new System.Drawing.Size(1082, 853);
+            this.ClientSize = new System.Drawing.Size(1082, 1055);
+            this.Controls.Add(this.btnBack);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.CkbProxTranspPublico);
             this.Controls.Add(this.CkbVagaGaragem);
             this.Controls.Add(this.CkbPetFriendly);
@@ -361,13 +389,15 @@
             this.Controls.Add(this.txbCidade);
             this.Controls.Add(this.lblCidade);
             this.Controls.Add(this.dataGridView1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Frm_AdvToRent_rnt";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Frm_AdvToRent_rnt";
+            this.Text = "Imóveis para alugar";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Frm_AdvToRent_rnt_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.propertyBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -401,5 +431,7 @@
         private DataGridViewCheckBoxColumn PetFriendly;
         private DataGridViewCheckBoxColumn Vaga;
         private DataGridViewCheckBoxColumn ProxTransp;
+        private PictureBox pictureBox1;
+        private Button btnBack;
     }
 }

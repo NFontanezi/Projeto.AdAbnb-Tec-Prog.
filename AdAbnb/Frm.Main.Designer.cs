@@ -56,7 +56,8 @@
             this.quitToolStripMenuItem});
             this.mspMain.Location = new System.Drawing.Point(0, 0);
             this.mspMain.Name = "mspMain";
-            this.mspMain.Size = new System.Drawing.Size(800, 24);
+            this.mspMain.Padding = new System.Windows.Forms.Padding(7, 3, 0, 3);
+            this.mspMain.Size = new System.Drawing.Size(914, 28);
             this.mspMain.TabIndex = 0;
             this.mspMain.Text = "menuStrip1";
             // 
@@ -68,19 +69,19 @@
             this.formMainToolStripMenuItem.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.formMainToolStripMenuItem.ForeColor = System.Drawing.Color.Cornsilk;
             this.formMainToolStripMenuItem.Name = "formMainToolStripMenuItem";
-            this.formMainToolStripMenuItem.Size = new System.Drawing.Size(77, 20);
+            this.formMainToolStripMenuItem.Size = new System.Drawing.Size(88, 22);
             this.formMainToolStripMenuItem.Text = "Form Main";
             // 
             // advertisimentToolStripMenuItem
             // 
             this.advertisimentToolStripMenuItem.Name = "advertisimentToolStripMenuItem";
-            this.advertisimentToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.advertisimentToolStripMenuItem.Size = new System.Drawing.Size(164, 26);
             this.advertisimentToolStripMenuItem.Text = "To advertise";
             // 
             // advertisimentToolStripMenuItem1
             // 
             this.advertisimentToolStripMenuItem1.Name = "advertisimentToolStripMenuItem1";
-            this.advertisimentToolStripMenuItem1.Size = new System.Drawing.Size(139, 22);
+            this.advertisimentToolStripMenuItem1.Size = new System.Drawing.Size(164, 26);
             this.advertisimentToolStripMenuItem1.Text = "To rent";
             // 
             // aboutToolStripMenuItem
@@ -88,7 +89,7 @@
             this.aboutToolStripMenuItem.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.aboutToolStripMenuItem.ForeColor = System.Drawing.Color.Cornsilk;
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(51, 20);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(60, 22);
             this.aboutToolStripMenuItem.Text = "About";
             // 
             // quitToolStripMenuItem
@@ -96,7 +97,7 @@
             this.quitToolStripMenuItem.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.quitToolStripMenuItem.ForeColor = System.Drawing.Color.Cornsilk;
             this.quitToolStripMenuItem.Name = "quitToolStripMenuItem";
-            this.quitToolStripMenuItem.Size = new System.Drawing.Size(42, 20);
+            this.quitToolStripMenuItem.Size = new System.Drawing.Size(49, 22);
             this.quitToolStripMenuItem.Text = "Quit";
             // 
             // btnAdvert
@@ -105,9 +106,10 @@
             this.btnAdvert.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.btnAdvert.Font = new System.Drawing.Font("Franklin Gothic Demi Cond", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnAdvert.ForeColor = System.Drawing.Color.Cornsilk;
-            this.btnAdvert.Location = new System.Drawing.Point(70, 186);
+            this.btnAdvert.Location = new System.Drawing.Point(80, 248);
+            this.btnAdvert.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAdvert.Name = "btnAdvert";
-            this.btnAdvert.Size = new System.Drawing.Size(316, 160);
+            this.btnAdvert.Size = new System.Drawing.Size(361, 213);
             this.btnAdvert.TabIndex = 1;
             this.btnAdvert.Text = "ANUNCIE";
             this.btnAdvert.UseVisualStyleBackColor = false;
@@ -119,9 +121,10 @@
             this.btnRent.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.btnRent.Font = new System.Drawing.Font("Franklin Gothic Demi Cond", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnRent.ForeColor = System.Drawing.Color.Cornsilk;
-            this.btnRent.Location = new System.Drawing.Point(418, 186);
+            this.btnRent.Location = new System.Drawing.Point(478, 248);
+            this.btnRent.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnRent.Name = "btnRent";
-            this.btnRent.Size = new System.Drawing.Size(316, 160);
+            this.btnRent.Size = new System.Drawing.Size(361, 213);
             this.btnRent.TabIndex = 1;
             this.btnRent.Text = "ALUGUE";
             this.btnRent.UseVisualStyleBackColor = false;
@@ -133,9 +136,10 @@
             this.btnAdvert2.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.btnAdvert2.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnAdvert2.ForeColor = System.Drawing.Color.Cornsilk;
-            this.btnAdvert2.Location = new System.Drawing.Point(69, 349);
+            this.btnAdvert2.Location = new System.Drawing.Point(79, 465);
+            this.btnAdvert2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAdvert2.Name = "btnAdvert2";
-            this.btnAdvert2.Size = new System.Drawing.Size(317, 25);
+            this.btnAdvert2.Size = new System.Drawing.Size(362, 33);
             this.btnAdvert2.TabIndex = 3;
             this.btnAdvert2.Text = "Clique aqui para anunciar um imóvel!";
             this.btnAdvert2.UseVisualStyleBackColor = false;
@@ -147,9 +151,10 @@
             this.btnRent2.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.btnRent2.Font = new System.Drawing.Font("Franklin Gothic Demi Cond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnRent2.ForeColor = System.Drawing.Color.Cornsilk;
-            this.btnRent2.Location = new System.Drawing.Point(418, 352);
+            this.btnRent2.Location = new System.Drawing.Point(478, 469);
+            this.btnRent2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnRent2.Name = "btnRent2";
-            this.btnRent2.Size = new System.Drawing.Size(316, 25);
+            this.btnRent2.Size = new System.Drawing.Size(361, 33);
             this.btnRent2.TabIndex = 3;
             this.btnRent2.Text = "Clique aqui para encontrar um lugar!";
             this.btnRent2.UseVisualStyleBackColor = false;
@@ -165,20 +170,19 @@
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(69, 46);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(79, 61);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(328, 110);
+            this.pictureBox1.Size = new System.Drawing.Size(375, 147);
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Cornsilk;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(914, 600);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnRent2);
             this.Controls.Add(this.btnAdvert2);
@@ -187,9 +191,10 @@
             this.Controls.Add(this.mspMain);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.mspMain;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "AdAbnb";
+            this.Text = "AdaBnB - Aluguel de casas para temporada";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.mspMain.ResumeLayout(false);
