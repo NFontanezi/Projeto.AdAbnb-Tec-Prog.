@@ -24,17 +24,31 @@ namespace AdAbnb.Presentation
         private void abrirLinkedinNatC()
         {
             lnklblNatC.LinkVisited = true;
-            var processes = Process.GetProcessesByName("Chrome");
-            var path = processes.FirstOrDefault()?.MainModule?.FileName;
-            Process.Start(path, "https://www.linkedin.com/in/naccamposs/");
+            //var processes = Process.GetProcessesByName("Chrome");
+            //var path = processes.FirstOrDefault()?.MainModule?.FileName;
+            //Process.Start(path, "https://www.linkedin.com/in/naccamposs/");
+
+
+
+            ProcessStartInfo processInfo = new ProcessStartInfo();
+            processInfo.FileName = "https://www.linkedin.com/in/naccamposs/";
+            processInfo.UseShellExecute = true;
+            Process.Start(processInfo);
+
         }
 
         private void abrirLinkedinNatF()
         {
             lnklblNatF.LinkVisited = true;
-            var processes = Process.GetProcessesByName("Chrome");
-            var path = processes.FirstOrDefault()?.MainModule?.FileName;
-            Process.Start(path, "https://www.linkedin.com/in/natalia-fontanezi-86083436/");
+            //var processes = Process.GetProcessesByName("Chrome");
+            //var path = processes.FirstOrDefault()?.MainModule?.FileName;
+            //Process.Start(path, "https://www.linkedin.com/in/natalia-fontanezi-86083436/");
+
+
+            ProcessStartInfo processInfo = new ProcessStartInfo();
+            processInfo.FileName = "https://www.linkedin.com/in/natalia-fontanezi-86083436/";
+            processInfo.UseShellExecute = true;
+            Process.Start(processInfo);
         }
 
 
@@ -62,18 +76,30 @@ namespace AdAbnb.Presentation
         public void abrirGithubNatC()
         {
             lnklblNatCgit.LinkVisited = true;
-            var processes = Process.GetProcessesByName("Chrome");
-            var path = processes.FirstOrDefault()?.MainModule?.FileName;
-            Process.Start(path, "https://github.com/NataliaNCCS");
+            //var processes = Process.GetProcessesByName("Chrome");
+            //var path = processes.FirstOrDefault()?.MainModule?.FileName;
+            //Process.Start(path, "https://github.com/NataliaNCCS");
+
+            ProcessStartInfo processInfo = new ProcessStartInfo();
+            processInfo.FileName = "https://github.com/NataliaNCCS";
+            processInfo.UseShellExecute = true;
+            Process.Start(processInfo);
+
         }
+
 
 
         public void abrirGithubNatF()
         {
             lnklblNatFgit.LinkVisited = true;
-            var processes = Process.GetProcessesByName("Chrome");
-            var path = processes.FirstOrDefault()?.MainModule?.FileName;
-            Process.Start(path, "https://github.com/nfontanezi/");
+            //var processes = Process.GetProcessesByName("Chrome");
+            //var path = processes.FirstOrDefault()?.MainModule?.FileName;
+            //Process.Start(path, "https://github.com/nfontanezi/");
+
+            ProcessStartInfo processInfo = new ProcessStartInfo();
+            processInfo.FileName = "https://github.com/nfontanezi/";
+            processInfo.UseShellExecute = true;
+            Process.Start(processInfo);
         }
 
         private void pbxGithubNatC_Click(object sender, EventArgs e)

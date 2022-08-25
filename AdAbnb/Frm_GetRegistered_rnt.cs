@@ -14,6 +14,7 @@ namespace AdAbnb.Presentation
 {
     public partial class Frm_GetRegistered_rnt : Form
     {
+        public static int clickEye = 0;
         Person User { get; set; }   
         public char Gender { get; set; }
 
@@ -93,6 +94,33 @@ namespace AdAbnb.Presentation
             var t = new Thread(() => Application.Run(new Frm_SignInLogin_rnt()));
             this.Close();
             t.Start();
+        }
+
+        public void viewPassword()
+        {
+            clickEye++;
+
+            if (clickEye % 2 != 0)
+            {
+                txbPassword.PasswordChar = '\0';
+                pictureBox2.Visible = false;
+                pictureBox3.Visible = true;
+            }
+            else
+            {
+                txbPassword.PasswordChar = '*';
+                pictureBox2.Visible = true;
+                pictureBox3.Visible = false;
+            }
+        }
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            viewPassword();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            viewPassword();
         }
     }
 }

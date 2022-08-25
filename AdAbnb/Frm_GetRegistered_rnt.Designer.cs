@@ -35,20 +35,24 @@
             this.cbxFemale = new System.Windows.Forms.CheckBox();
             this.txbEmail = new System.Windows.Forms.TextBox();
             this.lblEmail = new System.Windows.Forms.Label();
-            this.txbPhone = new System.Windows.Forms.TextBox();
             this.lblPhone = new System.Windows.Forms.Label();
             this.txbPassword = new System.Windows.Forms.TextBox();
-            this.txbBirth = new System.Windows.Forms.TextBox();
             this.lblPassword = new System.Windows.Forms.Label();
             this.lblGender = new System.Windows.Forms.Label();
             this.lblBirth = new System.Windows.Forms.Label();
-            this.txbCPF = new System.Windows.Forms.TextBox();
             this.lblCPF = new System.Windows.Forms.Label();
             this.txbName = new System.Windows.Forms.TextBox();
             this.lblName = new System.Windows.Forms.Label();
             this.lblNewAcc = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txbCPF = new System.Windows.Forms.MaskedTextBox();
+            this.txbBirth = new System.Windows.Forms.MaskedTextBox();
+            this.txbPhone = new System.Windows.Forms.MaskedTextBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // btnBack
@@ -127,15 +131,6 @@
             this.lblEmail.TabIndex = 8;
             this.lblEmail.Text = "Email";
             // 
-            // txbPhone
-            // 
-            this.txbPhone.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txbPhone.Location = new System.Drawing.Point(473, 214);
-            this.txbPhone.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txbPhone.Name = "txbPhone";
-            this.txbPhone.Size = new System.Drawing.Size(271, 27);
-            this.txbPhone.TabIndex = 16;
-            // 
             // lblPhone
             // 
             this.lblPhone.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -154,17 +149,9 @@
             this.txbPassword.Location = new System.Drawing.Point(77, 397);
             this.txbPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txbPassword.Name = "txbPassword";
+            this.txbPassword.PasswordChar = '*';
             this.txbPassword.Size = new System.Drawing.Size(271, 27);
             this.txbPassword.TabIndex = 15;
-            // 
-            // txbBirth
-            // 
-            this.txbBirth.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txbBirth.Location = new System.Drawing.Point(77, 309);
-            this.txbBirth.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txbBirth.Name = "txbBirth";
-            this.txbBirth.Size = new System.Drawing.Size(271, 27);
-            this.txbBirth.TabIndex = 18;
             // 
             // lblPassword
             // 
@@ -188,7 +175,7 @@
             this.lblGender.Name = "lblGender";
             this.lblGender.Size = new System.Drawing.Size(64, 18);
             this.lblGender.TabIndex = 9;
-            this.lblGender.Text = "Genero";
+            this.lblGender.Text = "Gênero";
             // 
             // lblBirth
             // 
@@ -201,15 +188,6 @@
             this.lblBirth.Size = new System.Drawing.Size(161, 18);
             this.lblBirth.TabIndex = 7;
             this.lblBirth.Text = "Data de Nascimento";
-            // 
-            // txbCPF
-            // 
-            this.txbCPF.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txbCPF.Location = new System.Drawing.Point(77, 214);
-            this.txbCPF.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txbCPF.Name = "txbCPF";
-            this.txbCPF.Size = new System.Drawing.Size(272, 27);
-            this.txbCPF.TabIndex = 14;
             // 
             // lblCPF
             // 
@@ -265,12 +243,65 @@
             this.pictureBox1.TabIndex = 23;
             this.pictureBox1.TabStop = false;
             // 
+            // txbCPF
+            // 
+            this.txbCPF.Location = new System.Drawing.Point(77, 228);
+            this.txbCPF.Mask = "000000000-00";
+            this.txbCPF.Name = "txbCPF";
+            this.txbCPF.Size = new System.Drawing.Size(119, 27);
+            this.txbCPF.TabIndex = 24;
+            // 
+            // txbBirth
+            // 
+            this.txbBirth.Location = new System.Drawing.Point(77, 322);
+            this.txbBirth.Mask = "00/00/0000";
+            this.txbBirth.Name = "txbBirth";
+            this.txbBirth.Size = new System.Drawing.Size(119, 27);
+            this.txbBirth.TabIndex = 25;
+            this.txbBirth.ValidatingType = typeof(System.DateTime);
+            // 
+            // txbPhone
+            // 
+            this.txbPhone.Location = new System.Drawing.Point(473, 228);
+            this.txbPhone.Mask = "(99) 00000-0000";
+            this.txbPhone.Name = "txbPhone";
+            this.txbPhone.Size = new System.Drawing.Size(128, 27);
+            this.txbPhone.TabIndex = 26;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(354, 397);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(35, 27);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 27;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(354, 397);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(35, 27);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 28;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Visible = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
             // Frm_GetRegistered_rnt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Cornsilk;
             this.ClientSize = new System.Drawing.Size(914, 600);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.txbPhone);
+            this.Controls.Add(this.txbBirth);
+            this.Controls.Add(this.txbCPF);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnRegister_rnt);
@@ -278,14 +309,11 @@
             this.Controls.Add(this.cbxFemale);
             this.Controls.Add(this.txbEmail);
             this.Controls.Add(this.lblEmail);
-            this.Controls.Add(this.txbPhone);
             this.Controls.Add(this.lblPhone);
             this.Controls.Add(this.txbPassword);
-            this.Controls.Add(this.txbBirth);
             this.Controls.Add(this.lblPassword);
             this.Controls.Add(this.lblGender);
             this.Controls.Add(this.lblBirth);
-            this.Controls.Add(this.txbCPF);
             this.Controls.Add(this.lblCPF);
             this.Controls.Add(this.txbName);
             this.Controls.Add(this.lblName);
@@ -296,6 +324,8 @@
             this.Text = "Nova conta";
             this.Load += new System.EventHandler(this.Frm_GetRegistered_rnt_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -309,18 +339,20 @@
         private CheckBox cbxFemale;
         private TextBox txbEmail;
         private Label lblEmail;
-        private TextBox txbPhone;
         private Label lblPhone;
         private TextBox txbPassword;
-        private TextBox txbBirth;
         private Label lblPassword;
         private Label lblGender;
         private Label lblBirth;
-        private TextBox txbCPF;
         private Label lblCPF;
         private TextBox txbName;
         private Label lblName;
         private Label lblNewAcc;
         private PictureBox pictureBox1;
+        private MaskedTextBox txbCPF;
+        private MaskedTextBox txbBirth;
+        private MaskedTextBox txbPhone;
+        private PictureBox pictureBox2;
+        private PictureBox pictureBox3;
     }
 }

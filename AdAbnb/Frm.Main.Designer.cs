@@ -42,6 +42,7 @@
             this.btnRent2 = new System.Windows.Forms.Button();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnAbout = new System.Windows.Forms.Button();
             this.mspMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -57,7 +58,7 @@
             this.mspMain.Location = new System.Drawing.Point(0, 0);
             this.mspMain.Name = "mspMain";
             this.mspMain.Padding = new System.Windows.Forms.Padding(7, 7, 0, 7);
-            this.mspMain.Size = new System.Drawing.Size(914, 36);
+            this.mspMain.Size = new System.Drawing.Size(999, 36);
             this.mspMain.TabIndex = 0;
             this.mspMain.Text = "menuStrip1";
             // 
@@ -76,7 +77,7 @@
             // 
             this.advertisimentToolStripMenuItem.ForeColor = System.Drawing.Color.Teal;
             this.advertisimentToolStripMenuItem.Name = "advertisimentToolStripMenuItem";
-            this.advertisimentToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.advertisimentToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
             this.advertisimentToolStripMenuItem.Text = "Anunciar um imóvel";
             this.advertisimentToolStripMenuItem.Click += new System.EventHandler(this.advertisimentToolStripMenuItem_Click);
             // 
@@ -84,7 +85,7 @@
             // 
             this.advertisimentToolStripMenuItem1.ForeColor = System.Drawing.Color.Teal;
             this.advertisimentToolStripMenuItem1.Name = "advertisimentToolStripMenuItem1";
-            this.advertisimentToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.advertisimentToolStripMenuItem1.Size = new System.Drawing.Size(214, 26);
             this.advertisimentToolStripMenuItem1.Text = "Alugar um imóvel";
             this.advertisimentToolStripMenuItem1.Click += new System.EventHandler(this.advertisimentToolStripMenuItem1_Click);
             // 
@@ -110,9 +111,9 @@
             // 
             this.btnAdvert.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnAdvert.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.btnAdvert.Font = new System.Drawing.Font("Franklin Gothic Demi Cond", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnAdvert.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnAdvert.ForeColor = System.Drawing.Color.Cornsilk;
-            this.btnAdvert.Location = new System.Drawing.Point(80, 248);
+            this.btnAdvert.Location = new System.Drawing.Point(122, 309);
             this.btnAdvert.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAdvert.Name = "btnAdvert";
             this.btnAdvert.Size = new System.Drawing.Size(361, 213);
@@ -125,9 +126,9 @@
             // 
             this.btnRent.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnRent.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.btnRent.Font = new System.Drawing.Font("Franklin Gothic Demi Cond", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnRent.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnRent.ForeColor = System.Drawing.Color.Cornsilk;
-            this.btnRent.Location = new System.Drawing.Point(478, 248);
+            this.btnRent.Location = new System.Drawing.Point(520, 309);
             this.btnRent.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnRent.Name = "btnRent";
             this.btnRent.Size = new System.Drawing.Size(361, 213);
@@ -140,9 +141,9 @@
             // 
             this.btnAdvert2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnAdvert2.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.btnAdvert2.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnAdvert2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnAdvert2.ForeColor = System.Drawing.Color.Cornsilk;
-            this.btnAdvert2.Location = new System.Drawing.Point(79, 465);
+            this.btnAdvert2.Location = new System.Drawing.Point(121, 516);
             this.btnAdvert2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAdvert2.Name = "btnAdvert2";
             this.btnAdvert2.Size = new System.Drawing.Size(362, 33);
@@ -155,9 +156,9 @@
             // 
             this.btnRent2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnRent2.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.btnRent2.Font = new System.Drawing.Font("Franklin Gothic Demi Cond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnRent2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnRent2.ForeColor = System.Drawing.Color.Cornsilk;
-            this.btnRent2.Location = new System.Drawing.Point(478, 469);
+            this.btnRent2.Location = new System.Drawing.Point(520, 516);
             this.btnRent2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnRent2.Name = "btnRent2";
             this.btnRent2.Size = new System.Drawing.Size(361, 33);
@@ -176,19 +177,35 @@
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(79, 61);
+            this.pictureBox1.Location = new System.Drawing.Point(245, 39);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(375, 147);
+            this.pictureBox1.Size = new System.Drawing.Size(515, 242);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // btnAbout
+            // 
+            this.btnAbout.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnAbout.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.btnAbout.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnAbout.ForeColor = System.Drawing.Color.Transparent;
+            this.btnAbout.Location = new System.Drawing.Point(303, 593);
+            this.btnAbout.Name = "btnAbout";
+            this.btnAbout.Size = new System.Drawing.Size(368, 56);
+            this.btnAbout.TabIndex = 6;
+            this.btnAbout.Text = "Primeira vez aqui? Clique em mim!";
+            this.btnAbout.UseVisualStyleBackColor = false;
+            this.btnAbout.Click += new System.EventHandler(this.btnAbout_Click);
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Cornsilk;
-            this.ClientSize = new System.Drawing.Size(914, 600);
+            this.ClientSize = new System.Drawing.Size(999, 723);
+            this.Controls.Add(this.btnAbout);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnRent2);
             this.Controls.Add(this.btnAdvert2);
@@ -225,5 +242,6 @@
         private Button btnRent2;
         private ImageList imageList1;
         private PictureBox pictureBox1;
+        private Button btnAbout;
     }
 }

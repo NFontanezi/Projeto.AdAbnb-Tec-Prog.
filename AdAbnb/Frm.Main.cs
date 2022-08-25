@@ -87,6 +87,12 @@ namespace AdAbnb
 
             }
         }
+
+        private void btnAbout_Click(object sender, EventArgs e)
+        {
+            var t = new Thread(() => Application.Run(new Frm_AboutUs()));
+            t.Start();
+        }
     }
 
 }
