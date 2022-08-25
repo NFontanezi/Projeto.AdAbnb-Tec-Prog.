@@ -37,6 +37,7 @@
             // 
             // btnVoltar
             // 
+            this.btnVoltar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnVoltar.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.btnVoltar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnVoltar.ForeColor = System.Drawing.Color.Transparent;
@@ -55,7 +56,7 @@
             this.lblMyInfo_adv.AutoSize = true;
             this.lblMyInfo_adv.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblMyInfo_adv.ForeColor = System.Drawing.Color.Teal;
-            this.lblMyInfo_adv.Location = new System.Drawing.Point(337, 171);
+            this.lblMyInfo_adv.Location = new System.Drawing.Point(311, 166);
             this.lblMyInfo_adv.Name = "lblMyInfo_adv";
             this.lblMyInfo_adv.Size = new System.Drawing.Size(0, 19);
             this.lblMyInfo_adv.TabIndex = 1;
@@ -82,6 +83,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmLoginAreaAdv_MyInfo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Minhas informações";
             this.Load += new System.EventHandler(this.frmLoginAreaAdv_MyInfo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

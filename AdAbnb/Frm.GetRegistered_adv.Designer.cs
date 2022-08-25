@@ -69,6 +69,7 @@
             this.lblNewAcc.Size = new System.Drawing.Size(188, 37);
             this.lblNewAcc.TabIndex = 0;
             this.lblNewAcc.Text = "Nova conta";
+            this.lblNewAcc.Click += new System.EventHandler(this.lblNewAcc_Click);
             // 
             // lblName
             // 
@@ -81,6 +82,7 @@
             this.lblName.Size = new System.Drawing.Size(144, 19);
             this.lblName.TabIndex = 1;
             this.lblName.Text = "Nome completo";
+            this.lblName.Click += new System.EventHandler(this.lblName_Click);
             // 
             // txbName
             // 
@@ -90,6 +92,7 @@
             this.txbName.Name = "txbName";
             this.txbName.Size = new System.Drawing.Size(271, 27);
             this.txbName.TabIndex = 2;
+            this.txbName.TextChanged += new System.EventHandler(this.txbName_TextChanged);
             // 
             // lblEmail
             // 
@@ -102,6 +105,7 @@
             this.lblEmail.Size = new System.Drawing.Size(60, 19);
             this.lblEmail.TabIndex = 1;
             this.lblEmail.Text = "E-mail";
+            this.lblEmail.Click += new System.EventHandler(this.lblEmail_Click);
             // 
             // txbEmail
             // 
@@ -111,6 +115,7 @@
             this.txbEmail.Name = "txbEmail";
             this.txbEmail.Size = new System.Drawing.Size(271, 27);
             this.txbEmail.TabIndex = 2;
+            this.txbEmail.TextChanged += new System.EventHandler(this.txbEmail_TextChanged);
             // 
             // lblCPF
             // 
@@ -123,6 +128,7 @@
             this.lblCPF.Size = new System.Drawing.Size(40, 19);
             this.lblCPF.TabIndex = 1;
             this.lblCPF.Text = "CPF";
+            this.lblCPF.Click += new System.EventHandler(this.lblCPF_Click);
             // 
             // txbCPF
             // 
@@ -132,6 +138,7 @@
             this.txbCPF.Name = "txbCPF";
             this.txbCPF.Size = new System.Drawing.Size(271, 27);
             this.txbCPF.TabIndex = 2;
+            this.txbCPF.TextChanged += new System.EventHandler(this.txbCPF_TextChanged);
             // 
             // lblPhone
             // 
@@ -144,6 +151,7 @@
             this.lblPhone.Size = new System.Drawing.Size(67, 19);
             this.lblPhone.TabIndex = 1;
             this.lblPhone.Text = "Celular";
+            this.lblPhone.Click += new System.EventHandler(this.lblPhone_Click);
             // 
             // txbPhone
             // 
@@ -153,6 +161,7 @@
             this.txbPhone.Name = "txbPhone";
             this.txbPhone.Size = new System.Drawing.Size(271, 27);
             this.txbPhone.TabIndex = 2;
+            this.txbPhone.TextChanged += new System.EventHandler(this.txbPhone_TextChanged);
             // 
             // lblBirth
             // 
@@ -165,6 +174,7 @@
             this.lblBirth.Size = new System.Drawing.Size(175, 19);
             this.lblBirth.TabIndex = 1;
             this.lblBirth.Text = "Data de nascimento";
+            this.lblBirth.Click += new System.EventHandler(this.lblBirth_Click);
             // 
             // txbBirth
             // 
@@ -174,6 +184,7 @@
             this.txbBirth.Name = "txbBirth";
             this.txbBirth.Size = new System.Drawing.Size(271, 27);
             this.txbBirth.TabIndex = 2;
+            this.txbBirth.TextChanged += new System.EventHandler(this.txbBirth_TextChanged);
             // 
             // cbxFemale
             // 
@@ -186,6 +197,7 @@
             this.cbxFemale.TabIndex = 3;
             this.cbxFemale.Text = "Feminino";
             this.cbxFemale.UseVisualStyleBackColor = true;
+            this.cbxFemale.CheckedChanged += new System.EventHandler(this.cbxFemale_CheckedChanged);
             // 
             // cbxMale
             // 
@@ -198,6 +210,7 @@
             this.cbxMale.TabIndex = 3;
             this.cbxMale.Text = "Masculino";
             this.cbxMale.UseVisualStyleBackColor = true;
+            this.cbxMale.CheckedChanged += new System.EventHandler(this.cbxMale_CheckedChanged);
             // 
             // lblGender
             // 
@@ -210,6 +223,7 @@
             this.lblGender.Size = new System.Drawing.Size(71, 19);
             this.lblGender.TabIndex = 1;
             this.lblGender.Text = "Gênero";
+            this.lblGender.Click += new System.EventHandler(this.lblGender_Click);
             // 
             // lblPassword
             // 
@@ -222,6 +236,7 @@
             this.lblPassword.Size = new System.Drawing.Size(60, 19);
             this.lblPassword.TabIndex = 1;
             this.lblPassword.Text = "Senha";
+            this.lblPassword.Click += new System.EventHandler(this.lblPassword_Click);
             // 
             // txbPassword
             // 
@@ -231,6 +246,7 @@
             this.txbPassword.Name = "txbPassword";
             this.txbPassword.Size = new System.Drawing.Size(271, 27);
             this.txbPassword.TabIndex = 2;
+            this.txbPassword.TextChanged += new System.EventHandler(this.txbPassword_TextChanged);
             // 
             // btnRegister
             // 
@@ -273,6 +289,7 @@
             this.lblBank.Size = new System.Drawing.Size(62, 19);
             this.lblBank.TabIndex = 1;
             this.lblBank.Text = "Banco";
+            this.lblBank.Click += new System.EventHandler(this.lblBank_Click);
             // 
             // txbBank
             // 
@@ -282,6 +299,7 @@
             this.txbBank.Name = "txbBank";
             this.txbBank.Size = new System.Drawing.Size(210, 27);
             this.txbBank.TabIndex = 2;
+            this.txbBank.TextChanged += new System.EventHandler(this.txbBank_TextChanged);
             // 
             // lblBankAg
             // 
@@ -294,6 +312,7 @@
             this.lblBankAg.Size = new System.Drawing.Size(80, 19);
             this.lblBankAg.TabIndex = 1;
             this.lblBankAg.Text = "Agência";
+            this.lblBankAg.Click += new System.EventHandler(this.lblBankAg_Click);
             // 
             // txbAg
             // 
@@ -303,6 +322,7 @@
             this.txbAg.Name = "txbAg";
             this.txbAg.Size = new System.Drawing.Size(210, 27);
             this.txbAg.TabIndex = 2;
+            this.txbAg.TextChanged += new System.EventHandler(this.txbAg_TextChanged);
             // 
             // lblBankAcc
             // 
@@ -315,6 +335,7 @@
             this.lblBankAcc.Size = new System.Drawing.Size(58, 19);
             this.lblBankAcc.TabIndex = 1;
             this.lblBankAcc.Text = "Conta";
+            this.lblBankAcc.Click += new System.EventHandler(this.lblBankAcc_Click);
             // 
             // txbBankAcc
             // 
@@ -324,14 +345,17 @@
             this.txbBankAcc.Name = "txbBankAcc";
             this.txbBankAcc.Size = new System.Drawing.Size(210, 27);
             this.txbBankAcc.TabIndex = 2;
+            this.txbBankAcc.TextChanged += new System.EventHandler(this.txbBankAcc_TextChanged);
             // 
             // lblMsg
             // 
+            this.lblMsg.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblMsg.AutoSize = true;
             this.lblMsg.Location = new System.Drawing.Point(739, 488);
             this.lblMsg.Name = "lblMsg";
             this.lblMsg.Size = new System.Drawing.Size(0, 20);
             this.lblMsg.TabIndex = 5;
+            this.lblMsg.Click += new System.EventHandler(this.lblMsg_Click);
             // 
             // pictureBox1
             // 
@@ -379,8 +403,8 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmGetRegistered";
-            this.Text = "Registration";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Nova conta";
             this.Load += new System.EventHandler(this.frmGetRegistered_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

@@ -40,6 +40,7 @@
             // 
             // btnNewAdv
             // 
+            this.btnNewAdv.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnNewAdv.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.btnNewAdv.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnNewAdv.ForeColor = System.Drawing.Color.Transparent;
@@ -54,6 +55,7 @@
             // 
             // btnAdvOn
             // 
+            this.btnAdvOn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnAdvOn.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.btnAdvOn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnAdvOn.ForeColor = System.Drawing.Color.Transparent;
@@ -68,6 +70,7 @@
             // 
             // btbBack
             // 
+            this.btbBack.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btbBack.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.btbBack.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btbBack.ForeColor = System.Drawing.Color.Transparent;
@@ -82,6 +85,7 @@
             // 
             // btn_Infos
             // 
+            this.btn_Infos.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_Infos.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.btn_Infos.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_Infos.ForeColor = System.Drawing.Color.Transparent;
@@ -95,6 +99,7 @@
             // 
             // lblTitle
             // 
+            this.lblTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblTitle.ForeColor = System.Drawing.Color.Teal;
@@ -129,6 +134,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmAdvArea";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Área do proprietário";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmAdvArea_Load);

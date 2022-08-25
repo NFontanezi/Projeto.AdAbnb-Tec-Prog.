@@ -32,17 +32,18 @@
             this.btnRegistration = new System.Windows.Forms.Button();
             this.btnSign = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
-            this.lblTitle = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.lbl_Adv = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // btnRegistration
             // 
+            this.btnRegistration.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnRegistration.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.btnRegistration.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnRegistration.ForeColor = System.Drawing.Color.Transparent;
-            this.btnRegistration.Location = new System.Drawing.Point(204, 193);
+            this.btnRegistration.Location = new System.Drawing.Point(217, 220);
             this.btnRegistration.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnRegistration.Name = "btnRegistration";
             this.btnRegistration.Size = new System.Drawing.Size(214, 93);
@@ -53,10 +54,11 @@
             // 
             // btnSign
             // 
+            this.btnSign.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnSign.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.btnSign.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnSign.ForeColor = System.Drawing.Color.Transparent;
-            this.btnSign.Location = new System.Drawing.Point(466, 193);
+            this.btnSign.Location = new System.Drawing.Point(479, 220);
             this.btnSign.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSign.Name = "btnSign";
             this.btnSign.Size = new System.Drawing.Size(214, 93);
@@ -67,10 +69,11 @@
             // 
             // btnBack
             // 
+            this.btnBack.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnBack.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.btnBack.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnBack.ForeColor = System.Drawing.Color.Transparent;
-            this.btnBack.Location = new System.Drawing.Point(324, 372);
+            this.btnBack.Location = new System.Drawing.Point(335, 381);
             this.btnBack.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(244, 76);
@@ -79,26 +82,28 @@
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
-            // lblTitle
+            // lbl_Adv
             // 
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblTitle.ForeColor = System.Drawing.Color.Teal;
-            this.lblTitle.Location = new System.Drawing.Point(324, 90);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(246, 37);
-            this.lblTitle.TabIndex = 2;
-            this.lblTitle.Text = "Para anunciar...";
+            this.lbl_Adv.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_Adv.AutoSize = true;
+            this.lbl_Adv.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbl_Adv.ForeColor = System.Drawing.Color.Teal;
+            this.lbl_Adv.Location = new System.Drawing.Point(290, 90);
+            this.lbl_Adv.Name = "lbl_Adv";
+            this.lbl_Adv.Size = new System.Drawing.Size(343, 70);
+            this.lbl_Adv.TabIndex = 6;
+            this.lbl_Adv.Text = "ANUNCIAR";
             // 
-            // pictureBox1
+            // pictureBox2
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 1);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(123, 83);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
+            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(181, 101);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 7;
+            this.pictureBox2.TabStop = false;
             // 
             // FormSign_adv
             // 
@@ -106,17 +111,18 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Cornsilk;
             this.ClientSize = new System.Drawing.Size(914, 600);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.lblTitle);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.lbl_Adv);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnSign);
             this.Controls.Add(this.btnRegistration);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FormSign_adv";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "AdaBnb - Anuncie";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -127,7 +133,7 @@
         private Button btnRegistration;
         private Button btnSign;
         private Button btnBack;
-        private Label lblTitle;
-        private PictureBox pictureBox1;
+        private Label lbl_Adv;
+        private PictureBox pictureBox2;
     }
 }

@@ -1,4 +1,8 @@
 using AdAbnb.Presentation;
+using AdAbnb.Domain;
+using AdAbnb.Repositories;
+using System.Globalization;
+
 
 namespace AdAbnb
 {
@@ -49,5 +53,43 @@ namespace AdAbnb
         {
 
         }
+
+        private void advertisimentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var t = new Thread(() => Application.Run(new FormSign_adv()));
+            this.Close();
+            t.Start();
+        }
+
+        private void advertisimentToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            var t = new Thread(() => Application.Run(new Frm_SignInLogin_rnt()));
+            this.Close();
+            t.Start();
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var t = new Thread(() => Application.Run(new Frm_AboutUs()));
+            t.Start();
+        }
+
+        private void quitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Você realmente deseja sair?", "Sair da aplicação", MessageBoxButtons.YesNo);
+
+            if(dialogResult == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+            else
+            {
+
+            }
+        }
     }
+
 }
+
+  
+    

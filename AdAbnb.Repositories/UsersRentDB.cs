@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,15 +14,6 @@ namespace AdAbnb.Repositories
         public static Dictionary<string, string> usersRentDic = new(); // chave = email, valor = senha
 
         public static List<Person> usersRentInfos = new();
-        //public static string ToString1(Person usuario)
-        //{
-        //    return $@"Número de registro: {usuario.Registration}
-        //    Nome: {usuario.Name}
-        //    CPF: {usuario.CPF}
-        //    Telefone: {usuario.Phone}   
-        //    Data de nascimento: {usuario.DateBirth}
-        //    Gênero: {usuario.Gender}";
-        //}
 
     }
 }

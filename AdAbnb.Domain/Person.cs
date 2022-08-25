@@ -1,4 +1,6 @@
-﻿namespace AdAbnb.Domain
+﻿using System.Globalization;
+
+namespace AdAbnb.Domain
 {
     public class Person
     {
@@ -23,7 +25,7 @@
             DateBirth = dateBirth;
             Gender = gender;
         }
-
+        
 
     }
 }

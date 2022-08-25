@@ -48,7 +48,7 @@
             // 
             // mspMain
             // 
-            this.mspMain.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.mspMain.BackColor = System.Drawing.Color.Teal;
             this.mspMain.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.mspMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.formMainToolStripMenuItem,
@@ -56,8 +56,8 @@
             this.quitToolStripMenuItem});
             this.mspMain.Location = new System.Drawing.Point(0, 0);
             this.mspMain.Name = "mspMain";
-            this.mspMain.Padding = new System.Windows.Forms.Padding(7, 3, 0, 3);
-            this.mspMain.Size = new System.Drawing.Size(914, 28);
+            this.mspMain.Padding = new System.Windows.Forms.Padding(7, 7, 0, 7);
+            this.mspMain.Size = new System.Drawing.Size(914, 36);
             this.mspMain.TabIndex = 0;
             this.mspMain.Text = "menuStrip1";
             // 
@@ -69,36 +69,42 @@
             this.formMainToolStripMenuItem.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.formMainToolStripMenuItem.ForeColor = System.Drawing.Color.Cornsilk;
             this.formMainToolStripMenuItem.Name = "formMainToolStripMenuItem";
-            this.formMainToolStripMenuItem.Size = new System.Drawing.Size(88, 22);
-            this.formMainToolStripMenuItem.Text = "Form Main";
+            this.formMainToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
+            this.formMainToolStripMenuItem.Text = "Você deseja...";
             // 
             // advertisimentToolStripMenuItem
             // 
+            this.advertisimentToolStripMenuItem.ForeColor = System.Drawing.Color.Teal;
             this.advertisimentToolStripMenuItem.Name = "advertisimentToolStripMenuItem";
-            this.advertisimentToolStripMenuItem.Size = new System.Drawing.Size(164, 26);
-            this.advertisimentToolStripMenuItem.Text = "To advertise";
+            this.advertisimentToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.advertisimentToolStripMenuItem.Text = "Anunciar um imóvel";
+            this.advertisimentToolStripMenuItem.Click += new System.EventHandler(this.advertisimentToolStripMenuItem_Click);
             // 
             // advertisimentToolStripMenuItem1
             // 
+            this.advertisimentToolStripMenuItem1.ForeColor = System.Drawing.Color.Teal;
             this.advertisimentToolStripMenuItem1.Name = "advertisimentToolStripMenuItem1";
-            this.advertisimentToolStripMenuItem1.Size = new System.Drawing.Size(164, 26);
-            this.advertisimentToolStripMenuItem1.Text = "To rent";
+            this.advertisimentToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.advertisimentToolStripMenuItem1.Text = "Alugar um imóvel";
+            this.advertisimentToolStripMenuItem1.Click += new System.EventHandler(this.advertisimentToolStripMenuItem1_Click);
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.aboutToolStripMenuItem.ForeColor = System.Drawing.Color.Cornsilk;
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(60, 22);
-            this.aboutToolStripMenuItem.Text = "About";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(58, 22);
+            this.aboutToolStripMenuItem.Text = "Sobre";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // quitToolStripMenuItem
             // 
             this.quitToolStripMenuItem.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.quitToolStripMenuItem.ForeColor = System.Drawing.Color.Cornsilk;
             this.quitToolStripMenuItem.Name = "quitToolStripMenuItem";
-            this.quitToolStripMenuItem.Size = new System.Drawing.Size(49, 22);
-            this.quitToolStripMenuItem.Text = "Quit";
+            this.quitToolStripMenuItem.Size = new System.Drawing.Size(45, 22);
+            this.quitToolStripMenuItem.Text = "Sair";
+            this.quitToolStripMenuItem.Click += new System.EventHandler(this.quitToolStripMenuItem_Click);
             // 
             // btnAdvert
             // 

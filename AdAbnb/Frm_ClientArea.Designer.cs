@@ -108,6 +108,7 @@
             // 
             // lblTitle
             // 
+            this.lblTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblTitle.ForeColor = System.Drawing.Color.Teal;
@@ -142,6 +143,7 @@
             this.Controls.Add(this.btn_Infos);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Frm_ClientArea";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Área do cliente";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

@@ -34,6 +34,7 @@
             // 
             // txbFacilities
             // 
+            this.txbFacilities.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txbFacilities.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txbFacilities.ForeColor = System.Drawing.Color.Teal;
             this.txbFacilities.Location = new System.Drawing.Point(102, 99);
@@ -53,6 +54,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmFacilities";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Comodidades";
             this.Load += new System.EventHandler(this.Frm_Load);
             this.ResumeLayout(false);

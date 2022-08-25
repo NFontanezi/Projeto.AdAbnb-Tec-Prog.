@@ -144,6 +144,8 @@ namespace AdAbnb.Presentation
             dtv2.Columns[4].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dtv2.Columns[4].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
+            dtv2.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
+
 
             dtv2.Columns[7].Visible = false;
             dtv2.Columns[1].Visible = false;

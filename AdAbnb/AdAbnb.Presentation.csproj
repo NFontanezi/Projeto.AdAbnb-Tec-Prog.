@@ -19,6 +19,7 @@
   <ItemGroup>
     <ProjectReference Include="..\AdAbnb.Domain\AdAbnb.Domain.csproj" />
     <ProjectReference Include="..\AdAbnb.Repositories\AdAbnb.Repositories.csproj" />
+    <ProjectReference Include="..\AdAbnb.Services\AdAbnb.Services.csproj" />
   </ItemGroup>
 
   <ItemGroup>

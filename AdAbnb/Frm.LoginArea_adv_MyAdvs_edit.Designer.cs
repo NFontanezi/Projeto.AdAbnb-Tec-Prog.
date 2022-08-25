@@ -57,6 +57,7 @@
             // 
             // btnSalvar
             // 
+            this.btnSalvar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnSalvar.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.btnSalvar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnSalvar.ForeColor = System.Drawing.Color.Transparent;
@@ -71,6 +72,7 @@
             // 
             // textBox1
             // 
+            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox1.Location = new System.Drawing.Point(64, 151);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox1.Name = "textBox1";
@@ -79,6 +81,7 @@
             // 
             // textBox2
             // 
+            this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox2.Location = new System.Drawing.Point(64, 232);
             this.textBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox2.Name = "textBox2";
@@ -87,6 +90,7 @@
             // 
             // textBox3
             // 
+            this.textBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox3.Location = new System.Drawing.Point(64, 318);
             this.textBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox3.Name = "textBox3";
@@ -95,6 +99,7 @@
             // 
             // textBox4
             // 
+            this.textBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox4.Location = new System.Drawing.Point(64, 406);
             this.textBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox4.Name = "textBox4";
@@ -103,6 +108,7 @@
             // 
             // textBox5
             // 
+            this.textBox5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox5.Location = new System.Drawing.Point(64, 496);
             this.textBox5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox5.Name = "textBox5";
@@ -111,6 +117,7 @@
             // 
             // textBox6
             // 
+            this.textBox6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox6.Location = new System.Drawing.Point(64, 586);
             this.textBox6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox6.Name = "textBox6";
@@ -119,6 +126,7 @@
             // 
             // checkBox1
             // 
+            this.checkBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox1.AutoSize = true;
             this.checkBox1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.checkBox1.ForeColor = System.Drawing.Color.Teal;
@@ -133,6 +141,7 @@
             // 
             // checkBox2
             // 
+            this.checkBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox2.AutoSize = true;
             this.checkBox2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.checkBox2.ForeColor = System.Drawing.Color.Teal;
@@ -146,6 +155,7 @@
             // 
             // checkBox3
             // 
+            this.checkBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox3.AutoSize = true;
             this.checkBox3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.checkBox3.ForeColor = System.Drawing.Color.Teal;
@@ -159,6 +169,7 @@
             // 
             // checkBox4
             // 
+            this.checkBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox4.AutoSize = true;
             this.checkBox4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.checkBox4.ForeColor = System.Drawing.Color.Teal;
@@ -172,6 +183,7 @@
             // 
             // checkBox5
             // 
+            this.checkBox5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox5.AutoSize = true;
             this.checkBox5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.checkBox5.ForeColor = System.Drawing.Color.Teal;
@@ -185,6 +197,7 @@
             // 
             // checkBox6
             // 
+            this.checkBox6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox6.AutoSize = true;
             this.checkBox6.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.checkBox6.ForeColor = System.Drawing.Color.Teal;
@@ -198,6 +211,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.Teal;
@@ -210,6 +224,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.Teal;
@@ -222,6 +237,7 @@
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.Teal;
@@ -234,6 +250,7 @@
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.Color.Teal;
@@ -246,6 +263,7 @@
             // 
             // label5
             // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label5.ForeColor = System.Drawing.Color.Teal;
@@ -258,6 +276,7 @@
             // 
             // label6
             // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label6.ForeColor = System.Drawing.Color.Teal;
@@ -270,6 +289,7 @@
             // 
             // checkBox7
             // 
+            this.checkBox7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox7.AutoSize = true;
             this.checkBox7.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.checkBox7.ForeColor = System.Drawing.Color.Teal;
@@ -283,6 +303,7 @@
             // 
             // lblTitle
             // 
+            this.lblTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblTitle.ForeColor = System.Drawing.Color.Teal;
@@ -294,6 +315,7 @@
             // 
             // lblFacilities
             // 
+            this.lblFacilities.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblFacilities.AutoSize = true;
             this.lblFacilities.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblFacilities.ForeColor = System.Drawing.Color.Teal;
@@ -345,6 +367,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FrmEdit";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Editar anúncio";
             this.Load += new System.EventHandler(this.FrmEdit_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

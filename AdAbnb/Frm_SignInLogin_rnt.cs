@@ -34,22 +34,6 @@ namespace AdAbnb.Presentation
             t.Start();
         }
 
-        private void btn_Search_rnt_Click(object sender, EventArgs e)
-        {
-            if (Frm_Login_rnt.logado)
-            {
-                User = Frm_Login_rnt.User;
-                var t = new Thread(() => Application.Run(new Frm_AdvToRent_rnt(User)));
-                this.Close();
-                t.Start();
-            }
-            else
-            {
-                MessageBox.Show("Nenhum usuário logado. Realize o login");
-            }
-            //teste
-        }
-
         private void btn_BackMenu_rnt_Click(object sender, EventArgs e)
         {
             var t = new Thread(() => Application.Run(new frmMain()));

@@ -23,7 +23,7 @@ namespace AdAbnb.Presentation
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            var t = new Thread(() => Application.Run(new frmMain()));
+            var t = new Thread(() => Application.Run(new FormSign_adv()));
             this.Close();
             t.Start();
 
@@ -101,6 +101,121 @@ namespace AdAbnb.Presentation
         }
 
         private void frmGetRegistered_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblNewAcc_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblMsg_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbxMale_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbxFemale_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txbBankAcc_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblBankAcc_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txbAg_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblBankAg_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txbBank_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblBank_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txbEmail_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblEmail_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txbPhone_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblPhone_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txbPassword_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txbBirth_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblPassword_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblGender_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblBirth_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txbCPF_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblCPF_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txbName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblName_Click(object sender, EventArgs e)
         {
 
         }

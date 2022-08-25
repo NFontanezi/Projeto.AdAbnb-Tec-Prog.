@@ -39,7 +39,7 @@
             // lblNameBlank
             // 
             this.lblNameBlank.AutoSize = true;
-            this.lblNameBlank.Location = new System.Drawing.Point(271, 110);
+            this.lblNameBlank.Location = new System.Drawing.Point(248, 112);
             this.lblNameBlank.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNameBlank.Name = "lblNameBlank";
             this.lblNameBlank.Size = new System.Drawing.Size(0, 23);
@@ -48,7 +48,7 @@
             // lbInfoBlank
             // 
             this.lbInfoBlank.AutoSize = true;
-            this.lbInfoBlank.Location = new System.Drawing.Point(233, 110);
+            this.lbInfoBlank.Location = new System.Drawing.Point(248, 198);
             this.lbInfoBlank.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbInfoBlank.Name = "lbInfoBlank";
             this.lbInfoBlank.Size = new System.Drawing.Size(0, 23);
@@ -91,6 +91,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "Frm_MyInfo_rnt";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Minhas informações";
             this.Load += new System.EventHandler(this.Frm_MyInfo_rnt_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

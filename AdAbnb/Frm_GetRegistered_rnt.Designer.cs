@@ -53,6 +53,7 @@
             // 
             // btnBack
             // 
+            this.btnBack.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnBack.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.btnBack.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnBack.ForeColor = System.Drawing.Color.Transparent;
@@ -67,6 +68,7 @@
             // 
             // btnRegister_rnt
             // 
+            this.btnRegister_rnt.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnRegister_rnt.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.btnRegister_rnt.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnRegister_rnt.ForeColor = System.Drawing.Color.Transparent;
@@ -81,6 +83,7 @@
             // 
             // cbxMale
             // 
+            this.cbxMale.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cbxMale.AutoSize = true;
             this.cbxMale.Location = new System.Drawing.Point(599, 311);
             this.cbxMale.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -92,6 +95,7 @@
             // 
             // cbxFemale
             // 
+            this.cbxFemale.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cbxFemale.AutoSize = true;
             this.cbxFemale.Location = new System.Drawing.Point(477, 311);
             this.cbxFemale.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -104,6 +108,7 @@
             // 
             // txbEmail
             // 
+            this.txbEmail.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txbEmail.Location = new System.Drawing.Point(473, 133);
             this.txbEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txbEmail.Name = "txbEmail";
@@ -112,6 +117,7 @@
             // 
             // lblEmail
             // 
+            this.lblEmail.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblEmail.ForeColor = System.Drawing.Color.Teal;
@@ -123,6 +129,7 @@
             // 
             // txbPhone
             // 
+            this.txbPhone.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txbPhone.Location = new System.Drawing.Point(473, 214);
             this.txbPhone.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txbPhone.Name = "txbPhone";
@@ -131,6 +138,7 @@
             // 
             // lblPhone
             // 
+            this.lblPhone.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblPhone.AutoSize = true;
             this.lblPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblPhone.ForeColor = System.Drawing.Color.Teal;
@@ -142,6 +150,7 @@
             // 
             // txbPassword
             // 
+            this.txbPassword.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txbPassword.Location = new System.Drawing.Point(77, 397);
             this.txbPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txbPassword.Name = "txbPassword";
@@ -150,6 +159,7 @@
             // 
             // txbBirth
             // 
+            this.txbBirth.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txbBirth.Location = new System.Drawing.Point(77, 309);
             this.txbBirth.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txbBirth.Name = "txbBirth";
@@ -158,6 +168,7 @@
             // 
             // lblPassword
             // 
+            this.lblPassword.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblPassword.AutoSize = true;
             this.lblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblPassword.ForeColor = System.Drawing.Color.Teal;
@@ -169,6 +180,7 @@
             // 
             // lblGender
             // 
+            this.lblGender.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblGender.AutoSize = true;
             this.lblGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblGender.ForeColor = System.Drawing.Color.Teal;
@@ -180,6 +192,7 @@
             // 
             // lblBirth
             // 
+            this.lblBirth.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblBirth.AutoSize = true;
             this.lblBirth.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblBirth.ForeColor = System.Drawing.Color.Teal;
@@ -191,6 +204,7 @@
             // 
             // txbCPF
             // 
+            this.txbCPF.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txbCPF.Location = new System.Drawing.Point(77, 214);
             this.txbCPF.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txbCPF.Name = "txbCPF";
@@ -199,6 +213,7 @@
             // 
             // lblCPF
             // 
+            this.lblCPF.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblCPF.AutoSize = true;
             this.lblCPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblCPF.ForeColor = System.Drawing.Color.Teal;
@@ -210,6 +225,7 @@
             // 
             // txbName
             // 
+            this.txbName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txbName.Location = new System.Drawing.Point(77, 133);
             this.txbName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txbName.Name = "txbName";
@@ -218,6 +234,7 @@
             // 
             // lblName
             // 
+            this.lblName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblName.ForeColor = System.Drawing.Color.Teal;
@@ -275,7 +292,8 @@
             this.Controls.Add(this.lblNewAcc);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Frm_GetRegistered_rnt";
-            this.Text = "Novo cadastro";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Nova conta";
             this.Load += new System.EventHandler(this.Frm_GetRegistered_rnt_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
