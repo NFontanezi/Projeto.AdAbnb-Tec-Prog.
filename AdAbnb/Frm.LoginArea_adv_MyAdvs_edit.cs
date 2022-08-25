@@ -26,6 +26,11 @@ namespace AdAbnb.Presentation
 
         bool ac, pool, sea, pet, park, bus, active;
 
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
         public FrmEdit(Owner owner, Property propList, string district, string city,
             string state, decimal footage, decimal daily, string image)
         {
@@ -38,14 +43,13 @@ namespace AdAbnb.Presentation
             textBox4.Text = Convert.ToString(footage);
             textBox5.Text = Convert.ToString(daily);
             textBox6.Text = image;
-            propList.AC = true ? checkBox1.Checked : false;
-            propList.Piscina = true ? checkBox2.Checked : false;
-            propList.ProxMar = true ? checkBox3.Checked : false;
-            propList.PetFriendly = true ? checkBox4.Checked : false;
-            propList.Vaga = true ? checkBox5.Checked : false;
-            propList.ProxTransp = true ? checkBox6.Checked : false;
-
-
+            checkBox1.Checked = true ? propList.AC == true : false;
+            checkBox2.Checked = true ? propList.Piscina == true : false;
+            checkBox3.Checked = true ? propList.ProxMar == true : false;
+            checkBox4.Checked = true ? propList.PetFriendly == true : false;
+            checkBox5.Checked = true ? propList.Vaga == true : false;
+            checkBox6.Checked = true ? propList.ProxTransp == true : false;
+            checkBox7.Checked = true ? propList.Active == true : false;
 
         }
 
@@ -64,13 +68,17 @@ namespace AdAbnb.Presentation
             footage = textBox4.Text == "" ? 0 : Convert.ToInt32(textBox4.Text);
             daily = textBox5.Text == "" ? 0 : Convert.ToInt32(textBox5.Text);
             imagetext = textBox6.Text == "" ? "" : textBox6.Text;
-            active = checkBox7.Checked ? true : false;
-            ac = checkBox1.Checked ? true : false;
+
+            active = true ? checkBox7.Checked : false;
+            ac = true ? checkBox1.Checked : false;
             pool = checkBox2.Checked ? true : false;
-            sea = checkBox3.Checked ? true : false;
-            pet = checkBox4.Checked ? true : false;
-            park = checkBox5.Checked ? true : false;
-            bus = checkBox6.Checked ? true : false;
+            sea = true ? checkBox2.Checked : false;
+            pet = true ? checkBox3.Checked : false;
+            pet = true ? checkBox4.Checked : false;
+            park = true ? checkBox5.Checked : false;
+            bus = true ? checkBox6.Checked : false;
+            active = true ? checkBox7.Checked : false;
+
 
             string footage2 = Convert.ToString(footage);
             string daily2 = Convert.ToString(daily);
@@ -84,7 +92,7 @@ namespace AdAbnb.Presentation
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-
+            //ac = checkBox1.Checked ? true : false;
         }
     }
 }

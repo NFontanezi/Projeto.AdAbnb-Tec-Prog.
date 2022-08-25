@@ -54,32 +54,7 @@ namespace AdAbnb.Presentation
             }
         }
 
-        public void viewPassword()
-        {
-            clickEye++;
 
-            if (clickEye % 2 != 0)
-            {
-                txbPasswordLogin.PasswordChar = '\0';
-                pictureBox2.Visible = false;
-                pictureBox3.Visible = true;
-            }
-            else
-            {
-                txbPasswordLogin.PasswordChar = '*';
-                pictureBox2.Visible = true;
-                pictureBox3.Visible = false;
-            }
         }
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            viewPassword();
-        }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-            viewPassword();
-        }
-
     }
 }

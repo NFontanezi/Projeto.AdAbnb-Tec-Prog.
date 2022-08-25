@@ -38,19 +38,21 @@ namespace AdAbnb.Presentation
 
 
             InitializeComponent();
+            Owner = owner;
             txbDistrict.Text = district;
             txbCity.Text = city;
             txbState.Text = state;
             txbFootage.Text = Convert.ToString(footage);
             txbDaily.Text = Convert.ToString(daily);
             txbURL.Text = image;
-            active = true ? cbxAC.Checked : false;
-            propList.AC = true ? cbxAC.Checked : false;
-            propList.Piscina = true ? cbxPool.Checked : false;
-            propList.ProxMar = true ? cbxSea.Checked : false;
-            propList.PetFriendly = true ? cbxPet.Checked : false;
-            propList.Vaga = true ? cbxPark.Checked : false;
-            propList.ProxTransp = true ? cbxBus.Checked : false;
+            cbxAC.Checked = true ? propList.AC == true : false;
+            cbxPool.Checked = true ? propList.Piscina == true : false;
+            cbxSea.Checked = true ? propList.ProxMar == true : false;
+            cbxPet.Checked = true ? propList.PetFriendly == true : false;
+            cbxPark.Checked = true ? propList.Vaga == true : false;
+            cbxBus.Checked = true ? propList.ProxTransp == true : false;
+            cbxAtivo.Checked = true ? active == true : false;
+
 
         }
 
@@ -61,9 +63,8 @@ namespace AdAbnb.Presentation
             district = txbDistrict.Text;
             city = txbCity.Text == "" ? "" : txbCity.Text;
             state = txbState.Text == "" ? "" : txbState.Text;
-            footage = txbFootage.Text == "" ? 0 : Convert.ToInt32(txbFootage.Text);
-            daily = txbDaily.Text == "" ? 0 : Convert.ToInt32(txbDaily.Text);
-            imagetext = txbURL.Text; //== "" ? "" : txbURL.Text;
+
+            imagetext = txbURL.Text == "" ? "" : txbURL.Text;
             active = cbxAtivo.Checked ? true : false;
              ac = cbxAC.Checked ? true : false;
              pool = cbxPool.Checked ? true : false;
@@ -72,12 +73,26 @@ namespace AdAbnb.Presentation
              park = cbxPark.Checked ? true : false;
              bus = cbxBus.Checked ? true : false;
 
+            if (!Decimal.TryParse(txbFootage.Text, out decimal Valida))
+            {
+                MessageBox.Show("Por favor inserir um número inteiro para Metragem");
+                return;
+            }
+            if (!Decimal.TryParse(txbDaily.Text, out decimal Valida2))
+            {
+                MessageBox.Show("Por favor inserir um número inteiro para Diária");
+                return;
+            }
+            footage = txbFootage.Text == "" ? 0 : Convert.ToInt32(txbFootage.Text);
+            daily = txbDaily.Text == "" ? 0 : Convert.ToInt32(txbDaily.Text);
+
             bool check = CheckFields(district, city, state, footage, daily,imagetext);
 
             if (check)
             {
                 Property newProp = new Property(district, city, state, footage, daily, active,
                 imagetext, ac, pool, sea, pet, park, bus );
+                newProp.AddFacilities("Ativo", active);
                 newProp.AddFacilities("Ar Condicionado", ac);
                 newProp.AddFacilities("Piscina", pool);
                 newProp.AddFacilities("Próximo ao mar", sea);
