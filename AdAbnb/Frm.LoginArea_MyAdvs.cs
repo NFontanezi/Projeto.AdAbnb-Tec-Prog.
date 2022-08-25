@@ -147,7 +147,7 @@ namespace AdAbnb.Presentation
                 frm.ShowDialog();
             }
 
-           else if (columnindex == 8)// foto
+           else if (columnindex == 9)// foto
             {
                 var path = dataGridView_adv.Rows[rowindex].Cells
                  ["imagetext"].Value.ToString();
