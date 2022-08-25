@@ -15,7 +15,8 @@ namespace AdAbnb.Presentation
     public partial class frmGetRegistered : Form
     {
         List<Owner> listOwner_adv = new();
-        List<Registration> listReg_adv=new();
+        List<Registration> listReg_adv = new();
+        static int clickEye { get; set; } = 0;
         public frmGetRegistered()
         {
             InitializeComponent();
@@ -31,7 +32,7 @@ namespace AdAbnb.Presentation
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            
+
             Register();
         }
         private bool checkBirth(string birth)
@@ -40,92 +41,118 @@ namespace AdAbnb.Presentation
             {
                 MessageBox.Show("Data de nascimento inválida. Insira uma data no formato: DD/MM/AAAA");
                 return true;
-                
+
             }
             else return false;
         }
 
-            private bool CheckEmptyFields(string email, string password, string name, string cpf, string phone, DateTime birth, char gender, string bank, string bankAg, string bankAcc)
+        private bool CheckEmptyFields(string email, string password, string name, string cpf, string phone, DateTime birth, char gender, string bank, string bankAg, string bankAcc)
+        {
+
+
+            if (email != "" && password != "" && name != "" && cpf != "" && phone != "" && birth != null && bank != "" && bankAg != "" && bankAcc != "" && gender != null)
             {
-
-
-                if (email != "" && password != "" && name != "" && cpf != "" && phone != "" && birth != null && bank != "" && bankAg != "" && bankAcc != "" && gender != null)
-                {
-                    return true;
-                }
-                else return false;
+                return true;
             }
+            else return false;
+        }
 
-            private void Register()
+        private void Register()
+        {
+            string name = txbName.Text;
+            string email = txbEmail.Text;
+            string cpf = txbCPF.Text;
+            string phone = txbPhone.Text;
+            string password = txbPassword.Text;
+            char gender = GetGender();
+            string bank = txbBank.Text;
+            string bankAg = txbAg.Text;
+            string bankAcc = txbBankAcc.Text;
+
+
+            if (!DateTime.TryParse(txbBirth.Text, out DateTime dataValida))
             {
-
-
-                string name = txbName.Text;
-                string email = txbEmail.Text;
-                string cpf = txbCPF.Text;
-                string phone = txbPhone.Text;
-                string password = txbPassword.Text;
-                char gender = GetGender();
-                string bank = txbBank.Text;
-                string bankAg = txbAg.Text;
-                string bankAcc = txbBankAcc.Text;
-
-
-                if (!DateTime.TryParse(txbBirth.Text, out DateTime dataValida))
-                {
-                    MessageBox.Show("Data de nascimento inválida. Insira uma data no formato: DD/MM/AAAA");
-                    return;
-                }
-                DateTime birth = Convert.ToDateTime(txbBirth.Text);
-            
-
-
-                bool check = CheckEmptyFields(email, password, cpf, name, phone, birth, gender, bank, bankAg, bankAcc);
-
-                if (check)
-                {
-                    Registration newReg = new Registration(email, password);
-                    Owner newOwner = new Owner(newReg, cpf, name, phone, birth, gender, bank, bankAg, bankAcc);
-                    MessageBox.Show("Registro incluído com sucesso");
-                    OwnerAdvDB.ownerAdvInfos.Add(newOwner);
-                    listOwner_adv.Add(newOwner);
-                    listReg_adv.Add(newReg);
-                    Person.UserList.Add(newOwner, newReg);
-
-
-                    var t = new Thread(() => Application.Run(new frmAdvArea(newOwner)));
-                    t.Start();
-                    this.Close();
-
-
-                }
-                else
-                {
-                    lblMsg.Text = "Preencha todos os campos";
-                    //MessageBox.Show("Preencha todos os campos");
-                    //corrigir gender e birth para ""
-                }
-
-                //BindDataGridView();
-
+                MessageBox.Show("Data de nascimento inválida. Insira uma data no formato: DD/MM/AAAA");
+                return;
             }
+            DateTime birth = Convert.ToDateTime(txbBirth.Text);
 
-            private char GetGender()
+
+
+            bool check = CheckEmptyFields(email, password, cpf, name, phone, birth, gender, bank, bankAg, bankAcc);
+            bool checkCpf = cpf.Length == 12;
+            bool checkPhone = phone.Length == 15;
+            if (check && checkCpf && checkPhone)
             {
-                if (cbxFemale.Checked)
-                    return 'F';
+                Registration newReg = new Registration(email, password);
+                Owner newOwner = new Owner(newReg, cpf, name, phone, birth, gender, bank, bankAg, bankAcc);
+                MessageBox.Show("Registro incluído com sucesso");
+                OwnerAdvDB.ownerAdvInfos.Add(newOwner);
+                listOwner_adv.Add(newOwner);
+                listReg_adv.Add(newReg);
+                Person.UserList.Add(newOwner, newReg);
 
-                else
-                    return 'M';
+
+                var t = new Thread(() => Application.Run(new frmAdvArea(newOwner)));
+                t.Start();
+                this.Close();
 
 
             }
-
-            private void frmGetRegistered_Load(object sender, EventArgs e)
+            else
             {
-
+                lblMsg.Text = "Preencha todos os campos corretamente";
+                //MessageBox.Show("Preencha todos os campos");
+                //corrigir gender e birth para ""
             }
 
+            //BindDataGridView();
+
+        }
+
+        private char GetGender()
+        {
+            if (cbxFemale.Checked)
+                return 'F';
+
+            else
+                return 'M';
+
+
+        }
+
+        private void frmGetRegistered_Load(object sender, EventArgs e)
+        {
+
+        }
+
+
+        public void viewPassword()
+        {
+            clickEye++;
+
+            if (clickEye % 2 != 0)
+            {
+                txbPassword.PasswordChar = '\0';
+                pictureBox4.Visible = false;
+                pictureBox5.Visible = true;
+            }
+            else
+            {
+                txbPassword.PasswordChar = '*';
+                pictureBox4.Visible = true;
+                pictureBox5.Visible = false;
+            }
+        }
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            viewPassword();
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            viewPassword();
+        }
         private void lblNewAcc_Click(object sender, EventArgs e)
         {
 
@@ -239,6 +266,21 @@ namespace AdAbnb.Presentation
         private void lblName_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void txbCPF_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+            MessageBox.Show("CPF inválido");
+        }
+
+        private void txbBirth_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+            MessageBox.Show("Data de nascimento inválida");
+        }
+
+        private void txbPhone_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+            MessageBox.Show("Telefone inválido");
         }
     }
 }

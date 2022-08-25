@@ -9,10 +9,19 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Infrastructure\" />
+    <Compile Remove="Infrastructure\**" />
+    <Compile Remove="Presentation\**" />
+    <Compile Remove="ProgramFlow\**" />
+    <EmbeddedResource Remove="Infrastructure\**" />
+    <EmbeddedResource Remove="Presentation\**" />
+    <EmbeddedResource Remove="ProgramFlow\**" />
+    <None Remove="Infrastructure\**" />
+    <None Remove="Presentation\**" />
+    <None Remove="ProgramFlow\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Properties\DataSources\" />
-    <Folder Include="ProgramFlow\" />
-    <Folder Include="Presentation\" />
     <Folder Include="Useful\" />
   </ItemGroup>
 

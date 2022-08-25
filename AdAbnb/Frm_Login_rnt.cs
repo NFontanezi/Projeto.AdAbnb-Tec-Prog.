@@ -31,7 +31,7 @@ namespace AdAbnb.Presentation
         }
 
         public static string emailLog { get; set; }
-        public static string passwordLog { get; set;}
+        public static string passwordLog { get; set; }
         private void btnLogin_Click(object sender, EventArgs e)
         {
             if (UsersRentDB.usersRentDic.ContainsKey(txbEmailLogin.Text) && UsersRentDB.usersRentDic[txbEmailLogin.Text] == txbPasswordLogin.Text)
@@ -54,7 +54,30 @@ namespace AdAbnb.Presentation
             }
         }
 
+        public void viewPassword()
+        {
+            clickEye++;
+
+            if (clickEye % 2 != 0)
+            {
+                txbPasswordLogin.PasswordChar = '\0';
+                pictureBox4.Visible = false;
+                pictureBox5.Visible = true;
+            }
+            else
+            {
+                txbPasswordLogin.PasswordChar = '*';
+                pictureBox4.Visible = true;
+                pictureBox5.Visible = false;
+            }
+        }
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
 
         }
+
+
+
     }
 }
+

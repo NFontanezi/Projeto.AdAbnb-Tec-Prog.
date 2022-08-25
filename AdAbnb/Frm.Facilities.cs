@@ -12,12 +12,12 @@ using System.Windows.Forms;
 namespace AdAbnb.Presentation
 {
     public partial class frmFacilities : Form
-    {   Property Prop { get; set; }
+    { Property Prop { get; set; }
         Dictionary<string, bool> Facilities;
         public int x { get; set; }
         public frmFacilities(Property prop, Dictionary<string, bool> facilities)
         {
-   
+
             Prop = prop;
             Facilities = facilities;
             InitializeComponent();
@@ -31,15 +31,19 @@ namespace AdAbnb.Presentation
             {
                 if (pair.Value == true)
                 {
-                    txbFacilities.Text += $"\n {pair.Key.ToString()}\n";
+                    txbFacilities.Text += @$"{pair.Key.ToString()}
+";
                 }
                 else continue;
 
 
-                }
-
-
             }
-
         }
+
+
+
+
+    }
 }
+
+

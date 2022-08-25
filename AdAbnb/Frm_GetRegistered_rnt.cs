@@ -26,7 +26,8 @@ namespace AdAbnb.Presentation
 
         private void Frm_GetRegistered_rnt_Load(object sender, EventArgs e)
         {
-
+            this.ActiveControl = txbName;
+            txbName.Focus();
         }
 
         private void cbxFemale_Click(object sender, EventArgs e)
@@ -122,5 +123,62 @@ namespace AdAbnb.Presentation
         {
             viewPassword();
         }
+
+        private void txbCPF_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+            MessageBox.Show("CPF inválido");
+        }
+
+        private void txbBirth_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+            MessageBox.Show("Data de nascimento inválida");
+        }
+
+        private void txbPhone_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+            MessageBox.Show("Telefone inválido");
+        }
+
+        private void txbName_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                txbEmail.Focus();
+            }
+        }
+
+        private void txbEmail_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txbCPF.Focus();
+            }
+        }
+
+        private void txbCPF_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txbPhone.Focus();
+            }
+        }
+
+        private void txbPhone_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txbBirth.Focus();
+            }
+        }
+
+        private void txbBirth_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txbPassword.Focus();
+            }
+        }
+
+
     }
 }

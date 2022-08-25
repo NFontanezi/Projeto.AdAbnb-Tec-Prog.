@@ -65,7 +65,7 @@
             this.btnBack.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(272, 61);
-            this.btnBack.TabIndex = 22;
+            this.btnBack.TabIndex = 10;
             this.btnBack.Text = "Voltar";
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
@@ -80,7 +80,7 @@
             this.btnRegister_rnt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnRegister_rnt.Name = "btnRegister_rnt";
             this.btnRegister_rnt.Size = new System.Drawing.Size(272, 61);
-            this.btnRegister_rnt.TabIndex = 21;
+            this.btnRegister_rnt.TabIndex = 9;
             this.btnRegister_rnt.Text = "Cadastrar";
             this.btnRegister_rnt.UseVisualStyleBackColor = false;
             this.btnRegister_rnt.Click += new System.EventHandler(this.btnRegister_rnt_Click);
@@ -93,7 +93,7 @@
             this.cbxMale.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cbxMale.Name = "cbxMale";
             this.cbxMale.Size = new System.Drawing.Size(98, 24);
-            this.cbxMale.TabIndex = 20;
+            this.cbxMale.TabIndex = 7;
             this.cbxMale.Text = "Masculino";
             this.cbxMale.UseVisualStyleBackColor = true;
             // 
@@ -105,7 +105,7 @@
             this.cbxFemale.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cbxFemale.Name = "cbxFemale";
             this.cbxFemale.Size = new System.Drawing.Size(92, 24);
-            this.cbxFemale.TabIndex = 19;
+            this.cbxFemale.TabIndex = 6;
             this.cbxFemale.Text = "Feminino";
             this.cbxFemale.UseVisualStyleBackColor = true;
             this.cbxFemale.Click += new System.EventHandler(this.cbxFemale_Click);
@@ -117,7 +117,8 @@
             this.txbEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txbEmail.Name = "txbEmail";
             this.txbEmail.Size = new System.Drawing.Size(327, 27);
-            this.txbEmail.TabIndex = 17;
+            this.txbEmail.TabIndex = 2;
+            this.txbEmail.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txbEmail_KeyDown);
             // 
             // lblEmail
             // 
@@ -151,7 +152,7 @@
             this.txbPassword.Name = "txbPassword";
             this.txbPassword.PasswordChar = '*';
             this.txbPassword.Size = new System.Drawing.Size(271, 27);
-            this.txbPassword.TabIndex = 15;
+            this.txbPassword.TabIndex = 8;
             // 
             // lblPassword
             // 
@@ -208,7 +209,8 @@
             this.txbName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txbName.Name = "txbName";
             this.txbName.Size = new System.Drawing.Size(342, 27);
-            this.txbName.TabIndex = 13;
+            this.txbName.TabIndex = 1;
+            this.txbName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txbName_KeyDown);
             // 
             // lblName
             // 
@@ -249,7 +251,9 @@
             this.txbCPF.Mask = "000000000-00";
             this.txbCPF.Name = "txbCPF";
             this.txbCPF.Size = new System.Drawing.Size(119, 27);
-            this.txbCPF.TabIndex = 24;
+            this.txbCPF.TabIndex = 3;
+            this.txbCPF.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txbCPF_MaskInputRejected);
+            this.txbCPF.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txbCPF_KeyDown);
             // 
             // txbBirth
             // 
@@ -257,8 +261,10 @@
             this.txbBirth.Mask = "00/00/0000";
             this.txbBirth.Name = "txbBirth";
             this.txbBirth.Size = new System.Drawing.Size(119, 27);
-            this.txbBirth.TabIndex = 25;
+            this.txbBirth.TabIndex = 5;
             this.txbBirth.ValidatingType = typeof(System.DateTime);
+            this.txbBirth.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txbBirth_MaskInputRejected);
+            this.txbBirth.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txbBirth_KeyDown);
             // 
             // txbPhone
             // 
@@ -266,7 +272,9 @@
             this.txbPhone.Mask = "(99) 00000-0000";
             this.txbPhone.Name = "txbPhone";
             this.txbPhone.Size = new System.Drawing.Size(128, 27);
-            this.txbPhone.TabIndex = 26;
+            this.txbPhone.TabIndex = 4;
+            this.txbPhone.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txbPhone_MaskInputRejected);
+            this.txbPhone.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txbPhone_KeyDown);
             // 
             // pictureBox2
             // 
@@ -297,7 +305,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Cornsilk;
             this.ClientSize = new System.Drawing.Size(914, 600);
-            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.txbPhone);
             this.Controls.Add(this.txbBirth);
@@ -318,6 +325,7 @@
             this.Controls.Add(this.txbName);
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.lblNewAcc);
+            this.Controls.Add(this.pictureBox3);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(932, 647);
             this.Name = "Frm_GetRegistered_rnt";

@@ -58,6 +58,7 @@
             // 
             this.dataGridView_adv.AllowUserToOrderColumns = true;
             this.dataGridView_adv.AutoGenerateColumns = false;
+            this.dataGridView_adv.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView_adv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_adv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
@@ -70,11 +71,12 @@
             this.facilities,
             this.imagetext});
             this.dataGridView_adv.DataSource = this.propertyBindingSource;
-            this.dataGridView_adv.Location = new System.Drawing.Point(12, 61);
+            this.dataGridView_adv.Location = new System.Drawing.Point(89, 81);
+            this.dataGridView_adv.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridView_adv.Name = "dataGridView_adv";
             this.dataGridView_adv.RowHeadersWidth = 51;
             this.dataGridView_adv.RowTemplate.Height = 25;
-            this.dataGridView_adv.Size = new System.Drawing.Size(850, 219);
+            this.dataGridView_adv.Size = new System.Drawing.Size(971, 292);
             this.dataGridView_adv.TabIndex = 0;
             this.dataGridView_adv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_adv_CellContentClick);
             this.dataGridView_adv.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_adv_CellContentDoubleClick);
@@ -173,33 +175,42 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(868, 181);
+            this.btnDelete.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.btnDelete.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnDelete.ForeColor = System.Drawing.Color.Transparent;
+            this.btnDelete.Location = new System.Drawing.Point(613, 463);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(109, 27);
+            this.btnDelete.Size = new System.Drawing.Size(122, 43);
             this.btnDelete.TabIndex = 2;
             this.btnDelete.Text = "Deletar";
-            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(870, 131);
+            this.button1.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button1.ForeColor = System.Drawing.Color.Transparent;
+            this.button1.Location = new System.Drawing.Point(375, 463);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(107, 32);
+            this.button1.Size = new System.Drawing.Size(122, 43);
             this.button1.TabIndex = 3;
             this.button1.Text = "Editar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // frmLoginArea_MyAdvs
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(999, 450);
+            this.BackColor = System.Drawing.Color.Cornsilk;
+            this.ClientSize = new System.Drawing.Size(1142, 600);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.dataGridView_adv);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.Name = "frmLoginArea_MyAdvs";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoginArea_MyAdvs";

@@ -112,6 +112,7 @@ namespace AdAbnb.Presentation
             dtv2.DefaultCellStyle.Font = new Font("Arial", 10);
             dtv2.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dtv2.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dtv2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
 
             dtv2.Columns[5].HeaderText = "Diária";

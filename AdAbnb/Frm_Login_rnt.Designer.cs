@@ -39,9 +39,13 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // btnBack
@@ -50,10 +54,11 @@
             this.btnBack.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.btnBack.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnBack.ForeColor = System.Drawing.Color.Transparent;
-            this.btnBack.Location = new System.Drawing.Point(186, 298);
+            this.btnBack.Location = new System.Drawing.Point(246, 429);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(135, 50);
-            this.btnBack.TabIndex = 9;
+            this.btnBack.Size = new System.Drawing.Size(154, 67);
+            this.btnBack.TabIndex = 4;
             this.btnBack.Text = "Voltar";
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
@@ -64,10 +69,11 @@
             this.btnLogin.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.btnLogin.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnLogin.ForeColor = System.Drawing.Color.Transparent;
-            this.btnLogin.Location = new System.Drawing.Point(45, 298);
+            this.btnLogin.Location = new System.Drawing.Point(84, 429);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(135, 50);
-            this.btnLogin.TabIndex = 10;
+            this.btnLogin.Size = new System.Drawing.Size(154, 67);
+            this.btnLogin.TabIndex = 3;
             this.btnLogin.Text = "Entrar";
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
@@ -75,10 +81,11 @@
             // txbPasswordLogin
             // 
             this.txbPasswordLogin.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txbPasswordLogin.Location = new System.Drawing.Point(60, 218);
+            this.txbPasswordLogin.Location = new System.Drawing.Point(102, 323);
+            this.txbPasswordLogin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txbPasswordLogin.Name = "txbPasswordLogin";
-            this.txbPasswordLogin.Size = new System.Drawing.Size(240, 23);
-            this.txbPasswordLogin.TabIndex = 7;
+            this.txbPasswordLogin.Size = new System.Drawing.Size(274, 27);
+            this.txbPasswordLogin.TabIndex = 2;
             // 
             // lblPasswordLogin
             // 
@@ -86,19 +93,20 @@
             this.lblPasswordLogin.AutoSize = true;
             this.lblPasswordLogin.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblPasswordLogin.ForeColor = System.Drawing.Color.Teal;
-            this.lblPasswordLogin.Location = new System.Drawing.Point(57, 196);
+            this.lblPasswordLogin.Location = new System.Drawing.Point(98, 293);
             this.lblPasswordLogin.Name = "lblPasswordLogin";
-            this.lblPasswordLogin.Size = new System.Drawing.Size(43, 16);
+            this.lblPasswordLogin.Size = new System.Drawing.Size(54, 18);
             this.lblPasswordLogin.TabIndex = 5;
             this.lblPasswordLogin.Text = "Senha";
             // 
             // txbEmailLogin
             // 
             this.txbEmailLogin.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txbEmailLogin.Location = new System.Drawing.Point(60, 152);
+            this.txbEmailLogin.Location = new System.Drawing.Point(102, 235);
+            this.txbEmailLogin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txbEmailLogin.Name = "txbEmailLogin";
-            this.txbEmailLogin.Size = new System.Drawing.Size(240, 23);
-            this.txbEmailLogin.TabIndex = 8;
+            this.txbEmailLogin.Size = new System.Drawing.Size(274, 27);
+            this.txbEmailLogin.TabIndex = 1;
             // 
             // lblEmailLogin
             // 
@@ -106,9 +114,9 @@
             this.lblEmailLogin.AutoSize = true;
             this.lblEmailLogin.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblEmailLogin.ForeColor = System.Drawing.Color.Teal;
-            this.lblEmailLogin.Location = new System.Drawing.Point(57, 129);
+            this.lblEmailLogin.Location = new System.Drawing.Point(98, 204);
             this.lblEmailLogin.Name = "lblEmailLogin";
-            this.lblEmailLogin.Size = new System.Drawing.Size(38, 16);
+            this.lblEmailLogin.Size = new System.Drawing.Size(48, 18);
             this.lblEmailLogin.TabIndex = 6;
             this.lblEmailLogin.Text = "Email";
             // 
@@ -118,19 +126,18 @@
             this.lblLoginTitle.AutoSize = true;
             this.lblLoginTitle.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblLoginTitle.ForeColor = System.Drawing.Color.Teal;
-            this.lblLoginTitle.Location = new System.Drawing.Point(132, 73);
+            this.lblLoginTitle.Location = new System.Drawing.Point(184, 129);
             this.lblLoginTitle.Name = "lblLoginTitle";
-            this.lblLoginTitle.Size = new System.Drawing.Size(74, 28);
+            this.lblLoginTitle.Size = new System.Drawing.Size(94, 37);
             this.lblLoginTitle.TabIndex = 4;
             this.lblLoginTitle.Text = "Login";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(10, -2);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(11, -3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(108, 62);
+            this.pictureBox1.Size = new System.Drawing.Size(123, 83);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
@@ -145,7 +152,6 @@
             this.pictureBox3.TabIndex = 33;
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Visible = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // pictureBox2
             // 
@@ -156,14 +162,36 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 32;
             this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(382, 323);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(35, 27);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 30;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.Visible = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(382, 323);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(35, 27);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 29;
+            this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
             // Frm_Login_rnt
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Cornsilk;
-            this.ClientSize = new System.Drawing.Size(418, 554);
+            this.ClientSize = new System.Drawing.Size(478, 635);
+            this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnLogin);
@@ -172,14 +200,17 @@
             this.Controls.Add(this.txbEmailLogin);
             this.Controls.Add(this.lblEmailLogin);
             this.Controls.Add(this.lblLoginTitle);
+            this.Controls.Add(this.pictureBox4);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Frm_Login_rnt";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
-            this.Load += new System.EventHandler(this.Frm_Login_rnt_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -197,5 +228,7 @@
         private PictureBox pictureBox1;
         private PictureBox pictureBox3;
         private PictureBox pictureBox2;
+        private PictureBox pictureBox4;
+        private PictureBox pictureBox5;
     }
 }

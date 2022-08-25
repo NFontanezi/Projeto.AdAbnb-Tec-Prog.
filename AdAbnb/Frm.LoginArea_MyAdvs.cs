@@ -48,6 +48,8 @@ namespace AdAbnb.Presentation
             dataGridView_adv.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 11);
             dataGridView_adv.DefaultCellStyle.Font = new Font("Arial", 10);
             dataGridView_adv.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dataGridView_adv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
             dataGridView_adv.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
 

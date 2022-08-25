@@ -139,95 +139,8 @@ namespace AdAbnb.Presentation
             return dt;
         }
 
-        //public static DataTable GetAnuncios(DataTable dtF)
-        //{
-        //    dtF.Columns.Add("id", typeof(Int32));
-        //    dtF.Columns.Add("descricao", typeof(string));
-        //    dtF.Columns.Add("diaria", typeof(decimal));
-        //    dtF.Columns.Add("arquivoFoto", typeof(string));
-        //    dtF.Columns.Add("cidade", typeof(string));
-        //    dtF.Columns.Add("piscina", typeof(bool));
-        //    dtF.Columns.Add("ac", typeof(bool));
-        //    dtF.Columns.Add("proxMar", typeof(bool));
-        //    dtF.Columns.Add("petFriendly", typeof(bool));
-        //    dtF.Columns.Add("vaga", typeof(bool));
-        //    dtF.Columns.Add("proxTranspPublico", typeof(bool));
 
 
-
-        //    return dtF;
-
-        //}
-
-        //public void ConfigurarGrade()
-        //{
-        //    dataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 11);
-        //    dataGridView1.DefaultCellStyle.Font = new Font("Arial", 10);
-        //    dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-
-        //    dataGridView1.Columns["id"].HeaderText = "ID";
-        //    dataGridView1.Columns["id"].Width = 50;
-        //    dataGridView1.Columns["id"].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-        //    dataGridView1.Columns["id"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-
-        //    dataGridView1.Columns["descricao"].HeaderText = "Descrição";
-        //    dataGridView1.Columns["descricao"].Width = 500;
-
-        //    dataGridView1.Columns["diaria"].HeaderText = "Diária";
-        //    dataGridView1.Columns["diaria"].Width = 80;
-        //    dataGridView1.Columns["diaria"].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-        //    dataGridView1.Columns["diaria"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-
-        //    dataGridView1.Columns["arquivoFoto"].Visible = false;
-
-        //    DataGridViewImageColumn col = new();
-        //    col.Name = "Image";
-        //    col.ImageLayout = DataGridViewImageCellLayout.Zoom;
-        //    dataGridView1.Columns.Add(col);
-        //    dataGridView1.Columns["Image"].HeaderText = "Foto";
-        //    dataGridView1.Columns["Image"].Width = 64;
-
-
-        //    //dtF.Columns.Add("piscina", typeof(bool));
-        //    //dtF.Columns.Add("ac", typeof(bool));
-        //    //dtF.Columns.Add("proxMar", typeof(bool));
-        //    //dtF.Columns.Add("petFriendly", typeof(bool));
-        //    //dtF.Columns.Add("vaga", typeof(bool));
-        //    //dtF.Columns.Add("proxTranspPublico", typeof(bool));
-
-        //    dataGridView1.Columns["piscina"].Visible = false;
-        //    dataGridView1.Columns["ac"].Visible = false;
-        //    dataGridView1.Columns["proxMar"].Visible = false;
-        //    dataGridView1.Columns["petFriendly"].Visible = false;
-        //    dataGridView1.Columns["vaga"].Visible = false;
-        //    dataGridView1.Columns["proxTranspPublico"].Visible = false;
-
-        //    dataGridView1.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
-
-
-        //}
-
-        //public void CarregarFotos()
-        //{
-        //    foreach (DataGridViewRow row in dataGridView1.Rows)
-        //    {
-        //        Uri uri = new Uri(row.Cells["arquivoFoto"].Value.ToString());
-        //        row.Cells["Image"].Value = GetImageFromUrl(uri);
-        //    }
-        //}
-
-        //public static Image GetImageFromUrl(Uri uri)
-        //{
-        //    HttpWebRequest httpWebRequest = (HttpWebRequest)HttpWebRequest.Create(uri);
-
-        //    using (HttpWebResponse httpWebReponse = (HttpWebResponse)httpWebRequest.GetResponse())
-        //    {
-        //        using (Stream stream = httpWebReponse.GetResponseStream())
-        //        {
-        //            return Image.FromStream(stream);
-        //        }
-        //    }
-        //}
         public void ConfigurarGrade()
         {
             dataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 11);
@@ -289,6 +202,10 @@ namespace AdAbnb.Presentation
             colRent.Name = "Rent";
             colRent.HeaderText = "";
             dataGridView1.Columns.Add(colRent);
+            dataGridView1.Columns["Rent"].DefaultCellStyle.BackColor = Color.Teal;
+            dataGridView1.Columns["Rent"].DefaultCellStyle.ForeColor = Color.Cornsilk;
+            dataGridView1.Columns["Rent"].DefaultCellStyle.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
+
 
 
         }

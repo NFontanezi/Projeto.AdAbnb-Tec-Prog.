@@ -75,7 +75,7 @@
             this.txbEmailLogin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txbEmailLogin.Name = "txbEmailLogin";
             this.txbEmailLogin.Size = new System.Drawing.Size(274, 27);
-            this.txbEmailLogin.TabIndex = 2;
+            this.txbEmailLogin.TabIndex = 1;
             // 
             // lblPasswordLogin
             // 
@@ -124,7 +124,7 @@
             this.btnBack.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(154, 67);
-            this.btnBack.TabIndex = 3;
+            this.btnBack.TabIndex = 4;
             this.btnBack.Text = "Voltar";
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);

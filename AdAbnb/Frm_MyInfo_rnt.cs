@@ -37,7 +37,8 @@ namespace AdAbnb.Presentation
 
     Data de nascimento: {usuario.DateBirth}
 
-    Gênero: {usuario.Gender}";
+    Gênero: {usuario.Gender}
+";
         }
 
         private void button1_Click(object sender, EventArgs e)
