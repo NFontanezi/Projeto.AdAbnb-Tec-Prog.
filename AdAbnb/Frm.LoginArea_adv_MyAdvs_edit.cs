@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
@@ -34,6 +35,7 @@ namespace AdAbnb.Presentation
         public FrmEdit(Owner owner, Property propList, string district, string city,
             string state, decimal footage, decimal daily, string image)
         {
+            
             InitializeComponent();
             Owner = owner;
             x = propList;
@@ -65,9 +67,30 @@ namespace AdAbnb.Presentation
             district = textBox1.Text;
             city = textBox2.Text == "" ? "" : textBox2.Text;
             state = textBox2.Text == "" ? "" : textBox2.Text;
+            imagetext = textBox6.Text == "" ? "" : textBox6.Text;
+
+
+            if (!IsValidURL(imagetext))
+            {
+                MessageBox.Show("Insira uma URL válida");
+                return;
+            }
+
+
+            if (!Decimal.TryParse(textBox4.Text, out decimal Valida))
+            {
+                MessageBox.Show("Por favor inserir um número inteiro para Metragem");
+                return;
+            }
+            if (!Decimal.TryParse(textBox5.Text, out decimal Valida2))
+            {
+                MessageBox.Show("Por favor inserir um número inteiro para Diária");
+                return;
+            }
+ 
             footage = textBox4.Text == "" ? 0 : Convert.ToInt32(textBox4.Text);
             daily = textBox5.Text == "" ? 0 : Convert.ToInt32(textBox5.Text);
-            imagetext = textBox6.Text == "" ? "" : textBox6.Text;
+
 
             active = true ? checkBox7.Checked : false;
             ac = true ? checkBox1.Checked : false;
@@ -82,13 +105,21 @@ namespace AdAbnb.Presentation
 
             string footage2 = Convert.ToString(footage);
             string daily2 = Convert.ToString(daily);
-            var t = new Thread(() => Application.Run(new frmAddAdv(Owner, x, district, city, state,
+            var t = new Thread(() => Application.Run(new frmAddAdv(Owner, district, city, state,
                 footage2, daily2, imagetext, ac, pool, sea, pet, park, bus, active)));
             this.Close();
             t.Start();
             
 
         }
+
+        bool IsValidURL(string imagetext)
+        {
+            string Pattern = @"^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+$";
+            Regex Rgx = new Regex(Pattern, RegexOptions.Compiled | RegexOptions.IgnoreCase);
+            return Rgx.IsMatch(imagetext);
+        }
+
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {

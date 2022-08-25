@@ -71,6 +71,17 @@ namespace AdAbnb.Presentation
             string email = txbEmailLogin.Text == "" ? "" : txbEmailLogin.Text;
             string password = txbPasswordLogin.Text == "" ? "" : txbPasswordLogin.Text;
 
+            if (email == "" || password == "")
+            {
+                MessageBox.Show("Digite email e senha para login");
+            }
+
+            if(Person.UserList.Count == 0)
+            {
+                MessageBox.Show("Email ou senha não encontrado");
+            }
+
+
             foreach (KeyValuePair<Person, Registration> pair in Person.UserList)
             {
                 if (pair.Value.Login == email && pair.Value.Password == password)
@@ -81,6 +92,7 @@ namespace AdAbnb.Presentation
 
 
                 }
+                
                 else
                     MessageBox.Show("Email ou senha não encontrado");
 

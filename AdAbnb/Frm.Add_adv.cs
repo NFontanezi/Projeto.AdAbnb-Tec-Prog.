@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -31,7 +32,7 @@ namespace AdAbnb.Presentation
         bool ac, pool, sea, pet, park, bus, active;
         
 
-        public frmAddAdv(Owner owner, Property propList, string district, string city,
+        public frmAddAdv(Owner owner, string district, string city,
             string state, string footage, string daily, string image, bool propAC, bool propPis,
              bool propMar, bool propPet, bool proVaga, bool proBus, bool active)
         { 
@@ -45,12 +46,12 @@ namespace AdAbnb.Presentation
             txbFootage.Text = Convert.ToString(footage);
             txbDaily.Text = Convert.ToString(daily);
             txbURL.Text = image;
-            cbxAC.Checked = true ? propList.AC == true : false;
-            cbxPool.Checked = true ? propList.Piscina == true : false;
-            cbxSea.Checked = true ? propList.ProxMar == true : false;
-            cbxPet.Checked = true ? propList.PetFriendly == true : false;
-            cbxPark.Checked = true ? propList.Vaga == true : false;
-            cbxBus.Checked = true ? propList.ProxTransp == true : false;
+            cbxAC.Checked = true ? propAC == true : false;
+            cbxPool.Checked = true ? propPis == true : false;
+            cbxSea.Checked = true ? propMar == true : false;
+            cbxPet.Checked = true ? propPet == true : false;
+            cbxPark.Checked = true ? proVaga == true : false;
+            cbxBus.Checked = true ? proBus == true : false;
             cbxAtivo.Checked = true ? active == true : false;
 
 
@@ -73,6 +74,11 @@ namespace AdAbnb.Presentation
              park = cbxPark.Checked ? true : false;
              bus = cbxBus.Checked ? true : false;
 
+            if (!IsValidURL(imagetext))
+            {
+                MessageBox.Show("Insira uma URL válida");
+                return;
+            }
             if (!Decimal.TryParse(txbFootage.Text, out decimal Valida))
             {
                 MessageBox.Show("Por favor inserir um número inteiro para Metragem");
@@ -119,10 +125,13 @@ namespace AdAbnb.Presentation
 
 
         }
-
-
-
-        private bool CheckFields(string district, string city, string state, int footage, decimal daily, string image)
+        bool IsValidURL(string url)
+        {
+            string Pattern = @"^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+$";
+            Regex Rgx = new Regex(Pattern, RegexOptions.Compiled | RegexOptions.IgnoreCase);
+            return Rgx.IsMatch(imagetext);
+        }
+            private bool CheckFields(string district, string city, string state, int footage, decimal daily, string image)
         {
             if (district != "" && city != "" && state != "" && footage != 0 && daily != 0 && image != "")
             {
