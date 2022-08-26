@@ -84,6 +84,7 @@
             this.txbPasswordLogin.Location = new System.Drawing.Point(102, 323);
             this.txbPasswordLogin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txbPasswordLogin.Name = "txbPasswordLogin";
+            this.txbPasswordLogin.PasswordChar = '*';
             this.txbPasswordLogin.Size = new System.Drawing.Size(274, 27);
             this.txbPasswordLogin.TabIndex = 2;
             // 
@@ -173,6 +174,7 @@
             this.pictureBox4.TabIndex = 30;
             this.pictureBox4.TabStop = false;
             this.pictureBox4.Visible = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // pictureBox5
             // 

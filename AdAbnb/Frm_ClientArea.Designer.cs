@@ -87,11 +87,11 @@
             this.btnBack.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.btnBack.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnBack.ForeColor = System.Drawing.Color.Transparent;
-            this.btnBack.Location = new System.Drawing.Point(318, 414);
+            this.btnBack.Location = new System.Drawing.Point(391, 409);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(282, 70);
+            this.btnBack.Size = new System.Drawing.Size(140, 70);
             this.btnBack.TabIndex = 3;
-            this.btnBack.Text = "Voltar ao menu principal";
+            this.btnBack.Text = "LogOut";
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 

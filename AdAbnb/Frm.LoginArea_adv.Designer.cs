@@ -74,12 +74,12 @@
             this.btbBack.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.btbBack.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btbBack.ForeColor = System.Drawing.Color.Transparent;
-            this.btbBack.Location = new System.Drawing.Point(335, 398);
+            this.btbBack.Location = new System.Drawing.Point(388, 398);
             this.btbBack.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btbBack.Name = "btbBack";
-            this.btbBack.Size = new System.Drawing.Size(256, 76);
+            this.btbBack.Size = new System.Drawing.Size(140, 70);
             this.btbBack.TabIndex = 1;
-            this.btbBack.Text = "Voltar Menu Principal";
+            this.btbBack.Text = "LogOut";
             this.btbBack.UseVisualStyleBackColor = false;
             this.btbBack.Click += new System.EventHandler(this.btbBack_Click);
             // 

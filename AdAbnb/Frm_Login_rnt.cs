@@ -36,7 +36,8 @@ namespace AdAbnb.Presentation
         {
             if (UsersRentDB.usersRentDic.ContainsKey(txbEmailLogin.Text) && UsersRentDB.usersRentDic[txbEmailLogin.Text] == txbPasswordLogin.Text)
             {
-                User = UsersRentDB.usersRentInfos.Where(x => x.Email == txbEmailLogin.Text).Single();
+                User = UsersRentDB.usersRentInfos.Where(x => x.Registration.Login == txbEmailLogin.Text).Single();
+                //User = UsersRentDB.usersRentInfos.Where(x => x.Email == txbEmailLogin.Text).Single();
 
                 MessageBox.Show("Usuário logado com sucesso");
                 emailLog = txbEmailLogin.Text;
@@ -61,23 +62,25 @@ namespace AdAbnb.Presentation
             if (clickEye % 2 != 0)
             {
                 txbPasswordLogin.PasswordChar = '\0';
-                pictureBox4.Visible = false;
-                pictureBox5.Visible = true;
+                pictureBox5.Visible = false;
+                pictureBox4.Visible = true;
             }
             else
             {
                 txbPasswordLogin.PasswordChar = '*';
-                pictureBox4.Visible = true;
-                pictureBox5.Visible = false;
+                pictureBox5.Visible = true;
+                pictureBox4.Visible = false;
             }
         }
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-
+            viewPassword();
         }
 
-
-
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            viewPassword();
+        }
     }
 }
 
